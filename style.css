@@ -1,3 +1,7 @@
+html {
+  font-size: clamp(14px, 1.2vw, 16px);
+}
+
 :root {
   --bg: #ffffff;
   --bg-dark: #0f172a;
@@ -18,6 +22,20 @@
   --font-main: 'Inter', -apple-system, system-ui, sans-serif;
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --max-width: 1200px;
+}
+
+button,
+.choice-item,
+.scale-item {
+  min-height: 48px;
+}
+
+.problem-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.roles-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 * {
@@ -128,11 +146,12 @@ body {
   border-right: 3px solid var(--accent-blue);
   white-space: nowrap;
   margin: 0;
-  width: 0;
+  width: auto;
+  max-width: 100%;
   vertical-align: bottom;
   animation:
-    typing 1s steps(18, end) forwards,
-    blink-caret 1s step-end infinite;
+    typing 1.5s steps(18, end) forwards,
+    blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -141,7 +160,8 @@ body {
   }
 
   to {
-    width: 70%;
+    width: 8.2em;
+    /* Approximately matches "Scale intelligence." across font sizes */
   }
 }
 
@@ -171,11 +191,11 @@ body {
 
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .hero-subheading {
-    font-size: 1rem;
+    font-size: 1.125rem;
     margin-bottom: 2rem;
   }
 
@@ -208,7 +228,7 @@ body {
   }
 
   .form-wrapper {
-    padding: 4rem 1rem;
+    padding: 6rem 1.5rem;
   }
 
   .question-text {
@@ -216,7 +236,7 @@ body {
   }
 
   .nav-footer {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 
   .hero-content h1 span.typewriter {
@@ -516,6 +536,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .diff-item {
@@ -923,7 +944,7 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 4rem);
   }
 
   .logo-flex {
@@ -933,5 +954,11 @@ body {
 
   .roles-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0 !important;
   }
 }
