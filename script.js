@@ -31,19 +31,43 @@ window.closeDemoModal = function () {
     setTimeout(() => modal.style.display = 'none', 400);
 };
 
-// Demo Form Submission (Stub)
-document.getElementById('demoForm')?.addEventListener('submit', (e) => {
+const DEMO_FORM_URL = 'https://script.google.com/macros/s/AKfycbxg6l_N12IKIKyIEWzFe6GOBLs5NoIrgXm-9GffADh0s9Yz-GNpjvvcZqaEwaFG6Luv/exec';
+
+// Demo Form Submission
+document.getElementById('demoForm')?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const btn = e.target.querySelector('button');
+    const form = e.target;
+    const btn = form.querySelector('button');
+    const formData = {
+        name: document.getElementById('demoName').value,
+        email: document.getElementById('demoEmail').value,
+        role: document.getElementById('demoRole').value,
+        type: 'demo_request',
+        timestamp: new Date().toISOString()
+    };
+
     btn.disabled = true;
     btn.innerHTML = 'Sending...';
 
-    setTimeout(() => {
+    try {
+        await fetch(DEMO_FORM_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify(formData)
+        });
+
         alert('Thank you! Our team will contact you shortly.');
         closeDemoModal();
+        form.reset();
+    } catch (error) {
+        console.error('Demo submission error:', error);
+        alert('Something went wrong. Please try again.');
+    } finally {
         btn.disabled = false;
         btn.innerHTML = 'Request Demo';
-    }, 1500);
+    }
 });
 
 // Questionnaire Logic (mostly unchanged but ensures it only runs when survey is active)
