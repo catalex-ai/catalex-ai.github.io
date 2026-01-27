@@ -1,38 +1,52 @@
 function doPost(e) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  
+  // Try to parse the incoming data
+  var data;
   try {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    var data = JSON.parse(e.postData.contents);
-    
-    // Define the order of headers
-    var headers = [
-      "timestamp",
-      "primary_role",
-      "company_stage",
-      "improvements",
-      "top_priority",
-      "pain_scale",
-      "current_solution",
-      "hardest_part",
-      "value_scale"
-    ];
-    
-    // Check if sheet is empty and add headers if so
-    if (sheet.getLastRow() === 0) {
-      sheet.appendRow(headers);
-    }
-    
-    // Map data to the row format
-    var row = headers.map(function(header) {
-      return data[header] || "";
-    });
-    
-    sheet.appendRow(row);
-    
-    return ContentService.createTextOutput(JSON.stringify({"result": "success"}))
-      .setMimeType(ContentService.MimeType.JSON);
-      
-  } catch (error) {
-    return ContentService.createTextOutput(JSON.stringify({"result": "error", "message": error.toString()}))
+    data = JSON.parse(e.postData.contents);
+  } catch (err) {
+    return ContentService.createTextOutput(JSON.stringify({result: "error", error: "Invalid JSON"}))
       .setMimeType(ContentService.MimeType.JSON);
   }
+  
+  // Decide which sheet to use based on the 'type' field
+  var sheetName = (data.type === 'demo_request') ? "Demo Requests" : "Survey Responses";
+  var sheet = ss.getSheetByName(sheetName);
+  
+  // Create sheet if it doesn't exist
+  if (!sheet) {
+    sheet = ss.insertSheet(sheetName);
+    // Add headers if it's a new sheet
+    if (data.type === 'demo_request') {
+      sheet.appendRow(["Timestamp", "Name", "Email", "Role"]);
+    } else {
+      sheet.appendRow(["Timestamp", "Role", "Company Stage", "Improvements", "Top Priority", "Pain Scale", "Current Solution", "Hardest Part", "Value Scale"]);
+    }
+  }
+  
+  // Append the row
+  if (data.type === 'demo_request') {
+    sheet.appendRow([
+      data.timestamp || new Date(),
+      data.name,
+      data.email,
+      data.role
+    ]);
+  } else {
+    sheet.appendRow([
+      data.timestamp || new Date(),
+      data.primary_role,
+      data.company_stage,
+      data.improvements,
+      data.top_priority,
+      data.pain_scale,
+      data.current_solution,
+      data.hardest_part,
+      data.value_scale
+    ]);
+  }
+  
+  return ContentService.createTextOutput(JSON.stringify({result: "success"}))
+    .setMimeType(ContentService.MimeType.JSON);
 }
