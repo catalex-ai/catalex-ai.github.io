@@ -4,273 +4,593 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wine | Questionnaire</title>
+        <title>Wine | AI productivity assistant for modern teams</title>
+        <meta name="description"
+                content="Wine helps teams find information, understand context, and take action across tools using AI.">
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<script>
-        function checkRoute() {
-                const hash = window.location.hash;
-                const isSurveyRoute = hash === '#/forms/survey' || hash === '#/forms/survey/';
-                const isLocal = window.location.hostname.includes('localhost') || window.location.hostname.includes('127.0.0.1');
-
-                if (!isSurveyRoute && !isLocal) {
-                        document.body.innerHTML = '<div style="display:flex; justify-content:center; align-items:center; height:100vh; font-family:Inter,sans-serif; color:white; background:#000;"><h1>404 - Page Not Found</h1></div>';
-                }
-        }
-
-        // Check on load and on hash change
-        window.addEventListener('hashchange', checkRoute);
-        document.addEventListener('DOMContentLoaded', checkRoute);
-</script>
 
 <body>
-        <form id="questionnaireForm">
-                <div class="form-wrapper">
-                        <!-- Step 0: Welcome Screen -->
-                        <div class="question-container active" data-step="0">
-                                <div class="question-number">Wine &rarr;</div>
-                                <h2 class="question-text">Help us shape the future of focus.</h2>
-                                <p
-                                        style="color: var(--text-muted); font-size: 1.25rem; margin-top: -1.5rem; margin-bottom: 3rem;">
-                                        It takes less than 2 minutes.
-                                </p>
-                                <div class="footer-controls" style="justify-content: flex-start;">
-                                        <button type="button" class="btn-primary" onclick="nextStep()">
-                                                Start Questionnaire
-                                        </button>
+        <!-- Homepage Section -->
+        <main id="homepage" class="page-section active">
+                <nav class="navbar">
+                        <div class="nav-container">
+                                <div class="logo">Wine</div>
+                                <div class="nav-links">
+                                        <a href="#features">Product</a>
+                                        <a href="#how-it-works">How it works</a>
+                                        <a href="#use-cases">Use Cases</a>
+                                        <button class="btn-primary btn-small" onclick="openDemoModal()">Get a
+                                                Demo</button>
                                 </div>
                         </div>
+                </nav>
 
-                        <!-- Q1: Primary Role -->
-                        <div class="question-container" data-step="1">
-                                <div class="question-number">01 &rarr; Role</div>
-                                <h2 class="question-text">What is your primary role?</h2>
-                                <div class="choices-grid">
-                                        <label class="choice-item"><span class="choice-key">A</span><input type="radio"
-                                                        name="primary_role" value="Engineering leader"
-                                                        required><span>Engineering leader (EM / Director /
-                                                        VP)</span></label>
-                                        <label class="choice-item"><span class="choice-key">B</span><input type="radio"
-                                                        name="primary_role"
-                                                        value="Individual contributor"><span>Individual contributor
-                                                        (Engineer / PM / Designer /
-                                                        Data)</span></label>
-                                        <label class="choice-item"><span class="choice-key">C</span><input type="radio"
-                                                        name="primary_role" value="Founder / Executive"><span>Founder /
-                                                        Executive</span></label>
-                                        <label class="choice-item"><span class="choice-key">D</span><input type="radio"
-                                                        name="primary_role"
-                                                        value="Operations / Business"><span>Operations /
-                                                        Business</span></label>
-                                        <label class="choice-item"><span class="choice-key">E</span><input type="radio"
-                                                        name="primary_role" value="Other"><span>Other</span></label>
+                <section class="hero-section">
+                        <div class="content-container">
+                                <div class="hero-content">
+                                        <div class="badge">AI-Powered Decisions</div>
+                                        <h1>Find answers. Take action. <span>Scale intelligence.</span></h1>
+                                        <p class="hero-subheading">The productivity assistant for modern teams that
+                                                connects your tools, understands your context, and accelerates your
+                                                workflows.</p>
+                                        <div class="hero-actions">
+                                                <button class="btn-primary btn-large" onclick="openDemoModal()">Get a
+                                                        Demo</button>
+                                                <button class="btn-secondary btn-large"
+                                                        onclick="window.location.hash = '#/forms/survey'">Take
+                                                        Survey</button>
+                                        </div>
+                                </div>
+                                <div class="hero-visual">
+                                        <img src="brain/07a743bb-69bb-4ad2-b261-26b6fbabab28/hero_illustration_wine_1769520115020.png"
+                                                alt="Wine Intelligence Hub Illustration">
                                 </div>
                         </div>
+                </section>
 
-                        <!-- Q2: Company Stage -->
-                        <div class="question-container" data-step="2">
-                                <div class="question-number">02 &rarr; Context</div>
-                                <h2 class="question-text">What stage is your company at?</h2>
-                                <div class="choices-grid">
-                                        <label class="choice-item"><span class="choice-key">A</span><input type="radio"
-                                                        name="company_stage" value="< 50 people" required><span>&lt; 50
-                                                        people</span></label>
-                                        <label class="choice-item"><span class="choice-key">B</span><input type="radio"
-                                                        name="company_stage" value="50–200"><span>50–200</span></label>
-                                        <label class="choice-item"><span class="choice-key">C</span><input type="radio"
-                                                        name="company_stage"
-                                                        value="200–1,000"><span>200–1,000</span></label>
-                                        <label class="choice-item"><span class="choice-key">D</span><input type="radio"
-                                                        name="company_stage" value="1,000+"><span>1,000+</span></label>
-                                        <label class="choice-item"><span class="choice-key">E</span><input type="radio"
-                                                        name="company_stage" value="Prefer not to say"><span>Prefer not
-                                                        to say</span></label>
+                <section id="problem" class="problem-section">
+                        <div class="content-container">
+                                <h2>The cost of scattered knowledge.</h2>
+                                <div class="problem-grid">
+                                        <div class="problem-card">
+                                                <div class="problem-icon">🔍</div>
+                                                <h3>Information Silos</h3>
+                                                <p>Knowledge is scattered across docs, tickets, and chats, making it
+                                                        impossible to find what you need.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                                <div class="problem-icon">📉</div>
+                                                <h3>Lost Context</h3>
+                                                <p>Valuable context disappears during handoffs and tool switches,
+                                                        leading to repeated work.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                                <div class="problem-icon">⏳</div>
+                                                <h3>Execution Lag</h3>
+                                                <p>Teams waste hours searching for answers instead of executing on their
+                                                        goals.</p>
+                                        </div>
+                                        <div class="problem-card">
+                                                <div class="problem-icon">⚠️</div>
+                                                <h3>Trust Deficit</h3>
+                                                <p>When information is found, it's often outdated or unreliable, making
+                                                        action risky.</p>
+                                        </div>
                                 </div>
                         </div>
+                </section>
 
-                        <!-- Q3: Improvements Wanted (Multi-select) -->
-                        <div class="question-container" data-step="3">
-                                <div class="question-number">03 &rarr; Needs</div>
-                                <h2 class="question-text">What would improve your work week?</h2>
-                                <div class="choices-grid compact-grid">
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Meeting Summaries"><span>Auto-summarise
-                                                        meetings</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Daily Brief"><span>Daily focus brief</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Task Converter"><span>Inbox &rarr; tasks</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Project Updates"><span>One-click updates</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Decision History"><span>Decision tracker</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Stakeholder Updates"><span>Stakeholder
-                                                        updates</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Catchup"><span>“Catch
-                                                        me up”</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Meeting Prep"><span>Meeting prep</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Meeting Guardrails"><span>Meeting
-                                                        guardrails</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Knowledge Base"><span>Knowledge base</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Note Taker"><span>AI
-                                                        note-taker</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Async Generator"><span>Async generator</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Burnout Detection"><span>Burnout detection</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Automation"><span>Work
-                                                        automation</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Intent Search"><span>Intent search</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Post Mortem"><span>Retro generator</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Goal Tracking"><span>Goal tracking</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Onboarding"><span>Onboarding assistant</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Exec Brief"><span>Executive brief</span></label>
-                                        <label class="choice-item"><input type="checkbox" name="improvements"
-                                                        value="Forgot Assistant"><span>“What did I
-                                                        forget?”</span></label>
+                <section id="features" class="features-section">
+                        <div class="content-container">
+                                <div class="section-header">
+                                        <h2>Operational intelligence for every team.</h2>
+                                        <p>Wine doesn't just search; it understands and acts.</p>
+                                </div>
+                                <div class="features-grid">
+                                        <div class="feature-item">
+                                                <div class="feature-marker"></div>
+                                                <div class="feature-content">
+                                                        <h3>Unified Knowledge Access</h3>
+                                                        <p>Connect and index data across all your tools instantly. One
+                                                                source of truth for your entire org.</p>
+                                                </div>
+                                        </div>
+                                        <div class="feature-item">
+                                                <div class="feature-marker"></div>
+                                                <div class="feature-content">
+                                                        <h3>Context-Aware AI Answers</h3>
+                                                        <p>Get precise answers based on your company's specific data,
+                                                                not general LLM knowledge.</p>
+                                                </div>
+                                        </div>
+                                        <div class="feature-item">
+                                                <div class="feature-marker"></div>
+                                                <div class="feature-content">
+                                                        <h3>Actionable Insights</h3>
+                                                        <p>Go beyond summaries. Trigger workflows and take action
+                                                                directly from your AI interface.</p>
+                                                </div>
+                                        </div>
+                                        <div class="feature-item">
+                                                <div class="feature-marker"></div>
+                                                <div class="feature-content">
+                                                        <h3>Enterprise Security</h3>
+                                                        <p>Secure, permission-aware results. We respect your data silos
+                                                                and access controls.</p>
+                                                </div>
+                                        </div>
+                                        <div class="feature-item">
+                                                <div class="feature-marker"></div>
+                                                <div class="feature-content">
+                                                        <h3>Custom Workflows</h3>
+                                                        <p>Build team-specific automations that adapt to how you
+                                                                actually work.</p>
+                                                </div>
+                                        </div>
                                 </div>
                         </div>
+                </section>
 
-                        <!-- Q4: Top Priority (Single-select) -->
-                        <div class="question-container" data-step="4">
-                                <div class="question-number">04 &rarr; Priority</div>
-                                <h2 class="question-text">If you could solve ONE of these first?</h2>
-                                <div class="choices-grid compact-grid">
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Meeting Summaries" required><span>Meeting
-                                                        summaries</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Daily Brief"><span>Daily
-                                                        brief</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Task Converter"><span>Task
-                                                        converter</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Project Updates"><span>Project updates</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Decision History"><span>Decision tracker</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Stakeholder Updates"><span>Stakeholder
-                                                        updates</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Catchup"><span>Catchup
-                                                        coach</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Meeting Prep"><span>Meeting prep</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Knowledge Base"><span>Knowledge base</span></label>
-                                        <label class="choice-item"><input type="radio" name="top_priority"
-                                                        value="Work Automation"><span>Work automation</span></label>
+                <section id="how-it-works" class="how-it-works">
+                        <div class="content-container">
+                                <h2>Simple setup. Immediate value.</h2>
+                                <div class="steps-grid">
+                                        <div class="step">
+                                                <div class="step-number">01</div>
+                                                <h4>Connect</h4>
+                                                <p>Integrate your existing tools and data sources in minutes.</p>
+                                        </div>
+                                        <div class="step">
+                                                <div class="step-number">02</div>
+                                                <h4>Configure</h4>
+                                                <p>Define what matters most to your team's unique goals.</p>
+                                        </div>
+                                        <div class="step">
+                                                <div class="step-number">03</div>
+                                                <h4>Interact</h4>
+                                                <p>Ask questions or trigger workflows via natural language.</p>
+                                        </div>
+                                        <div class="step">
+                                                <div class="step-number">04</div>
+                                                <h4>Execute</h4>
+                                                <p>Get trusted answers and take action immediately.</p>
+                                        </div>
                                 </div>
                         </div>
+                </section>
 
-                        <!-- Q5: Pain Level -->
-                        <div class="question-container" data-step="5">
-                                <div class="question-number">05 &rarr; friction</div>
-                                <h2 class="question-text">How painful is this problem for you today?</h2>
-                                <div class="scale-grid">
-                                        <label class="scale-item"><input type="radio" name="pain_scale" value="1"
-                                                        required>1</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="2">2</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="3">3</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="4">4</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="5">5</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="6">6</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="7">7</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="8">8</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="9">9</label>
-                                        <label class="scale-item"><input type="radio" name="pain_scale"
-                                                        value="10">10</label>
+                <section id="use-cases" class="use-cases">
+                        <div class="content-container">
+                                <h2>Tailored for every role.</h2>
+                                <div class="roles-grid">
+                                        <div class="role-card">
+                                                <h3>Engineering</h3>
+                                                <p class="role-pain">Pain: Navigating complex docs and legacy code
+                                                        context.</p>
+                                                <p class="role-solution">Wine provides instant architecture answers and
+                                                        automates PR summaries.</p>
+                                                <div class="role-outcome">Outcome: 40% faster onboarding.</div>
+                                        </div>
+                                        <div class="role-card">
+                                                <h3>Product</h3>
+                                                <p class="role-pain">Pain: Tracking feedback across disparate channels.
+                                                </p>
+                                                <p class="role-solution">Wine synthesizes user feedback into actionable
+                                                        feature insights.</p>
+                                                <div class="role-outcome">Outcome: Better roadmap alignment.</div>
+                                        </div>
+                                        <div class="role-card">
+                                                <h3>Operations</h3>
+                                                <p class="role-pain">Pain: Manual reporting and workflow bottlenecks.
+                                                </p>
+                                                <p class="role-solution">Wine automates status updates and identifies
+                                                        process inefficiencies.</p>
+                                                <div class="role-outcome">Outcome: Operational excellence.</div>
+                                        </div>
+                                        <div class="role-card">
+                                                <h3>Leadership</h3>
+                                                <p class="role-pain">Pain: Information lag and decision silos.</p>
+                                                <p class="role-solution">Wine provides a real-time pulse of the
+                                                        organization's progress.</p>
+                                                <div class="role-outcome">Outcome: Strategy execution speed.</div>
+                                        </div>
                                 </div>
                         </div>
+                </section>
 
-                        <!-- Q6: Current Solution -->
-                        <div class="question-container" data-step="6">
-                                <div class="question-number">06 &rarr; Workarounds</div>
-                                <h2 class="question-text">How are you currently dealing with this?</h2>
-                                <textarea name="current_solution" class="input-field"
-                                        placeholder="Type your answer here..." required maxlength="500"></textarea>
-                        </div>
-
-                        <!-- Q7: Hardest Part -->
-                        <div class="question-container" data-step="7">
-                                <div class="question-number">07 &rarr; frustrations</div>
-                                <h2 class="question-text">What’s the hardest part about this today?</h2>
-                                <textarea name="hardest_part" class="input-field" placeholder="Type your answer here..."
-                                        required maxlength="500"></textarea>
-                        </div>
-
-                        <!-- Q8: Value of Solving -->
-                        <div class="question-container" data-step="8">
-                                <div class="question-number">08 &rarr; impact</div>
-                                <h2 class="question-text">If this were solved well, how valuable would it be?</h2>
-                                <div class="scale-grid">
-                                        <label class="scale-item"><input type="radio" name="value_scale" value="1"
-                                                        required>1</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="2">2</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="3">3</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="4">4</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="5">5</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="6">6</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="7">7</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="8">8</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="9">9</label>
-                                        <label class="scale-item"><input type="radio" name="value_scale"
-                                                        value="10">10</label>
+                <section class="differentiation">
+                        <div class="content-container">
+                                <div class="diff-header">
+                                        <h2>Why Wine?</h2>
+                                        <p>Moving beyond search to true operational intelligence.</p>
+                                </div>
+                                <div class="diff-grid">
+                                        <div class="diff-item">
+                                                <h4>Context + Action</h4>
+                                                <p>Unlike traditional search, Wine understands the "why" and helps you
+                                                        do the "what".</p>
+                                        </div>
+                                        <div class="diff-item">
+                                                <h4>Structured + Unstructured</h4>
+                                                <p>We index everything from SQL databases to Slack threads seamlessly.
+                                                </p>
+                                        </div>
+                                        <div class="diff-item">
+                                                <h4>Designed for Scale</h4>
+                                                <p>Architecture built for enterprise-level data volume and security
+                                                        requirements.</p>
+                                        </div>
                                 </div>
                         </div>
+                </section>
 
-                        <!-- Success -->
-                        <div class="success-view" id="successView">
-                                <h2>All set.</h2>
-                                <p>Thank you for helping us build Wine.</p>
+                <section class="trust-section">
+                        <div class="content-container">
+                                <div class="logos-placeholder">
+                                        <span>Trusted by teams at</span>
+                                        <div class="logo-flex">
+                                                <div class="logo-stub">ACME</div>
+                                                <div class="logo-stub">GLOBEX</div>
+                                                <div class="logo-stub">SOYLENT</div>
+                                                <div class="logo-stub">Hooli</div>
+                                        </div>
+                                </div>
+                                <div class="testimonial">
+                                        <blockquote>"Wine has completely changed how our engineering team operates. We
+                                                spend less time searching and more time building."</blockquote>
+                                        <cite>— CTO, Leading FinTech</cite>
+                                </div>
                         </div>
+                </section>
 
-                        <div class="error-message" id="errorMsg">Please answer to continue &rarr;</div>
-                </div>
-
-                <footer class="nav-footer" id="navFooter">
-                        <div class="progress-info">
-                                Question <span id="currentStepText">1</span> of 8
+                <section class="cta-bottom">
+                        <div class="content-container">
+                                <h2>Ready to accelerate your team?</h2>
+                                <p>Join the future of productivity today. No hype, just execution.</p>
+                                <button class="btn-primary btn-large" onclick="openDemoModal()">Get a Demo</button>
+                                <p class="cta-muted">No commitment required. 15-minute intro call.</p>
                         </div>
-                        <div class="footer-controls">
-                                <button type="button" class="btn-primary" id="nextBtn">
-                                        OK <span class="keyboard-hint">Enter ↵</span>
-                                </button>
+                </section>
+
+                <footer class="main-footer">
+                        <div class="content-container">
+                                <div class="footer-grid">
+                                        <div class="footer-brand">
+                                                <div class="logo">Wine</div>
+                                                <p>AI-powered productivity for modern enterprise teams.</p>
+                                        </div>
+                                        <div class="footer-links">
+                                                <div class="link-column">
+                                                        <h4>Product</h4>
+                                                        <a href="#features">Features</a>
+                                                        <a href="#how-it-works">Process</a>
+                                                </div>
+                                                <div class="link-column">
+                                                        <h4>Resources</h4>
+                                                        <a href="#">Client Study</a>
+                                                        <a href="#">Security</a>
+                                                </div>
+                                                <div class="link-column">
+                                                        <h4>Legal</h4>
+                                                        <a href="#">Privacy</a>
+                                                        <a href="#">Terms</a>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="footer-bottom">
+                                        <p>&copy; 2026 Wine AI. contact@wine.ai</p>
+                                </div>
                         </div>
                 </footer>
-        </form>
+        </main>
+
+        <!-- Survey Section -->
+        <main id="survey" class="page-section">
+                <form id="questionnaireForm">
+                        <div class="form-wrapper">
+                                <!-- Step 0: Welcome Screen -->
+                                <div class="question-container active" data-step="0">
+                                        <div class="question-number">Wine &rarr;</div>
+                                        <h2 class="question-text">Help us shape the future of focus.</h2>
+                                        <p
+                                                style="color: var(--text-muted); font-size: 1.25rem; margin-top: -1.5rem; margin-bottom: 3rem;">
+                                                It takes less than 2 minutes.
+                                        </p>
+                                        <div class="footer-controls" style="justify-content: flex-start;">
+                                                <button type="button" class="btn-primary" onclick="nextStep()">
+                                                        Start Questionnaire
+                                                </button>
+                                        </div>
+                                </div>
+
+                                <!-- Q1: Primary Role -->
+                                <div class="question-container" data-step="1">
+                                        <div class="question-number">01 &rarr; Role</div>
+                                        <h2 class="question-text">What is your primary role?</h2>
+                                        <div class="choices-grid">
+                                                <label class="choice-item"><span class="choice-key">A</span><input
+                                                                type="radio" name="primary_role"
+                                                                value="Engineering leader" required><span>Engineering
+                                                                leader (EM / Director /
+                                                                VP)</span></label>
+                                                <label class="choice-item"><span class="choice-key">B</span><input
+                                                                type="radio" name="primary_role"
+                                                                value="Individual contributor"><span>Individual
+                                                                contributor
+                                                                (Engineer / PM / Designer /
+                                                                Data)</span></label>
+                                                <label class="choice-item"><span class="choice-key">C</span><input
+                                                                type="radio" name="primary_role"
+                                                                value="Founder / Executive"><span>Founder /
+                                                                Executive</span></label>
+                                                <label class="choice-item"><span class="choice-key">D</span><input
+                                                                type="radio" name="primary_role"
+                                                                value="Operations / Business"><span>Operations /
+                                                                Business</span></label>
+                                                <label class="choice-item"><span class="choice-key">E</span><input
+                                                                type="radio" name="primary_role"
+                                                                value="Other"><span>Other</span></label>
+                                        </div>
+                                </div>
+
+                                <!-- Q2: Company Stage -->
+                                <div class="question-container" data-step="2">
+                                        <div class="question-number">02 &rarr; Context</div>
+                                        <h2 class="question-text">What stage is your company at?</h2>
+                                        <div class="choices-grid">
+                                                <label class="choice-item"><span class="choice-key">A</span><input
+                                                                type="radio" name="company_stage" value="< 50 people"
+                                                                required><span>&lt; 50
+                                                                people</span></label>
+                                                <label class="choice-item"><span class="choice-key">B</span><input
+                                                                type="radio" name="company_stage"
+                                                                value="50–200"><span>50–200</span></label>
+                                                <label class="choice-item"><span class="choice-key">C</span><input
+                                                                type="radio" name="company_stage"
+                                                                value="200–1,000"><span>200–1,000</span></label>
+                                                <label class="choice-item"><span class="choice-key">D</span><input
+                                                                type="radio" name="company_stage"
+                                                                value="1,000+"><span>1,000+</span></label>
+                                                <label class="choice-item"><span class="choice-key">E</span><input
+                                                                type="radio" name="company_stage"
+                                                                value="Prefer not to say"><span>Prefer not
+                                                                to say</span></label>
+                                        </div>
+                                </div>
+
+                                <!-- Q3: Improvements Wanted (Multi-select) -->
+                                <div class="question-container" data-step="3">
+                                        <div class="question-number">03 &rarr; Needs</div>
+                                        <h2 class="question-text">What would improve your work week?</h2>
+                                        <div class="choices-grid compact-grid">
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Meeting Summaries"><span>Auto-summarise
+                                                                meetings</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Daily Brief"><span>Daily focus
+                                                                brief</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Task Converter"><span>Inbox &rarr;
+                                                                tasks</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Project Updates"><span>One-click
+                                                                updates</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Decision History"><span>Decision
+                                                                tracker</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Stakeholder Updates"><span>Stakeholder
+                                                                updates</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Catchup"><span>“Catch
+                                                                me up”</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Meeting Prep"><span>Meeting prep</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Meeting Guardrails"><span>Meeting
+                                                                guardrails</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Knowledge Base"><span>Knowledge
+                                                                base</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Note Taker"><span>AI
+                                                                note-taker</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Async Generator"><span>Async
+                                                                generator</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Burnout Detection"><span>Burnout
+                                                                detection</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Automation"><span>Work
+                                                                automation</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Intent Search"><span>Intent search</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Post Mortem"><span>Retro generator</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Goal Tracking"><span>Goal tracking</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Onboarding"><span>Onboarding
+                                                                assistant</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Exec Brief"><span>Executive brief</span></label>
+                                                <label class="choice-item"><input type="checkbox" name="improvements"
+                                                                value="Forgot Assistant"><span>“What did I
+                                                                forget?”</span></label>
+                                        </div>
+                                </div>
+
+                                <!-- Q4: Top Priority (Single-select) -->
+                                <div class="question-container" data-step="4">
+                                        <div class="question-number">04 &rarr; Priority</div>
+                                        <h2 class="question-text">If you could solve ONE of these first?</h2>
+                                        <div class="choices-grid compact-grid">
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Meeting Summaries" required><span>Meeting
+                                                                summaries</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Daily Brief"><span>Daily
+                                                                brief</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Task Converter"><span>Task
+                                                                converter</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Project Updates"><span>Project
+                                                                updates</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Decision History"><span>Decision
+                                                                tracker</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Stakeholder Updates"><span>Stakeholder
+                                                                updates</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Catchup"><span>Catchup
+                                                                coach</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Meeting Prep"><span>Meeting prep</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Knowledge Base"><span>Knowledge
+                                                                base</span></label>
+                                                <label class="choice-item"><input type="radio" name="top_priority"
+                                                                value="Work Automation"><span>Work
+                                                                automation</span></label>
+                                        </div>
+                                </div>
+
+                                <!-- Q5: Pain Level -->
+                                <div class="question-container" data-step="5">
+                                        <div class="question-number">05 &rarr; friction</div>
+                                        <h2 class="question-text">How painful is this problem for you today?</h2>
+                                        <div class="scale-grid">
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="1" required>1</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="2">2</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="3">3</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="4">4</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="5">5</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="6">6</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="7">7</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="8">8</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="9">9</label>
+                                                <label class="scale-item"><input type="radio" name="pain_scale"
+                                                                value="10">10</label>
+                                        </div>
+                                </div>
+
+                                <!-- Q6: Current Solution -->
+                                <div class="question-container" data-step="6">
+                                        <div class="question-number">06 &rarr; Workarounds</div>
+                                        <h2 class="question-text">How are you currently dealing with this?</h2>
+                                        <textarea name="current_solution" class="input-field"
+                                                placeholder="Type your answer here..." required
+                                                maxlength="500"></textarea>
+                                </div>
+
+                                <!-- Q7: Hardest Part -->
+                                <div class="question-container" data-step="7">
+                                        <div class="question-number">07 &rarr; frustrations</div>
+                                        <h2 class="question-text">What’s the hardest part about this today?</h2>
+                                        <textarea name="hardest_part" class="input-field"
+                                                placeholder="Type your answer here..." required
+                                                maxlength="500"></textarea>
+                                </div>
+
+                                <!-- Q8: Value of Solving -->
+                                <div class="question-container" data-step="8">
+                                        <div class="question-number">08 &rarr; impact</div>
+                                        <h2 class="question-text">If this were solved well, how valuable would it be?
+                                        </h2>
+                                        <div class="scale-grid">
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="1" required>1</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="2">2</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="3">3</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="4">4</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="5">5</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="6">6</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="7">7</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="8">8</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="9">9</label>
+                                                <label class="scale-item"><input type="radio" name="value_scale"
+                                                                value="10">10</label>
+                                        </div>
+                                </div>
+
+                                <!-- Success -->
+                                <div class="success-view" id="successView">
+                                        <h2>All set.</h2>
+                                        <p>Thank you for helping us build Wine.</p>
+                                </div>
+
+                                <div class="error-message" id="errorMsg">Please answer to continue &rarr;</div>
+                        </div>
+
+                        <footer class="nav-footer" id="navFooter">
+                                <div class="progress-info">
+                                        Question <span id="currentStepText">1</span> of 8
+                                </div>
+                                <div class="footer-controls">
+                                        <button type="button" class="btn-primary" id="nextBtn">
+                                                OK <span class="keyboard-hint">Enter ↵</span>
+                                        </button>
+                                </div>
+                        </footer>
+                </form>
+        </main>
+
+        <!-- Demo Modal -->
+        <div id="demoModal" class="modal">
+                <div class="modal-content">
+                        <span class="close-modal" onclick="closeDemoModal()">&times;</span>
+                        <h2>Get a Demo</h2>
+                        <p>Experience how Wine can accelerate your team's workflow.</p>
+                        <form id="demoForm">
+                                <div class="form-group">
+                                        <label for="demoName">Full Name</label>
+                                        <input type="text" id="demoName" placeholder="Jane Doe" required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="demoEmail">Work Email</label>
+                                        <input type="email" id="demoEmail" placeholder="jane@company.com" required>
+                                </div>
+                                <div class="form-group">
+                                        <label for="demoRole">Role</label>
+                                        <select id="demoRole" required>
+                                                <option value="" disabled selected>Select your role</option>
+                                                <option value="engineering">Engineering</option>
+                                                <option value="product">Product</option>
+                                                <option value="ops">Operations</option>
+                                                <option value="leadership">Leadership</option>
+                                                <option value="other">Other</option>
+                                        </select>
+                                </div>
+                                <button type="submit" class="btn-primary">Request Demo</button>
+                                <p class="form-reassurance">No commitment. No spam. Just intelligence.</p>
+                        </form>
+                </div>
+        </div>
+
         <script src="script.js"></script>
 </body>
 

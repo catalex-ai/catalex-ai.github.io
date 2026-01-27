@@ -1,3 +1,52 @@
+// Routing Logic
+function checkRoute() {
+    const hash = window.location.hash;
+    const homepage = document.getElementById('homepage');
+    const survey = document.getElementById('survey');
+
+    if (hash === '#/forms/survey' || hash === '#/forms/survey/') {
+        homepage.classList.remove('active');
+        survey.classList.add('active');
+        currentStep = 0; // Reset survey if needed
+        updateProgress();
+    } else {
+        survey.classList.remove('active');
+        homepage.classList.add('active');
+    }
+}
+
+window.addEventListener('hashchange', checkRoute);
+window.addEventListener('load', checkRoute);
+
+// Modal Logic
+window.openDemoModal = function () {
+    const modal = document.getElementById('demoModal');
+    modal.style.display = 'flex';
+    setTimeout(() => modal.classList.add('active'), 10);
+};
+
+window.closeDemoModal = function () {
+    const modal = document.getElementById('demoModal');
+    modal.classList.remove('active');
+    setTimeout(() => modal.style.display = 'none', 400);
+};
+
+// Demo Form Submission (Stub)
+document.getElementById('demoForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.disabled = true;
+    btn.innerHTML = 'Sending...';
+
+    setTimeout(() => {
+        alert('Thank you! Our team will contact you shortly.');
+        closeDemoModal();
+        btn.disabled = false;
+        btn.innerHTML = 'Request Demo';
+    }, 1500);
+});
+
+// Questionnaire Logic (mostly unchanged but ensures it only runs when survey is active)
 const FORM_URL = 'https://script.google.com/macros/s/AKfycbxg6l_N12IKIKyIEWzFe6GOBLs5NoIrgXm-9GffADh0s9Yz-GNpjvvcZqaEwaFG6Luv/exec';
 
 let currentStep = 0;
@@ -9,19 +58,18 @@ const errorMsg = document.getElementById('errorMsg');
 const currentStepText = document.getElementById('currentStepText');
 const navFooter = document.getElementById('navFooter');
 
-// Progress Mapping
 function updateProgress() {
+    if (!currentStepText) return;
     currentStepText.textContent = currentStep;
-    // Hide footer on welcome screen
     if (currentStep === 0) {
         navFooter.style.display = 'none';
+        navFooter.style.opacity = '0';
     } else {
         navFooter.style.display = 'flex';
         setTimeout(() => navFooter.style.opacity = '1', 50);
     }
 }
 
-// Focus helper
 function focusInput(step) {
     const section = document.querySelector(`.question-container[data-step="${step}"]`);
     if (!section) return;
@@ -29,11 +77,9 @@ function focusInput(step) {
     if (input) input.focus();
 }
 
-// Step Navigation
 window.nextStep = async function () {
     if (isTransitioning || currentStep > totalSteps) return;
 
-    // Validate current step
     if (currentStep > 0 && !validateStep(currentStep)) {
         showError('Please answer to continue &rarr;');
         return;
@@ -93,17 +139,14 @@ function showError(msg) {
     }
 }
 
-// Form Submission
 async function submitForm() {
     if (FORM_URL.includes('YOUR_GOOGLE_APPS_SCRIPT_URL_HERE')) {
-        showError('Backend URL not configured. Please check script.js.');
+        showError('Backend URL not configured.');
         return;
     }
 
     const formData = new FormData(form);
     const data = {};
-
-    // Special handling for improvements (checkboxes)
     const improvements = formData.getAll('improvements');
     data.improvements = improvements.join(', ');
 
@@ -113,10 +156,8 @@ async function submitForm() {
         }
     });
 
-    // Ensure numeric values for scales
     data.pain_scale = formData.get('pain_scale');
     data.value_scale = formData.get('value_scale');
-
     data.timestamp = new Date().toISOString();
 
     nextBtn.disabled = true;
@@ -132,7 +173,6 @@ async function submitForm() {
             body: JSON.stringify(data)
         });
 
-        // Show Success
         const lastSection = document.querySelector(`.question-container[data-step="${totalSteps}"]`);
         lastSection.classList.remove('active');
         setTimeout(() => {
@@ -140,26 +180,22 @@ async function submitForm() {
             navFooter.style.display = 'none';
             const successView = document.getElementById('successView');
             successView.style.display = 'block';
-            setTimeout(() => {
-                successView.classList.add('active');
-            }, 50);
+            setTimeout(() => successView.classList.add('active'), 50);
         }, 400);
 
     } catch (error) {
         console.error('Submission error:', error);
-        showError('Submission failed. Please check your connection.');
+        showError('Submission failed.');
         nextBtn.disabled = false;
         nextBtn.innerHTML = 'Try Again';
     }
 }
 
-// Interaction Listeners
-nextBtn.addEventListener('click', (e) => {
+nextBtn?.addEventListener('click', (e) => {
     e.preventDefault();
     nextStep();
 });
 
-// Keyboard Support
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
         const activeSection = document.querySelector('.question-container.active');
@@ -170,9 +206,8 @@ document.addEventListener('keydown', (e) => {
         }
     }
 
-    // Choice Keys (A, B, C...)
     const activeSection = document.querySelector('.question-container.active');
-    if (activeSection && !['TEXTAREA', 'INPUT'].includes(document.activeElement.tagName)) {
+    if (activeSection && !['TEXTAREA', 'INPUT', 'SELECT'].includes(document.activeElement.tagName)) {
         const radioChoices = activeSection.querySelectorAll('.choice-item');
         if (radioChoices.length > 0) {
             const index = e.key.toUpperCase().charCodeAt(0) - 65;
@@ -188,11 +223,9 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Selection Visuals
 function handleSelection(element) {
     const parent = element.closest('.question-container');
     if (parent) {
-        // If it's a radio inside the element, deselect others
         const input = element.querySelector('input');
         if (input && input.type === 'radio') {
             parent.querySelectorAll('.choice-item, .scale-item').forEach(el => {
@@ -210,20 +243,10 @@ function handleSelection(element) {
 
 document.addEventListener('change', (e) => {
     const parentLabel = e.target.parentElement;
-    if (parentLabel.classList.contains('choice-item') || parentLabel.classList.contains('scale-item')) {
+    if (parentLabel?.classList.contains('choice-item') || parentLabel?.classList.contains('scale-item')) {
         handleSelection(parentLabel);
         if (e.target.type === 'radio') {
             setTimeout(nextStep, 500);
         }
     }
-});
-
-// Initial Setup
-window.addEventListener('load', () => {
-    document.querySelectorAll('.question-container').forEach(c => {
-        if (c.getAttribute('data-step') !== "0") {
-            c.style.display = 'none';
-        }
-    });
-    updateProgress();
 });
