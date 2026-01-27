@@ -21,6 +21,8 @@ window.addEventListener('load', checkRoute);
 // Modal Logic
 window.openDemoModal = function () {
     const modal = document.getElementById('demoModal');
+    document.getElementById('demoInitialView').style.display = 'block';
+    document.getElementById('demoSuccessView').style.display = 'none';
     modal.style.display = 'flex';
     setTimeout(() => modal.classList.add('active'), 10);
 };
@@ -58,9 +60,14 @@ document.getElementById('demoForm')?.addEventListener('submit', async (e) => {
             body: JSON.stringify(formData)
         });
 
-        alert('Thank you! Our team will contact you shortly.');
-        closeDemoModal();
+        // Show inline success message
+        document.getElementById('demoInitialView').style.display = 'none';
+        document.getElementById('demoSuccessView').style.display = 'block';
         form.reset();
+
+        // Auto-close after 3 seconds
+        setTimeout(window.closeDemoModal, 3000);
+
     } catch (error) {
         console.error('Demo submission error:', error);
         alert('Something went wrong. Please try again.');

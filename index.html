@@ -524,31 +524,40 @@
         <div id="demoModal" class="modal">
                 <div class="modal-content">
                         <span class="close-modal" onclick="closeDemoModal()">&times;</span>
-                        <h2>Get a Demo</h2>
-                        <p>Experience how Wine can accelerate your team's workflow.</p>
-                        <form id="demoForm">
-                                <div class="form-group">
-                                        <label for="demoName">Full Name</label>
-                                        <input type="text" id="demoName" placeholder="e.g. Peter Parker" required>
-                                </div>
-                                <div class="form-group">
-                                        <label for="demoEmail">Work Email</label>
-                                        <input type="email" id="demoEmail" placeholder="peter@spider.com" required>
-                                </div>
-                                <div class="form-group">
-                                        <label for="demoRole">Role</label>
-                                        <select id="demoRole" required>
-                                                <option value="" disabled selected>Select your role</option>
-                                                <option value="engineering">Engineering</option>
-                                                <option value="product">Product</option>
-                                                <option value="ops">Operations</option>
-                                                <option value="leadership">Leadership</option>
-                                                <option value="other">Other</option>
-                                        </select>
-                                </div>
-                                <button type="submit" class="btn-primary">Request Demo</button>
-                                <p class="form-reassurance">No commitment. No spam. Just intelligence.</p>
-                        </form>
+                        <div id="demoInitialView">
+                                <h2>Get a Demo</h2>
+                                <p>Experience how Wine can accelerate your team's workflow.</p>
+                                <form id="demoForm">
+                                        <div class="form-group">
+                                                <label for="demoName">Full Name</label>
+                                                <input type="text" id="demoName" placeholder="e.g. Peter Parker"
+                                                        required>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="demoEmail">Work Email</label>
+                                                <input type="email" id="demoEmail" placeholder="peter@spider.com"
+                                                        required>
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="demoRole">Role</label>
+                                                <select id="demoRole" required>
+                                                        <option value="" disabled selected>Select your role</option>
+                                                        <option value="engineering">Engineering</option>
+                                                        <option value="product">Product</option>
+                                                        <option value="ops">Operations</option>
+                                                        <option value="leadership">Leadership</option>
+                                                        <option value="other">Other</option>
+                                                </select>
+                                        </div>
+                                        <button type="submit" class="btn-primary">Request Demo</button>
+                                        <p class="form-reassurance">No commitment. No spam. Just intelligence.</p>
+                                </form>
+                        </div>
+                        <div id="demoSuccessView" class="success-view-inline" style="display: none;">
+                                <div class="success-icon">✓</div>
+                                <h2>Success!</h2>
+                                <p>Thank you! Our team will contact you shortly.</p>
+                        </div>
                 </div>
         </div>
 
