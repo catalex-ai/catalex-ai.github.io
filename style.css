@@ -322,7 +322,7 @@ body {
 
 /* Problem Section */
 .problem-section {
-  padding: 8rem 0;
+  padding: 2rem 0;
   background: var(--slate);
 }
 
@@ -752,7 +752,7 @@ body {
 
 /* CTA Bottom */
 .cta-bottom {
-  padding: 8rem 0;
+  padding: 0 0 8rem 0;
   text-align: center;
   background: var(--bg);
 }
@@ -774,9 +774,9 @@ body {
   opacity: 0.7;
 }
 
-/* Survey Page Specific Styles (Restored & Refined) */
+/* Get Started Page Specific Styles (Restored & Refined) */
 
-#survey {
+#get-started {
   background-color: var(--slate);
   min-height: 100vh;
 }

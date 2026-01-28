@@ -2,15 +2,15 @@
 function checkRoute() {
     const hash = window.location.hash;
     const homepage = document.getElementById('homepage');
-    const survey = document.getElementById('survey');
+    const getStarted = document.getElementById('get-started');
 
-    if (hash === '#/forms/survey' || hash === '#/forms/survey/') {
+    if (hash === '#/forms/get-started' || hash === '#/forms/get-started/') {
         homepage.classList.remove('active');
-        survey.classList.add('active');
-        currentStep = 0; // Reset survey if needed
+        getStarted.classList.add('active');
+        currentStep = 0; // Reset get-started if needed
         updateProgress();
     } else {
-        survey.classList.remove('active');
+        getStarted.classList.remove('active');
         homepage.classList.add('active');
     }
 }
@@ -77,7 +77,7 @@ document.getElementById('demoForm')?.addEventListener('submit', async (e) => {
     }
 });
 
-// Questionnaire Logic (mostly unchanged but ensures it only runs when survey is active)
+// Questionnaire Logic (mostly unchanged but ensures it only runs when get-started is active)
 const FORM_URL = 'https://script.google.com/macros/s/AKfycbzUoxb49FlTE2E9v85J_2rEPeCMYnDQig-9V-tS-79d4n1PK0UXWSSNiiU1Eua2Vjc1/exec';
 
 let currentStep = 0;
