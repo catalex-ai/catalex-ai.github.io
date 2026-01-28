@@ -18,7 +18,7 @@
         <main id="homepage" class="page-section active">
                 <nav class="navbar">
                         <div class="nav-container">
-                                <div class="logo">CatalEx</div>
+                                <div class="logo"><img class="logo-img" src="logo.png" alt="CatalEx"></div>
                                 <div class="nav-links">
                                         <a href="#features">Product</a>
                                         <a href="#how-it-works">How it works</a>
@@ -256,9 +256,17 @@
                                         </div>
                                 </div>
 
-                                <!-- Q1: Primary Role -->
+                                <!-- Q1: Email Address (NEW) -->
                                 <div class="question-container" data-step="1">
-                                        <div class="question-number">01 &rarr; Role</div>
+                                        <div class="question-number">01 &rarr; Contact</div>
+                                        <h2 class="question-text">What is your email address?</h2>
+                                        <input type="email" name="email" class="input-field"
+                                                placeholder="name@company.com" required autocomplete="email">
+                                </div>
+
+                                <!-- Q2: Primary Role (Was Q1) -->
+                                <div class="question-container" data-step="2">
+                                        <div class="question-number">02 &rarr; Role</div>
                                         <h2 class="question-text">What is your primary role?</h2>
                                         <div class="choices-grid">
                                                 <label class="choice-item"><span class="choice-key">A</span><input
@@ -286,9 +294,9 @@
                                         </div>
                                 </div>
 
-                                <!-- Q2: Company Stage -->
-                                <div class="question-container" data-step="2">
-                                        <div class="question-number">02 &rarr; Context</div>
+                                <!-- Q3: Company Stage (Was Q2) -->
+                                <div class="question-container" data-step="3">
+                                        <div class="question-number">03 &rarr; Context</div>
                                         <h2 class="question-text">What stage is your company at?</h2>
                                         <div class="choices-grid">
                                                 <label class="choice-item"><span class="choice-key">A</span><input
@@ -311,9 +319,9 @@
                                         </div>
                                 </div>
 
-                                <!-- Q3: Improvements Wanted (Multi-select) -->
-                                <div class="question-container" data-step="3">
-                                        <div class="question-number">03 &rarr; Needs</div>
+                                <!-- Q4: Improvements Wanted (Was Q3) -->
+                                <div class="question-container" data-step="4">
+                                        <div class="question-number">04 &rarr; Needs</div>
                                         <h2 class="question-text">What would improve your work week?</h2>
                                         <div class="choices-grid compact-grid">
                                                 <label class="choice-item"><input type="checkbox" name="improvements"
@@ -374,44 +382,7 @@
                                         </div>
                                 </div>
 
-                                <!-- Q4: Top Priority (Single-select) -->
-                                <div class="question-container" data-step="4">
-                                        <div class="question-number">04 &rarr; Priority</div>
-                                        <h2 class="question-text">If you could solve ONE of these first?</h2>
-                                        <div class="choices-grid compact-grid">
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Meeting Summaries" required><span>Meeting
-                                                                summaries</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Daily Brief"><span>Daily
-                                                                brief</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Task Converter"><span>Task
-                                                                converter</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Project Updates"><span>Project
-                                                                updates</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Decision History"><span>Decision
-                                                                tracker</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Stakeholder Updates"><span>Stakeholder
-                                                                updates</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Catchup"><span>Catchup
-                                                                coach</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Meeting Prep"><span>Meeting prep</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Knowledge Base"><span>Knowledge
-                                                                base</span></label>
-                                                <label class="choice-item"><input type="radio" name="top_priority"
-                                                                value="Work Automation"><span>Work
-                                                                automation</span></label>
-                                        </div>
-                                </div>
-
-                                <!-- Q5: Pain Level -->
+                                <!-- Q5: Pain Level (Was Q5) -->
                                 <div class="question-container" data-step="5">
                                         <div class="question-number">05 &rarr; friction</div>
                                         <h2 class="question-text">How painful is this problem for you today?</h2>
@@ -439,7 +410,7 @@
                                         </div>
                                 </div>
 
-                                <!-- Q6: Current Solution -->
+                                <!-- Q6: Current Solution (Was Q6) -->
                                 <div class="question-container" data-step="6">
                                         <div class="question-number">06 &rarr; Workarounds</div>
                                         <h2 class="question-text">How are you currently dealing with this?</h2>
@@ -448,16 +419,16 @@
                                                 maxlength="500"></textarea>
                                 </div>
 
-                                <!-- Q7: Hardest Part -->
+                                <!-- Q7: Hardest Part (Was Q7) -->
                                 <div class="question-container" data-step="7">
                                         <div class="question-number">07 &rarr; frustrations</div>
-                                        <h2 class="question-text">What’s the hardest part about this today?</h2>
+                                        <h2 class="question-text">What’s the hardest part about the problems today?</h2>
                                         <textarea name="hardest_part" class="input-field"
                                                 placeholder="Type your answer here..." required
                                                 maxlength="500"></textarea>
                                 </div>
 
-                                <!-- Q8: Value of Solving -->
+                                <!-- Q8: Value of Solving (Was Q8) -->
                                 <div class="question-container" data-step="8">
                                         <div class="question-number">08 &rarr; impact</div>
                                         <h2 class="question-text">If this were solved well, how valuable would it be?
@@ -502,6 +473,10 @@
                                         Question <span id="currentStepText">1</span> of 8
                                 </div>
                                 <div class="footer-controls">
+                                        <button type="button" class="btn-secondary" id="prevBtn" onclick="prevStep()"
+                                                style="display: none;">
+                                                &larr; Back
+                                        </button>
                                         <button type="button" class="btn-primary" id="nextBtn">
                                                 OK <span class="keyboard-hint">Enter ↵</span>
                                         </button>

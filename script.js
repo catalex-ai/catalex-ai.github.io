@@ -89,6 +89,8 @@ const errorMsg = document.getElementById('errorMsg');
 const currentStepText = document.getElementById('currentStepText');
 const navFooter = document.getElementById('navFooter');
 
+const prevBtn = document.getElementById('prevBtn');
+
 function updateProgress() {
     if (!currentStepText) return;
     currentStepText.textContent = currentStep;
@@ -98,6 +100,20 @@ function updateProgress() {
     } else {
         navFooter.style.display = 'flex';
         setTimeout(() => navFooter.style.opacity = '1', 50);
+    }
+
+    // Update Back button visibility
+    if (prevBtn) {
+        prevBtn.style.display = currentStep > 0 ? 'inline-block' : 'none'; // Use inline-block or block as per CSS, simple override
+        // Actually CSS for .btn-secondary might expect specific display. Let's assume block or remove style.display='none'
+        // But original code set it to display:none in HTML.
+        // Let's toggle it.
+        prevBtn.style.display = currentStep > 1 ? 'block' : 'none'; // Only show back button from Step 2 onwards? 
+        // Or Step 1? logic: Step 1 (Email) -> Back goes to Step 0 (Start). 
+        // If we want users to be able to go back to "Start", then Step 1 is fine.
+        // If I look at the requested manual verification plan: "Go to Step 1 (Email). Click Back -> Should go to Start Screen (Step 0)."
+        // So it should be visible on Step 1.
+        prevBtn.style.display = currentStep > 0 ? 'block' : 'none';
     }
 }
 
@@ -143,6 +159,30 @@ window.nextStep = async function () {
     }, 400);
 }
 
+window.prevStep = function () {
+    if (isTransitioning || currentStep <= 0) return;
+
+    const currentSection = document.querySelector(`.question-container[data-step="${currentStep}"]`);
+    const prevSection = document.querySelector(`.question-container[data-step="${currentStep - 1}"]`);
+
+    if (!prevSection) return;
+
+    isTransitioning = true;
+    currentSection.classList.remove('active');
+
+    setTimeout(() => {
+        currentSection.style.display = 'none';
+        prevSection.style.display = 'block';
+        setTimeout(() => {
+            prevSection.classList.add('active');
+            currentStep--;
+            updateProgress();
+            // Optional: Remove focus when going back
+            isTransitioning = false;
+        }, 50);
+    }, 400);
+}
+
 function validateStep(step) {
     const section = document.querySelector(`.question-container[data-step="${step}"]`);
     if (!section) return true;
@@ -154,6 +194,11 @@ function validateStep(step) {
         if (input.type === 'radio') {
             const checked = section.querySelector(`input[name="${input.name}"]:checked`);
             if (!checked) return false;
+        } else if (input.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!input.value.trim() || !emailRegex.test(input.value)) {
+                return false;
+            }
         } else if (!input.value.trim()) {
             return false;
         }
@@ -225,6 +270,11 @@ async function submitForm() {
 nextBtn?.addEventListener('click', (e) => {
     e.preventDefault();
     nextStep();
+});
+
+prevBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    prevStep();
 });
 
 document.addEventListener('keydown', (e) => {
