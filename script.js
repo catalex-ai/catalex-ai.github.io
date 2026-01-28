@@ -33,7 +33,7 @@ window.closeDemoModal = function () {
     setTimeout(() => modal.style.display = 'none', 400);
 };
 
-const DEMO_FORM_URL = 'https://script.google.com/macros/s/AKfycbzUoxb49FlTE2E9v85J_2rEPeCMYnDQig-9V-tS-79d4n1PK0UXWSSNiiU1Eua2Vjc1/exec';
+const DEMO_FORM_URL = 'https://script.google.com/macros/s/AKfycbx09AfKPG6Lpp3hvmciiALLOHIvByppAUUWKjeKxrCTPZAZ3itorFVvam2M-Fh6UidE/exec';
 
 // Demo Form Submission
 document.getElementById('demoForm')?.addEventListener('submit', async (e) => {
@@ -78,7 +78,7 @@ document.getElementById('demoForm')?.addEventListener('submit', async (e) => {
 });
 
 // Questionnaire Logic (mostly unchanged but ensures it only runs when get-started is active)
-const FORM_URL = 'https://script.google.com/macros/s/AKfycbzUoxb49FlTE2E9v85J_2rEPeCMYnDQig-9V-tS-79d4n1PK0UXWSSNiiU1Eua2Vjc1/exec';
+const FORM_URL = 'https://script.google.com/macros/s/AKfycbx09AfKPG6Lpp3hvmciiALLOHIvByppAUUWKjeKxrCTPZAZ3itorFVvam2M-Fh6UidE/exec';
 
 let currentStep = 0;
 const totalSteps = 8;

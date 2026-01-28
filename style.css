@@ -926,6 +926,19 @@ body {
   display: none;
 }
 
+.scale-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.scale-labels span:last-child {
+  text-align: right;
+}
+
 .nav-footer {
   position: fixed;
   bottom: 0;
@@ -945,6 +958,13 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text-muted);
+}
+
+.footer-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
 }
 
 .keyboard-hint {

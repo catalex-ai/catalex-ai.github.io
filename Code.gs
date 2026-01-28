@@ -21,7 +21,7 @@ function doPost(e) {
     if (data.type === 'demo_request') {
       sheet.appendRow(["Timestamp", "Name", "Email", "Role"]);
     } else {
-      sheet.appendRow(["Timestamp", "Role", "Company Stage", "Improvements", "Top Priority", "Pain Scale", "Current Solution", "Hardest Part", "Value Scale"]);
+      sheet.appendRow(["Timestamp", "Email", "Role", "Company Stage", "Improvements", "Pain Scale", "Current Solution", "Hardest Part", "Value Scale"]);
     }
   }
   
@@ -36,10 +36,10 @@ function doPost(e) {
   } else {
     sheet.appendRow([
       data.timestamp || new Date(),
+      data.email,
       data.primary_role,
       data.company_stage,
       data.improvements,
-      data.top_priority,
       data.pain_scale,
       data.current_solution,
       data.hardest_part,
