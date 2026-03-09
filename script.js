@@ -38,7 +38,7 @@
         el.style.borderRight = '2px solid #2D4A53';
         el.style.animation = 'blink-caret 0.75s step-end infinite';
 
-        let delay = isDeleting ? 40 : 80;
+        let delay = isDeleting ? 20 : 50;
 
         if (!isDeleting && charIndex === current.length) {
             delay = 2000;
