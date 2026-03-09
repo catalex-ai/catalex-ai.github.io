@@ -1,3 +1,61 @@
+// Scroll fade-in animation
+(function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+})();
+
+// Typewriter Effect - cycles through phrases
+(function() {
+    const phrases = ['Ask your docs.', 'Deploy agents.', 'Automate work.'];
+    const el = document.getElementById('typewriter');
+    if (!el) return;
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeout;
+
+    function type() {
+        const current = phrases[phraseIndex];
+        if (isDeleting) {
+            el.textContent = current.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            el.textContent = current.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        el.style.borderRight = '2px solid #2D4A53';
+        el.style.animation = 'blink-caret 0.75s step-end infinite';
+
+        let delay = isDeleting ? 40 : 80;
+
+        if (!isDeleting && charIndex === current.length) {
+            delay = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            delay = 400;
+        }
+
+        timeout = setTimeout(type, delay);
+    }
+
+    // Start after a brief delay
+    setTimeout(type, 500);
+})();
+
 // Routing Logic
 function checkRoute() {
     const hash = window.location.hash;

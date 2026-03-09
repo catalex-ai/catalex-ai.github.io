@@ -2,539 +2,580 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CatalEx | AI powered workplace intelligence</title>
-        <meta name="description"
-                content="CatalEx helps teams find information, understand context, and take action across tools using AI.">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatalEx | AI-Powered Workplace Intelligence</title>
+    <meta name="description"
+        content="CatalEx connects your team's knowledge, tools, and workflows into one intelligent system. Find answers, extract tasks, automate workflows, and deploy custom agents.">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-        <!-- Homepage Section -->
-        <main id="homepage" class="page-section active">
-                <nav class="navbar">
-                        <div class="nav-container">
-                                <div class="logo"><img class="logo-img" src="logo.png" alt="CatalEx"></div>
-                                <div class="nav-links">
-                                        <a href="#features">Product</a>
-                                        <a href="#how-it-works">How it works</a>
-                                        <a href="#use-cases">Use Cases</a>
-                                        <button class="btn-primary btn-small" onclick="openDemoModal()">Book a
-                                                Demo</button>
-                                </div>
-                        </div>
-                </nav>
-
-                <section class="hero-section">
-                        <div class="content-container">
-                                <div class="hero-content">
-                                        <div class="badge">AI-powered Catalyst For Work Execution</div>
-                                        <h1>Find answers. Take action.<br><span class="typewriter">Scale
-                                                        intelligence.</span></h1>
-                                        <p class="hero-subheading">Connect people, tools, knowledge, and decisions into
-                                                a permission-aware intelligent system, supercharging your team with
-                                                proactive action!</p>
-                                        <div class="hero-actions">
-                                                <button class="btn-primary btn-large" onclick="openDemoModal()">Book a
-                                                        Demo</button>
-                                                <button class="btn-secondary btn-large"
-                                                        onclick="window.location.hash = '#/forms/get-started'">Get
-                                                        Started</button>
-                                        </div>
-                                </div>
-                                <!-- Image Removed -->
-                        </div>
-                </section>
-
-                <section id="problem" class="problem-section">
-                        <div class="content-container">
-                                <h2>The cost of scattered knowledge.</h2>
-                                <div class="problem-grid">
-                                        <div class="problem-card">
-                                                <div class="problem-icon">🔍</div>
-                                                <h3>Hidden Context</h3>
-                                                <p>Knowledge is scattered across docs, tickets, and chats, making it
-                                                        impossible to find what you need.</p>
-                                        </div>
-                                        <div class="problem-card">
-                                                <div class="problem-icon">⏳</div>
-                                                <h3>Execution Lag</h3>
-                                                <p>Teams waste hours searching for answers instead of executing on their
-                                                        goals.</p>
-                                        </div>
-                                        <div class="problem-card">
-                                                <div class="problem-icon">⚠️</div>
-                                                <h3>Trust Deficit</h3>
-                                                <p>When information is found, it's often outdated or unreliable, making
-                                                        action risky.</p>
-                                        </div>
-                                        <div class="problem-card">
-                                                <div class="problem-icon">📉</div>
-                                                <h3>Lost Opportunity</h3>
-                                                <p>Teams are generally reactive and not proactive, often resulting in
-                                                        loss of valuable opportunities.</p>
-                                        </div>
-                                </div>
-                        </div>
-                </section>
-
-                <section id="features" class="features-section">
-                        <div class="content-container">
-                                <div class="section-header">
-                                        <h2>Operational intelligence for every team.</h2>
-                                        <p>CatalEx doesn't just search; it understands and acts.</p>
-                                </div>
-                                <div class="features-grid">
-                                        <div class="feature-item">
-                                                <div class="feature-marker"></div>
-                                                <div class="feature-content">
-                                                        <h3>Unified Knowledge Access</h3>
-                                                        <p>Connect and index data across all your tools. One
-                                                                source of truth for Slack, Meetings, Code, Email
-                                                                or Documents.</p>
-                                                </div>
-                                        </div>
-                                        <div class="feature-item">
-                                                <div class="feature-marker"></div>
-                                                <div class="feature-content">
-                                                        <h3>Context-Aware AI Answers</h3>
-                                                        <p>Get precise answers based on your company's specific data,
-                                                                not general LLM knowledge.</p>
-                                                </div>
-                                        </div>
-                                        <div class="feature-item">
-                                                <div class="feature-marker"></div>
-                                                <div class="feature-content">
-                                                        <h3>Actionable Insights</h3>
-                                                        <p>Go beyond summaries. Trigger workflows and take action
-                                                                directly from your AI interface.</p>
-                                                </div>
-                                        </div>
-                                        <div class="feature-item">
-                                                <div class="feature-marker"></div>
-                                                <div class="feature-content">
-                                                        <h3>Custom Workflows</h3>
-                                                        <p>Build team-specific automations that adapt to how you
-                                                                actually work.</p>
-                                                </div>
-                                        </div>
-                                        <div class="feature-item">
-                                                <div class="feature-marker"></div>
-                                                <div class="feature-content">
-                                                        <h3>Team Health Dashboard</h3>
-                                                        <p>Track team productivity, work load distribution, project
-                                                                blockers and early warnings.</p>
-                                                </div>
-                                        </div>
-                                        <div class="feature-item">
-                                                <div class="feature-marker"></div>
-                                                <div class="feature-content">
-                                                        <h3>Enterprise Grade Security</h3>
-                                                        <p>Secure, permission-aware results. We respect your data silos
-                                                                and access controls.</p>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </section>
-
-                <section id="how-it-works" class="how-it-works">
-                        <div class="content-container">
-                                <h2>Simple setup. Immediate value.</h2>
-                                <div class="steps-grid">
-                                        <div class="step">
-                                                <div class="step-number">01</div>
-                                                <h4>Listen & Capture</h4>
-                                                <p>Team discusses important updates, blockers and next steps.</p>
-                                        </div>
-                                        <div class="step">
-                                                <div class="step-number">02</div>
-                                                <h4>Analyse & Extract</h4>
-                                                <p>Advanced NLP identifies action items, deadlines, assignees and
-                                                        priorities based on company context.</p>
-                                        </div>
-                                        <div class="step">
-                                                <div class="step-number">03</div>
-                                                <h4>Follow-up & Execute</h4>
-                                                <p>Sends reminders to team members and autonomously executes tasks,
-                                                        pending your review for approval.</p>
-                                        </div>
-                                        <div class="step">
-                                                <div class="step-number">04</div>
-                                                <h4>Productive Teams</h4>
-                                                <p>70% efficiency gains, 30% faster time to market, 50% fewer meetings.
-                                                </p>
-                                        </div>
-                                </div>
-                        </div>
-                </section>
-
-                <section id="use-cases" class="use-cases">
-                        <div class="content-container">
-                                <h2>Tailored for every role.</h2>
-                                <div class="roles-grid">
-                                        <div class="role-card">
-                                                <h3>Engineering</h3>
-                                                <p class="role-pain">Pain: Navigating complex docs and legacy code
-                                                        context.</p>
-                                                <p class="role-solution">CatalEx provides instant architecture answers
-                                                        and
-                                                        automates PR summaries.</p>
-                                                <div class="role-outcome">Outcome: 70% efficiency gain.</div>
-                                        </div>
-                                        <div class="role-card">
-                                                <h3>Product</h3>
-                                                <p class="role-pain">Pain: Missing customer feedback from multiple
-                                                        channels.
-                                                </p>
-                                                <p class="role-solution">CatalEx synthesizes user feedback into
-                                                        actionable
-                                                        feature insights.</p>
-                                                <div class="role-outcome">Outcome: Better roadmap alignment.</div>
-                                        </div>
-                                        <div class="role-card">
-                                                <h3>Sales</h3>
-                                                <p class="role-pain">Pain: Manual follow-ups, missed revenue signals.
-                                                </p>
-                                                <p class="role-solution">CatalEx unifies CRM, emails, and calls to
-                                                        surface deal risks and prompt timely actions.</p>
-                                                <div class="role-outcome">Outcome: Faster closes and higher win rates.
-                                                </div>
-                                        </div>
-                                        <div class="role-card">
-                                                <h3>Leadership</h3>
-                                                <p class="role-pain">Pain: Project risks and team overload stay
-                                                        invisible.</p>
-                                                <p class="role-solution">CatalEx shows team capacity, stuck work items,
-                                                        unresolved blockers, and velocity trends across projects.</p>
-                                                <div class="role-outcome">Outcome: Spot problems before they become
-                                                        crises.</div>
-                                        </div>
-                                </div>
-                        </div>
-                </section>
-
-                <section class="cta-bottom">
-                        <div class="content-container">
-                                <h2>Ready to accelerate your team?</h2>
-                                <p>Join the future of productivity today. No hype, just execution.</p>
-                                <button class="btn-primary btn-large" onclick="openDemoModal()">Book a Demo</button>
-                                <p class="cta-muted">No commitment required. 15-minute intro call.</p>
-                        </div>
-                </section>
-
-                <!-- Footer Removed -->
-        </main>
-
-        <!-- Get Started Section -->
-        <main id="get-started" class="page-section">
-                <a href="#" class="home-icon-link" title="Return to Home">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
+    <!-- Homepage Section -->
+    <main id="homepage" class="page-section active">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <img class="logo-img" src="logo.svg" alt="CatalEx">
+                    <span class="logo-text">CatalEx</span>
                 </a>
-                <form id="questionnaireForm">
-                        <div class="form-wrapper">
-                                <!-- Step 0: Welcome Screen -->
-                                <div class="question-container active" data-step="0">
-                                        <div class="question-number">CatalEx &rarr;</div>
-                                        <h2 class="question-text">Help us shape the future of focus.</h2>
-                                        <p
-                                                style="color: var(--text-muted); font-size: 1.25rem; margin-top: 0.5rem; margin-bottom: 3rem;">
-                                                It takes less than 2 minutes.
-                                        </p>
-                                        <div class="footer-controls" style="justify-content: flex-start;">
-                                                <button type="button" class="btn-primary" onclick="nextStep()">
-                                                        Start Questionnaire
-                                                </button>
-                                        </div>
-                                </div>
-
-                                <!-- Q1: Email Address (NEW) -->
-                                <div class="question-container" data-step="1">
-                                        <div class="question-number">01 &rarr; Contact</div>
-                                        <h2 class="question-text">What is your email address?</h2>
-                                        <input type="email" name="email" class="input-field"
-                                                placeholder="name@company.com" required autocomplete="email">
-                                </div>
-
-                                <!-- Q2: Primary Role (Was Q1) -->
-                                <div class="question-container" data-step="2">
-                                        <div class="question-number">02 &rarr; Role</div>
-                                        <h2 class="question-text">What is your primary role?</h2>
-                                        <div class="choices-grid">
-                                                <label class="choice-item"><span class="choice-key">A</span><input
-                                                                type="radio" name="primary_role"
-                                                                value="Engineering leader" required><span>Engineering
-                                                                leader (EM / Director /
-                                                                VP)</span></label>
-                                                <label class="choice-item"><span class="choice-key">B</span><input
-                                                                type="radio" name="primary_role"
-                                                                value="Individual contributor"><span>Individual
-                                                                contributor
-                                                                (Engineer / PM / Designer /
-                                                                Data)</span></label>
-                                                <label class="choice-item"><span class="choice-key">C</span><input
-                                                                type="radio" name="primary_role"
-                                                                value="Founder / Executive"><span>Founder /
-                                                                Executive</span></label>
-                                                <label class="choice-item"><span class="choice-key">D</span><input
-                                                                type="radio" name="primary_role"
-                                                                value="Operations / Business"><span>Operations /
-                                                                Business</span></label>
-                                                <label class="choice-item"><span class="choice-key">E</span><input
-                                                                type="radio" name="primary_role"
-                                                                value="Other"><span>Other</span></label>
-                                        </div>
-                                </div>
-
-                                <!-- Q3: Company Stage (Was Q2) -->
-                                <div class="question-container" data-step="3">
-                                        <div class="question-number">03 &rarr; Context</div>
-                                        <h2 class="question-text">What stage is your company at?</h2>
-                                        <div class="choices-grid">
-                                                <label class="choice-item"><span class="choice-key">A</span><input
-                                                                type="radio" name="company_stage" value="< 50 people"
-                                                                required><span>&lt; 50
-                                                                people</span></label>
-                                                <label class="choice-item"><span class="choice-key">B</span><input
-                                                                type="radio" name="company_stage"
-                                                                value="50–200"><span>50–200</span></label>
-                                                <label class="choice-item"><span class="choice-key">C</span><input
-                                                                type="radio" name="company_stage"
-                                                                value="200–1,000"><span>200–1,000</span></label>
-                                                <label class="choice-item"><span class="choice-key">D</span><input
-                                                                type="radio" name="company_stage"
-                                                                value="1,000+"><span>1,000+</span></label>
-                                                <label class="choice-item"><span class="choice-key">E</span><input
-                                                                type="radio" name="company_stage"
-                                                                value="Prefer not to say"><span>Prefer not
-                                                                to say</span></label>
-                                        </div>
-                                </div>
-
-                                <!-- Q4: Improvements Wanted (Was Q3) -->
-                                <div class="question-container" data-step="4">
-                                        <div class="question-number">04 &rarr; Needs</div>
-                                        <h2 class="question-text">What would improve your work week?</h2>
-                                        <div class="choices-grid compact-grid">
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Meeting Summaries"><span>Auto-summarise
-                                                                meetings</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Daily Brief"><span>Daily focus
-                                                                brief</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Task Converter"><span>Inbox &rarr;
-                                                                tasks</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Project Updates"><span>One-click
-                                                                updates</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Decision History"><span>Decision
-                                                                tracker</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Stakeholder Updates"><span>Stakeholder
-                                                                updates</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Catchup"><span>“Catch
-                                                                me up”</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Meeting Prep"><span>Meeting prep</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Meeting Guardrails"><span>Meeting
-                                                                guardrails</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Knowledge Base"><span>Knowledge
-                                                                base</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Note Taker"><span>AI
-                                                                note-taker</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Async Generator"><span>Async
-                                                                generator</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Burnout Detection"><span>Burnout
-                                                                detection</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Automation"><span>Work
-                                                                automation</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Intent Search"><span>Intent search</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Post Mortem"><span>Retro generator</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Goal Tracking"><span>Goal tracking</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Onboarding"><span>Onboarding
-                                                                assistant</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Exec Brief"><span>Executive brief</span></label>
-                                                <label class="choice-item"><input type="checkbox" name="improvements"
-                                                                value="Forgot Assistant"><span>“What did I
-                                                                forget?”</span></label>
-                                        </div>
-                                </div>
-
-                                <!-- Q5: Pain Level (Was Q5) -->
-                                <div class="question-container" data-step="5">
-                                        <div class="question-number">05 &rarr; friction</div>
-                                        <h2 class="question-text">How painful is this problem for you today?</h2>
-                                        <div class="scale-grid">
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="1" required>1</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="2">2</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="3">3</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="4">4</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="5">5</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="6">6</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="7">7</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="8">8</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="9">9</label>
-                                                <label class="scale-item"><input type="radio" name="pain_scale"
-                                                                value="10">10</label>
-                                        </div>
-                                        <div class="scale-labels">
-                                                <span>Not at all</span>
-                                                <span>These are the biggest work hurdles</span>
-                                        </div>
-                                </div>
-
-                                <!-- Q6: Current Solution (Was Q6) -->
-                                <div class="question-container" data-step="6">
-                                        <div class="question-number">06 &rarr; Workarounds</div>
-                                        <h2 class="question-text">How are you currently dealing with this?</h2>
-                                        <textarea name="current_solution" class="input-field"
-                                                placeholder="Type your answer here..." required
-                                                maxlength="500"></textarea>
-                                </div>
-
-                                <!-- Q7: Hardest Part (Was Q7) -->
-                                <div class="question-container" data-step="7">
-                                        <div class="question-number">07 &rarr; frustrations</div>
-                                        <h2 class="question-text">What’s the hardest part about the problems today?</h2>
-                                        <textarea name="hardest_part" class="input-field"
-                                                placeholder="Type your answer here..." required
-                                                maxlength="500"></textarea>
-                                </div>
-
-                                <!-- Q8: Value of Solving (Was Q8) -->
-                                <div class="question-container" data-step="8">
-                                        <div class="question-number">08 &rarr; impact</div>
-                                        <h2 class="question-text">If this were solved well, how valuable would it be?
-                                        </h2>
-                                        <div class="scale-grid">
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="1" required>1</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="2">2</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="3">3</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="4">4</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="5">5</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="6">6</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="7">7</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="8">8</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="9">9</label>
-                                                <label class="scale-item"><input type="radio" name="value_scale"
-                                                                value="10">10</label>
-                                        </div>
-                                        <div class="scale-labels">
-                                                <span>Not valuable at all</span>
-                                                <span>When can you build this for me?</span>
-                                        </div>
-                                </div>
-
-                                <!-- Success -->
-                                <div class="success-view" id="successView">
-                                        <h2>All set.</h2>
-                                        <p>Thank you for helping us build <b>CatalEx</b>.</p>
-                                        <button type="button" class="btn-secondary" style="margin-top: 2rem;"
-                                                onclick="window.location.hash = ''">Return to Home Page</button>
-                                </div>
-
-                                <div class="error-message" id="errorMsg">Please answer to continue &rarr;</div>
-                        </div>
-
-                        <footer class="nav-footer" id="navFooter">
-                                <div class="progress-info">
-                                        Question <span id="currentStepText">1</span> of 8
-                                </div>
-                                <div class="footer-controls">
-                                        <button type="button" class="btn-secondary" id="prevBtn" onclick="prevStep()"
-                                                style="display: none;">
-                                                &larr; Back
-                                        </button>
-                                        <button type="button" class="btn-primary" id="nextBtn">
-                                                OK <span class="keyboard-hint">Enter ↵</span>
-                                        </button>
-                                </div>
-                        </footer>
-                </form>
-        </main>
-
-        <!-- Demo Modal -->
-        <div id="demoModal" class="modal">
-                <div class="modal-content">
-                        <span class="close-modal" onclick="closeDemoModal()">&times;</span>
-                        <div id="demoInitialView">
-                                <h2>Book a Demo</h2>
-                                <p>Experience how CatalEx can accelerate your team's workflow.</p>
-                                <form id="demoForm">
-                                        <div class="form-group">
-                                                <label for="demoName">Full Name</label>
-                                                <input type="text" id="demoName" placeholder="e.g. Peter Parker"
-                                                        required>
-                                        </div>
-                                        <div class="form-group">
-                                                <label for="demoEmail">Work Email</label>
-                                                <input type="email" id="demoEmail" placeholder="peter@spider.com"
-                                                        required>
-                                        </div>
-                                        <div class="form-group">
-                                                <label for="demoRole">Role</label>
-                                                <select id="demoRole" required>
-                                                        <option value="" disabled selected>Select your role</option>
-                                                        <option value="engineering">Engineering</option>
-                                                        <option value="product">Product</option>
-                                                        <option value="ops">Operations</option>
-                                                        <option value="leadership">Leadership</option>
-                                                        <option value="other">Other</option>
-                                                </select>
-                                        </div>
-                                        <button type="submit" class="btn-primary">Request Demo</button>
-                                        <p class="form-reassurance">No commitment. No spam. Just intelligence.</p>
-                                </form>
-                        </div>
-                        <div id="demoSuccessView" class="success-view-inline" style="display: none;">
-                                <div class="success-icon">✓</div>
-                                <h2>Success!</h2>
-                                <p>Thank you! Our team will contact you shortly.</p>
-                        </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How it works</a>
+                    <a href="#integrations">Integrations</a>
+                    <a href="https://docs.catalex.co" target="_blank" rel="noopener">Docs</a>
+                    <a href="https://console.catalex.co" class="btn-secondary btn-small" target="_blank" rel="noopener">Try CatalEx</a>
                 </div>
-        </div>
+            </div>
+        </nav>
 
-        <script src="script.js"></script>
+        <section class="hero-section">
+            <div class="content-container">
+                <div class="hero-content">
+                    <div class="badge">AI-Powered Workplace Intelligence</div>
+                    <h1>Connect knowledge. Take action.<br><span class="typewriter" id="typewriter"></span></h1>
+                    <p class="hero-subheading">CatalEx connects your team's documents, conversations, and tools
+                        into one intelligent system — so you find answers, extract tasks, and automate workflows
+                        without switching context.</p>
+                    <div class="hero-actions">
+                        <button class="btn-primary btn-large" onclick="openDemoModal()">Book a Demo</button>
+                        <button class="btn-secondary btn-large"
+                            onclick="window.location.hash = '#/forms/get-started'">Get Started</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="use-cases" class="use-cases fade-in">
+            <div class="content-container">
+                <h2>Not just intelligent. Autonomous.</h2>
+                <div class="use-cases-grid">
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Your team brainstorms. CatalEx executes.</h3>
+                        <p>While your team focuses on strategy and creative decisions, CatalEx follows every task end to end — extracting action items, assigning owners, and driving them to completion autonomously.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg>
+                        </div>
+                        <h3>From meeting to done — without the handoff.</h3>
+                        <p>CatalEx doesn't just find tasks and wait. It picks them up, coordinates across tools, sends reminders, and closes the loop. People make decisions; CatalEx makes them happen.</p>
+                    </div>
+                    <div class="use-case-card">
+                        <div class="use-case-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3>Extend with agents that get work done.</h3>
+                        <p>Deploy MCP agents that don't just integrate — they act. Create Jira tickets, update docs, draft follow-ups, and run recurring workflows without human intervention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="integrations" class="integrations-section fade-in">
+            <div class="content-container">
+                <div class="section-header">
+                    <h2>Works with the tools you already use.</h2>
+                </div>
+                <div class="integrations-grid">
+                    <div class="integration-item">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#4285F4" d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+                        <span>Google Drive</span>
+                    </div>
+                    <div class="integration-item">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/><path fill="#36C5F0" d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"/><path fill="#2EB67D" d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"/><path fill="#ECB22E" d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg>
+                        <span>Slack</span>
+                    </div>
+                    <div class="integration-item">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#181717" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="integration-item">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#0052CC" d="M4.913 13.571H1.74L7.826 2.16h3.722l-2.049 4.142h5.15L4.913 20.16V13.57zm10.8-3.399h3.173L12.8 21.783H9.079l2.049-4.142h-5.15L15.713 6.23v7.002-.06z"/></svg>
+                        <span>Jira</span>
+                    </div>
+                    <div class="integration-item">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000000" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.98-.7-2.055-.607L2.58 2.514c-.467.047-.56.28-.374.466l2.253 1.228zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.166V6.354c0-.606-.233-.933-.748-.886l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952l1.448.327s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.726l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.886.747-.933l3.222-.186zM1.6 1.054L15.98.154c1.682-.14 2.102.093 2.802.607l3.876 2.708c.513.373.653.467.653 1.167v15.924c0 1.12-.42 1.773-1.682 1.866l-15.45.888c-.935.047-1.402-.093-1.868-.7l-2.476-3.22c-.513-.653-.747-1.26-.747-1.866V2.361c0-.7.42-1.4 1.495-1.307z"/></svg>
+                        <span>Notion</span>
+                    </div>
+                    <div class="integration-item">
+                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#0052CC" d="M.87 18.257c-.248.382.053.867.514.867h5.767a.667.667 0 0 0 .59-.357L12 10.472l-2.998-5.36a.667.667 0 0 0-1.18 0L.87 18.257zM14.196 5.111a.667.667 0 0 0-1.18 0L8.26 14.263l3.74 4.86 4.728-8.651-2.533-5.36zM17.764 10.472l-2.998 5.36 3.74 4.86h5.767c.461 0 .762-.486.514-.867L17.764 5.111l-2.533 5.36h2.533z"/></svg>
+                        <span>Confluence</span>
+                    </div>
+                </div>
+                <p class="integrations-note">Plus custom MCP agents — build and deploy your own integrations.</p>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="how-it-works fade-in">
+            <div class="content-container">
+                <h2>Three steps to operational intelligence.</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">01</div>
+                        <h4>Connect</h4>
+                        <p>Link your Google Drive, Slack, and tools. CatalEx indexes everything into a knowledge graph.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">02</div>
+                        <h4>Ask &amp; Act</h4>
+                        <p>Query your data in natural language. CatalEx finds answers, extracts tasks, and suggests actions.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">03</div>
+                        <h4>Extend &amp; Automate</h4>
+                        <p>Add agents from the marketplace or build your own. Schedule recurring workflows that run on autopilot.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section fade-in">
+            <div class="content-container">
+                <div class="section-header">
+                    <h2>Everything your team needs to move faster.</h2>
+                    <p>Eight capabilities. One platform. Zero context-switching.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>Freeflow</h3>
+                        <p>Ask anything across your company's knowledge. Get precise, cited answers — not generic AI responses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Knowledge</h3>
+                        <p>Automatically sync and index Google Drive, Slack, and more into a searchable knowledge graph.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3>Agent Market</h3>
+                        <p>Connect Jira, GitHub, Slack, Notion, Confluence — or build and deploy your own custom MCP agents.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                            </svg>
+                        </div>
+                        <h3>Tasks</h3>
+                        <p>AI extracts action items from documents, assigns owners, and tracks them to completion — end to end.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Automation</h3>
+                        <p>Schedule recurring workflows that run hourly, daily, or weekly. Define triggers in natural language.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Execution Health</h3>
+                        <p>Monitor team velocity, spot blockers early, and track project risk with real-time dashboards.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3>Admin</h3>
+                        <p>Manage users, roles, and permissions from a single dashboard. Invite team members and control access levels.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3>Access Control</h3>
+                        <p>Every query respects your data permissions. Results are scoped to what each user is authorized to see — always.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-bottom fade-in">
+            <div class="content-container">
+                <h2>Start building with CatalEx.</h2>
+                <p>Connect your tools, deploy agents, and give your team an intelligence layer.</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large" onclick="openDemoModal()">Book a Demo</button>
+                    <a href="https://console.catalex.co" class="btn-secondary btn-large" target="_blank" rel="noopener">Try CatalEx</a>
+                </div>
+                <p class="cta-muted">No commitment required. 15-minute intro call.</p>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="content-container">
+                <div class="footer-inner">
+                    <div class="footer-brand">
+                        <img src="logo.svg" alt="CatalEx" class="footer-logo">
+                        <span class="footer-name">CatalEx</span>
+                    </div>
+                    <div class="footer-links-row">
+                        <a href="https://docs.catalex.co" target="_blank" rel="noopener">Documentation</a>
+                        <a href="https://console.catalex.co" target="_blank" rel="noopener">Console</a>
+                        <a href="#features">Features</a>
+                    </div>
+                    <div class="footer-copyright">
+                        &copy; 2026 CatalEx. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Get Started Section (preserved from original, just reclassed for new theme) -->
+    <main id="get-started" class="page-section">
+        <a href="#" class="home-icon-link" title="Return to Home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </a>
+        <form id="questionnaireForm">
+            <div class="form-wrapper">
+                <!-- Step 0: Welcome Screen -->
+                <div class="question-container active" data-step="0">
+                    <div class="question-number">CatalEx &rarr;</div>
+                    <h2 class="question-text">Help us shape the future of focus.</h2>
+                    <p style="color: var(--text-muted); font-size: 1.25rem; margin-top: 0.5rem; margin-bottom: 3rem;">
+                        It takes less than 2 minutes.
+                    </p>
+                    <div class="footer-controls" style="justify-content: flex-start;">
+                        <button type="button" class="btn-primary" onclick="nextStep()">
+                            Start Questionnaire
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Q1: Email Address -->
+                <div class="question-container" data-step="1">
+                    <div class="question-number">01 &rarr; Contact</div>
+                    <h2 class="question-text">What is your email address?</h2>
+                    <input type="email" name="email" class="input-field"
+                        placeholder="name@company.com" required autocomplete="email">
+                </div>
+
+                <!-- Q2: Primary Role -->
+                <div class="question-container" data-step="2">
+                    <div class="question-number">02 &rarr; Role</div>
+                    <h2 class="question-text">What is your primary role?</h2>
+                    <div class="choices-grid">
+                        <label class="choice-item"><span class="choice-key">A</span><input
+                                type="radio" name="primary_role"
+                                value="Engineering leader" required><span>Engineering
+                                leader (EM / Director /
+                                VP)</span></label>
+                        <label class="choice-item"><span class="choice-key">B</span><input
+                                type="radio" name="primary_role"
+                                value="Individual contributor"><span>Individual
+                                contributor
+                                (Engineer / PM / Designer /
+                                Data)</span></label>
+                        <label class="choice-item"><span class="choice-key">C</span><input
+                                type="radio" name="primary_role"
+                                value="Founder / Executive"><span>Founder /
+                                Executive</span></label>
+                        <label class="choice-item"><span class="choice-key">D</span><input
+                                type="radio" name="primary_role"
+                                value="Operations / Business"><span>Operations /
+                                Business</span></label>
+                        <label class="choice-item"><span class="choice-key">E</span><input
+                                type="radio" name="primary_role"
+                                value="Other"><span>Other</span></label>
+                    </div>
+                </div>
+
+                <!-- Q3: Company Stage -->
+                <div class="question-container" data-step="3">
+                    <div class="question-number">03 &rarr; Context</div>
+                    <h2 class="question-text">What stage is your company at?</h2>
+                    <div class="choices-grid">
+                        <label class="choice-item"><span class="choice-key">A</span><input
+                                type="radio" name="company_stage" value="< 50 people"
+                                required><span>&lt; 50
+                                people</span></label>
+                        <label class="choice-item"><span class="choice-key">B</span><input
+                                type="radio" name="company_stage"
+                                value="50-200"><span>50 &ndash; 200</span></label>
+                        <label class="choice-item"><span class="choice-key">C</span><input
+                                type="radio" name="company_stage"
+                                value="200-1,000"><span>200 &ndash; 1,000</span></label>
+                        <label class="choice-item"><span class="choice-key">D</span><input
+                                type="radio" name="company_stage"
+                                value="1,000+"><span>1,000+</span></label>
+                        <label class="choice-item"><span class="choice-key">E</span><input
+                                type="radio" name="company_stage"
+                                value="Prefer not to say"><span>Prefer not
+                                to say</span></label>
+                    </div>
+                </div>
+
+                <!-- Q4: Improvements Wanted -->
+                <div class="question-container" data-step="4">
+                    <div class="question-number">04 &rarr; Needs</div>
+                    <h2 class="question-text">What would improve your work week?</h2>
+                    <div class="choices-grid compact-grid">
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Prep me up for the day!"><span>Prep me up for the
+                                day!</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Find action items and PIC"><span>Find action
+                                items and PIC</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Project Updates"><span>Project
+                                Updates</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Decision History"><span>Decision
+                                History</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Prep me for a meeting"><span>Prep me for a
+                                meeting</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="What did I miss out today"><span>What did I miss
+                                out today</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Find the PIC"><span>Find the PIC</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Onboard a new joiner"><span>Onboard a new
+                                joiner</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Execute tasks by AI"><span>Execute tasks by
+                                AI</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Keep docs up to date"><span>Keep docs up to
+                                date</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Review code"><span>Review code</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Rate an interview and summarise"><span>Rate an
+                                interview and summarise</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="How is my org doing?"><span>How is my org
+                                doing?</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Is anything at Risk?"><span>Is anything at
+                                Risk?</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="If this happens update here."><span>Create
+                                Workflows - If this happens update here.</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Catch me up with a meeting/chat/doc"><span>Catch
+                                me up with a meeting, chat, or document</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Auto draft emails / documents / code based on context"><span>Auto
+                                draft emails / documents / code based on
+                                context</span></label>
+                        <label class="choice-item"><input type="checkbox" name="improvements"
+                                value="Create LinkedIn posts based on my context"><span>Create
+                                LinkedIn posts based on my context</span></label>
+                    </div>
+                </div>
+
+                <!-- Q5: Pain Level -->
+                <div class="question-container" data-step="5">
+                    <div class="question-number">05 &rarr; Friction</div>
+                    <h2 class="question-text">How painful is this problem for you today?</h2>
+                    <div class="scale-grid">
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="1" required>1</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="2">2</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="3">3</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="4">4</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="5">5</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="6">6</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="7">7</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="8">8</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="9">9</label>
+                        <label class="scale-item"><input type="radio" name="pain_scale"
+                                value="10">10</label>
+                    </div>
+                    <div class="scale-labels">
+                        <span>Not at all</span>
+                        <span>These are the biggest work hurdles</span>
+                    </div>
+                </div>
+
+                <!-- Q6: Current Solution -->
+                <div class="question-container" data-step="6">
+                    <div class="question-number">06 &rarr; Workarounds</div>
+                    <h2 class="question-text">How are you currently dealing with this?</h2>
+                    <textarea name="current_solution" class="input-field"
+                        placeholder="Type your answer here..." required
+                        maxlength="500"></textarea>
+                </div>
+
+                <!-- Q7: Hardest Part -->
+                <div class="question-container" data-step="7">
+                    <div class="question-number">07 &rarr; Frustrations</div>
+                    <h2 class="question-text">What's the hardest part about the problems today?</h2>
+                    <textarea name="hardest_part" class="input-field"
+                        placeholder="Type your answer here..." required
+                        maxlength="500"></textarea>
+                </div>
+
+                <!-- Q8: Value of Solving -->
+                <div class="question-container" data-step="8">
+                    <div class="question-number">08 &rarr; Impact</div>
+                    <h2 class="question-text">If this were solved well, how valuable would it be?
+                    </h2>
+                    <div class="scale-grid">
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="1" required>1</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="2">2</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="3">3</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="4">4</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="5">5</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="6">6</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="7">7</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="8">8</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="9">9</label>
+                        <label class="scale-item"><input type="radio" name="value_scale"
+                                value="10">10</label>
+                    </div>
+                    <div class="scale-labels">
+                        <span>Not valuable at all</span>
+                        <span>When can you build this for me?</span>
+                    </div>
+                </div>
+
+                <!-- Success -->
+                <div class="success-view" id="successView">
+                    <h2>All set.</h2>
+                    <p>Thank you for helping us build <b>CatalEx</b>.</p>
+                    <button type="button" class="btn-secondary" style="margin-top: 2rem;"
+                        onclick="window.location.hash = ''">Return to Home Page</button>
+                </div>
+
+                <div class="error-message" id="errorMsg">Please answer to continue &rarr;</div>
+            </div>
+
+            <footer class="nav-footer" id="navFooter">
+                <div class="progress-info">
+                    Question <span id="currentStepText">1</span> of 8
+                </div>
+                <div class="footer-controls">
+                    <button type="button" class="btn-secondary" id="prevBtn" onclick="prevStep()"
+                        style="display: none;">
+                        &larr; Back
+                    </button>
+                    <button type="button" class="btn-primary" id="nextBtn">
+                        OK <span class="keyboard-hint">Enter &crarr;</span>
+                    </button>
+                </div>
+            </footer>
+        </form>
+    </main>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeDemoModal()">&times;</span>
+            <div id="demoInitialView">
+                <h2>Book a Demo</h2>
+                <p>See how CatalEx can accelerate your team's workflow.</p>
+                <form id="demoForm">
+                    <div class="form-group">
+                        <label for="demoName">Full Name</label>
+                        <input type="text" id="demoName" placeholder="e.g. Peter Parker"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoEmail">Work Email</label>
+                        <input type="email" id="demoEmail" placeholder="peter@company.com"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="demoRole">Role</label>
+                        <select id="demoRole" required>
+                            <option value="" disabled selected>Select your role</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="product">Product</option>
+                            <option value="ops">Operations</option>
+                            <option value="leadership">Leadership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Request Demo</button>
+                    <p class="form-reassurance">No commitment. No spam. Just intelligence.</p>
+                </form>
+            </div>
+            <div id="demoSuccessView" class="success-view-inline" style="display: none;">
+                <div class="success-icon">&#10003;</div>
+                <h2>Success!</h2>
+                <p>Thank you! Our team will contact you shortly.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
