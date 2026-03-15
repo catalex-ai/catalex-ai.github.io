@@ -28,6 +28,7 @@
                     <a href="#use-cases">How it works</a>
                     <a href="#integrations">Integrations</a>
                     <a href="#features">Features</a>
+                    <a href="#/vision">Vision</a>
                     <a href="https://docs.catalex.co" target="_blank" rel="noopener">Docs</a>
                     <a href="https://console.catalex.co" class="btn-secondary btn-small" target="_blank" rel="noopener">Try CatalEx</a>
                 </div>
@@ -534,6 +535,365 @@
                 </div>
             </footer>
         </form>
+    </main>
+
+    <!-- Vision Page -->
+    <main id="vision" class="page-section">
+        <a href="#" class="home-icon-link" title="Return to Home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+        </a>
+
+        <!-- Hero -->
+        <section class="vision-hero">
+            <div class="vision-hero-inner">
+                <div class="vision-badge vision-blur-in" style="animation-delay: 0.1s">Product Vision</div>
+                <h1 class="vision-title vision-blur-in" style="animation-delay: 0s">The Workspace<br>is Evolving</h1>
+                <p class="vision-subtitle vision-blur-in" style="animation-delay: 0.5s">Work used to require people at every step &mdash; directing, executing, evaluating. In the new world, <strong>AI handles the execution</strong>. People direct. People review. Your company becomes <span class="ai-shimmer-text">AI-native</span>.</p>
+            </div>
+            <div class="vision-scroll-cue">
+                <span>Scroll to explore</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 3v10M4 9l4 4 4-4"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Org Transformation Network -->
+        <section class="vision-org-section">
+            <div class="vision-org-header">
+                <h2>The Organization, Reimagined</h2>
+                <p>Smaller teams. Greater leverage. Same ambition &mdash; exponential output.</p>
+            </div>
+            <div class="org-compare">
+                <div class="org-side org-today" id="orgToday">
+                    <div class="org-side-label">Traditional Structure</div>
+                    <div class="org-network" id="orgNetworkToday">
+                        <canvas id="orgCanvasToday" width="420" height="380"></canvas>
+                    </div>
+                </div>
+
+                <div class="org-divider">
+                    <div class="org-divider-line"></div>
+                    <div class="org-divider-text">same output</div>
+                    <div class="org-divider-line"></div>
+                </div>
+
+                <div class="org-side org-tomorrow" id="orgTomorrow">
+                    <div class="org-side-label">With CatalEx</div>
+                    <div class="org-network" id="orgNetworkTomorrow">
+                        <canvas id="orgCanvasTomorrow" width="420" height="380"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="org-bottom-message">
+                <span>AI executes silently in the background.</span>
+                <span>Everyone else focuses on building the vision.</span>
+            </div>
+        </section>
+
+        <!-- The Architecture -->
+        <section class="vision-arch-section">
+            <div class="vision-arch-header">
+                <h2>The Architecture</h2>
+                <p>To automate execution, you need three things: <strong>Intelligence</strong>, <strong>Memory</strong>, and <strong>Orchestration</strong>. The intelligence layer is already here. CatalEx builds the rest.</p>
+            </div>
+            <div class="arch-layout">
+                <div class="arch-canvas-wrap">
+                    <canvas id="archCanvas" width="720" height="420"></canvas>
+                </div>
+                <div class="arch-description">
+                    <div class="arch-desc-item">
+                        <div class="arch-desc-num">01</div>
+                        <div>
+                            <strong>Ingest</strong>
+                            <p>Data flows in from your tools &mdash; docs, conversations, code, tasks &mdash; and gets indexed into a unified knowledge graph.</p>
+                        </div>
+                    </div>
+                    <div class="arch-desc-item">
+                        <div class="arch-desc-num">02</div>
+                        <div>
+                            <strong>Remember</strong>
+                            <p>The Memory layer stores context about your org &mdash; who works on what, what was decided, where things stand.</p>
+                        </div>
+                    </div>
+                    <div class="arch-desc-item">
+                        <div class="arch-desc-num">03</div>
+                        <div>
+                            <strong>Reason</strong>
+                            <p>Intelligence layer uses frontier LLMs to understand, synthesize, and generate &mdash; grounded in your company's context.</p>
+                        </div>
+                    </div>
+                    <div class="arch-desc-item">
+                        <div class="arch-desc-num">04</div>
+                        <div>
+                            <strong>Execute</strong>
+                            <p>Orchestration connects to your tools via MCP agents and drives tasks to completion autonomously.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What Exists Today -->
+        <section class="vision-today-section">
+            <div class="vision-today-header">
+                <h2>What Exists Today</h2>
+                <p>We are in the Memory phase &mdash; building the knowledge layer that powers everything else.</p>
+            </div>
+            <div class="vision-today-content">
+                <div class="today-mcp-grid">
+                    <div class="today-mcp-card">
+                        <div class="today-mcp-icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="#4285F4" d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></div>
+                        <h4>Google Drive</h4>
+                        <p>Docs, Sheets, Slides</p>
+                    </div>
+                    <div class="today-mcp-card">
+                        <div class="today-mcp-icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/><path fill="#36C5F0" d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"/><path fill="#2EB67D" d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"/><path fill="#ECB22E" d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg></div>
+                        <h4>Slack</h4>
+                        <p>Channels and threads</p>
+                    </div>
+                    <div class="today-mcp-card">
+                        <div class="today-mcp-icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="#fff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></div>
+                        <h4>GitHub</h4>
+                        <p>Repos, PRs, issues</p>
+                    </div>
+                    <div class="today-mcp-card">
+                        <div class="today-mcp-icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="#2684FF" d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.723a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057a5.215 5.215 0 0 0 5.213 5.215V6.762a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H11.446a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 24.021 12.5V1.006A1.005 1.005 0 0 0 23.017 0z"/></svg></div>
+                        <h4>Jira</h4>
+                        <p>Projects and sprints</p>
+                    </div>
+                    <div class="today-mcp-card">
+                        <div class="today-mcp-icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="#fff" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.98-.7-2.055-.607L2.58 2.514c-.467.047-.56.28-.374.466l2.253 1.228zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.166V6.354c0-.606-.233-.933-.748-.886l-15.177.887c-.56.047-.747.327-.747.933z"/></svg></div>
+                        <h4>Notion</h4>
+                        <p>Wikis and databases</p>
+                    </div>
+                    <div class="today-mcp-card">
+                        <div class="today-mcp-icon"><svg viewBox="0 0 24 24" width="24" height="24"><path fill="#0052CC" d="M.87 18.257c-.248.382.053.867.514.867h5.767a.667.667 0 0 0 .59-.357L12 10.472l-2.998-5.36a.667.667 0 0 0-1.18 0L.87 18.257zM14.196 5.111a.667.667 0 0 0-1.18 0L8.26 14.263l3.74 4.86 4.728-8.651-2.533-5.36zM17.764 10.472l-2.998 5.36 3.74 4.86h5.767c.461 0 .762-.486.514-.867L17.764 5.111l-2.533 5.36h2.533z"/></svg></div>
+                        <h4>Confluence</h4>
+                        <p>Spaces and pages</p>
+                    </div>
+                </div>
+                <div class="today-features">
+                    <h3>Available now</h3>
+                    <div class="today-features-grid">
+                        <div class="today-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            <div>
+                                <strong>Freeflow</strong>
+                                <span>Ask anything across your entire company's knowledge and get cited, accurate answers.</span>
+                                <span class="feature-example">"What was decided about the pricing model in last quarter's board meeting?"</span>
+                            </div>
+                        </div>
+                        <div class="today-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                            <div>
+                                <strong>Semantic Search</strong>
+                                <span>Find answers by meaning, not keywords. Results are scoped to your access permissions.</span>
+                                <span class="feature-example">"Find the onboarding checklist for new engineers" &mdash; even if it's buried in a Notion wiki.</span>
+                            </div>
+                        </div>
+                        <div class="today-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <div>
+                                <strong>Daily Prep</strong>
+                                <span>Get a morning briefing: today's meetings, what changed overnight, blockers to watch.</span>
+                                <span class="feature-example">"Prep me up for today" &mdash; summarises calendar, Slack highlights, and project status.</span>
+                            </div>
+                        </div>
+                        <div class="today-feature-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                            <div>
+                                <strong>MCP Agents</strong>
+                                <span>Connect any tool via Model Context Protocol. Deploy from marketplace or build your own.</span>
+                                <span class="feature-example">Jira agent creates tickets from Slack conversations. GitHub agent links PRs to decisions.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Journey / Vertical Timeline -->
+        <section class="vision-timeline-section">
+            <div class="vision-timeline-header">
+                <h2>The Journey</h2>
+                <p>Four phases from assisted knowledge to fully autonomous work.</p>
+            </div>
+
+            <div class="vtimeline">
+                <!-- Vertical line -->
+                <div class="vtimeline-line"></div>
+
+                <!-- Phase 1 — LEFT -->
+                <div class="vtimeline-item vtimeline-left" data-phase="1">
+                    <div class="vtimeline-node completed">
+                        <div class="vtimeline-node-inner">1</div>
+                    </div>
+                    <div class="vtimeline-label">Now</div>
+                    <div class="phase-card">
+                        <h3>Memory</h3>
+                        <p class="phase-tagline">Build company knowledge</p>
+                        <p class="phase-desc">CatalEx indexes your documents, conversations, and tools into a unified knowledge graph. Your company's collective memory becomes searchable, cited, and actionable.</p>
+                        <div class="phase-details-label">What gets unlocked</div>
+                        <div class="phase-details open">
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span>Freeflow &mdash; ask anything across your company</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                                <span>Search &mdash; find answers, not files</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>Prep me up for today</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <span>Who is working on X?</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <span>Catch me up on this document</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- "We are here" marker — between Phase 1 and 2 -->
+                <div class="vtimeline-here-marker" id="weAreHereMarker">
+                    <div class="vtimeline-here-dot">
+                        <div class="vtimeline-here-pulse"></div>
+                    </div>
+                    <div class="vtimeline-here-label">
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3M3 5l3-3 3 3"/></svg>
+                        <span>We are here</span>
+                    </div>
+                </div>
+
+                <!-- Phase 2 — RIGHT -->
+                <div class="vtimeline-item vtimeline-right" data-phase="2">
+                    <div class="vtimeline-node">
+                        <div class="vtimeline-node-inner">2</div>
+                    </div>
+                    <div class="vtimeline-label">Next</div>
+                    <div class="phase-card">
+                        <h3>Execution</h3>
+                        <p class="phase-tagline">AI does the work after you decide</p>
+                        <p class="phase-desc">Meetings end and tasks get done. People become reviewers &mdash; they take their hands off execution. The system connects to tools via MCP and drives work to completion.</p>
+                        <div class="phase-details-label">What gets unlocked</div>
+                        <div class="phase-details open">
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                                <span>Meeting ends &rarr; tasks auto-created and assigned</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                <span>People review, AI executes</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                                <span>MCP agents connect to Jira, GitHub, Slack, Notion</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <span>Auto-draft docs, emails, and follow-ups</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 — LEFT -->
+                <div class="vtimeline-item vtimeline-left" data-phase="3">
+                    <div class="vtimeline-node">
+                        <div class="vtimeline-node-inner">3</div>
+                    </div>
+                    <div class="vtimeline-label">~6 months</div>
+                    <div class="phase-card">
+                        <h3>Automation</h3>
+                        <p class="phase-tagline">Work runs on a schedule</p>
+                        <p class="phase-desc">Users schedule recurring workflows. AI picks up signals of work &mdash; a Slack message, a calendar event, a status change &mdash; and executes without being asked.</p>
+                        <div class="phase-details-label">What gets unlocked</div>
+                        <div class="phase-details open">
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>Scheduled workflows &mdash; hourly, daily, weekly</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                <span>Signal-driven execution &mdash; AI detects work and acts</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+                                <span>Recurring reports, standups, and status updates</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                                <span>Trigger chains &mdash; if X happens, do Y then Z</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 4 — RIGHT -->
+                <div class="vtimeline-item vtimeline-right" data-phase="4">
+                    <div class="vtimeline-node">
+                        <div class="vtimeline-node-inner">4</div>
+                    </div>
+                    <div class="vtimeline-label">~1 year</div>
+                    <div class="phase-card">
+                        <h3>Autonomous</h3>
+                        <p class="phase-tagline">Every person gets an army</p>
+                        <p class="phase-desc">The system extracts work for you. Specialized agents &mdash; HR, engineering, sales, ops &mdash; pick up tasks and execute end-to-end. Every person operates with the leverage of an entire team.</p>
+                        <div class="phase-details-label">What gets unlocked</div>
+                        <div class="phase-details open">
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <span>Specialized agents: HR, Engineering, Sales, Ops</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                <span>AI extracts work from context &mdash; no prompting needed</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                                <span>Fully hands-off &mdash; work happens while you sleep</span>
+                            </div>
+                            <div class="phase-feature">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <span>Every person operates with the leverage of a team</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="vision-cta">
+            <div class="vision-cta-inner">
+                <h2>The future of work isn't about working harder.<br>It's about building systems that work for you.</h2>
+                <div class="vision-cta-actions">
+                    <button class="btn-primary btn-large" onclick="openDemoModal()">Book a Demo</button>
+                    <a href="https://console.catalex.co" class="btn-secondary btn-large" target="_blank" rel="noopener">Try CatalEx</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="vision-footer">
+            <div class="vision-footer-inner">
+                <div class="footer-brand">
+                    <img src="logo.svg" alt="CatalEx" class="footer-logo">
+                    <span class="footer-name">CatalEx</span>
+                </div>
+                <div class="footer-copyright">&copy; 2026 CatalEx. All rights reserved.</div>
+            </div>
+        </footer>
     </main>
 
     <!-- Demo Modal -->
