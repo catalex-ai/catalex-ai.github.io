@@ -918,7 +918,7 @@ function drawArchitecture() {
         else if(t<5) cap='CatalEx connects and indexes everything';
         else if(t<8) cap='Building your organization\'s memory';
         else if(t<11) cap='You ask — CatalEx orchestrates the workflow';
-        else if(t<15) cap='ReAct loop: reason, act, observe, repeat';
+        else if(t<15) cap='CatalEx reasons the appropriate way to answer';
         else if(t<18) cap='Response delivered — preferences saved';
         if(cap) lbl(cap, W/2, H-10, '500 12px Inter, sans-serif', '#484F58', ez(pr(t,Math.floor(t/2)*2,Math.floor(t/2)*2+1))*fade);
 
