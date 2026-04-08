@@ -1,3 +1,6 @@
+// Mark JS-enabled so CSS can hide fade-in elements before reveal
+document.documentElement.classList.add('js');
+
 // Scroll fade-in animation
 (function() {
     const observer = new IntersectionObserver((entries) => {
@@ -14,9 +17,84 @@
     });
 })();
 
+// Counter animation for [data-counter] elements
+(function() {
+    const easeOut = t => 1 - Math.pow(1 - t, 3);
+    function animateCounter(el) {
+        const target = parseInt(el.getAttribute('data-counter'), 10);
+        if (isNaN(target)) return;
+        const duration = 1800;
+        const start = performance.now();
+        function tick(now) {
+            const t = Math.min(1, (now - start) / duration);
+            const v = Math.round(easeOut(t) * target);
+            el.textContent = v;
+            if (t < 1) requestAnimationFrame(tick);
+            else el.textContent = target;
+        }
+        requestAnimationFrame(tick);
+    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('[data-counter]').forEach(el => observer.observe(el));
+    });
+})();
+
+// Stagger reveal — adds .stagger-in to children of [data-stagger] when section enters viewport
+(function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('staggered');
+                const children = entry.target.children;
+                Array.from(children).forEach((child, i) => {
+                    child.style.animationDelay = `${i * 90}ms`;
+                    child.classList.add('stagger-in');
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('[data-stagger]').forEach(el => observer.observe(el));
+    });
+})();
+
+// Subtle parallax for [data-parallax] — translates Y based on scroll position
+(function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els = [];
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('[data-parallax]').forEach(el => {
+            els.push({
+                el,
+                speed: parseFloat(el.getAttribute('data-parallax')) || 0.15
+            });
+        });
+        if (!els.length) return;
+        function update() {
+            const scrollY = window.scrollY;
+            els.forEach(({el, speed}) => {
+                const rect = el.getBoundingClientRect();
+                const center = rect.top + rect.height / 2 - window.innerHeight / 2;
+                el.style.setProperty('--parallax-y', `${-center * speed}px`);
+            });
+        }
+        window.addEventListener('scroll', update, { passive: true });
+        update();
+    });
+})();
+
 // Typewriter Effect - cycles through phrases
 (function() {
-    const phrases = ['Ask your docs.', 'Deploy agents.', 'Automate work.'];
+    const phrases = ['needs to use AI.', 'works with AI.', 'ships with AI.', 'gets work done.'];
     const el = document.getElementById('typewriter');
     if (!el) return;
 
@@ -28,7 +106,8 @@
     function type() {
         const current = phrases[phraseIndex];
         if (isDeleting) {
-            el.textContent = current.substring(0, charIndex - 1);
+            const next = current.substring(0, charIndex - 1);
+            el.textContent = next.length === 0 ? '\u00a0' : next;
             charIndex--;
         } else {
             el.textContent = current.substring(0, charIndex + 1);

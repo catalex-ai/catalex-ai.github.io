@@ -4,256 +4,494 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatalEx | AI-Powered Workplace Intelligence</title>
+    <title>CatalEx | The AI Operating Layer for AI-Native Companies</title>
     <meta name="description"
-        content="CatalEx connects your team's knowledge, tools, and workflows into one intelligent system. Find answers, extract tasks, automate workflows, and deploy custom agents.">
+        content="CatalEx is the operating layer for AI-native companies — one platform to build, measure, and govern every agent in your organization. Move from pilots to production P&L.">
     <link rel="icon" href="logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <!-- Homepage Section -->
     <main id="homepage" class="page-section active">
-        <nav class="navbar">
+        <nav class="navbar nav-pro">
             <div class="nav-container">
                 <a href="#" class="logo">
                     <img class="logo-img" src="logo.svg" alt="CatalEx">
                     <span class="logo-text">CatalEx</span>
                 </a>
                 <div class="nav-links">
-                    <a href="#use-cases">How it works</a>
-                    <a href="#integrations">Integrations</a>
-                    <a href="#features">Features</a>
-                    <a href="#/vision">Vision</a>
+                    <a href="#modes">Modes</a>
+                    <a href="#employees">Virtual Employees</a>
+                    <a href="#platform">Platform</a>
                     <a href="https://docs.catalex.co" target="_blank" rel="noopener">Docs</a>
-                    <a href="https://console.catalex.co" class="btn-secondary btn-small" target="_blank" rel="noopener">Try CatalEx</a>
+                    <a href="https://console.catalex.co" class="nav-login" target="_blank" rel="noopener">Login</a>
+                    <button class="btn-primary btn-small" onclick="openDemoModal()">Book a Demo</button>
                 </div>
             </div>
         </nav>
 
-        <section class="hero-section">
-            <div class="content-container">
-                <div class="hero-content">
-                    <div class="badge">AI-Powered Workplace Intelligence</div>
-                    <h1>Connect knowledge. Take action.<br><span class="typewriter" id="typewriter"></span></h1>
-                    <p class="hero-subheading">CatalEx connects your team's documents, conversations, and tools
-                        into one intelligent system — so you find answers, extract tasks, and automate workflows
-                        without switching context.</p>
-                    <div class="hero-actions">
+        <section class="hero-section hero-pro">
+            <div class="hero-pro-bg"></div>
+            <div class="content-container hero-pro-grid">
+                <div class="hero-pro-text">
+                    <div class="hero-meta"><span class="hero-meta-dot"></span>CATALEX&nbsp;&nbsp;/&nbsp;&nbsp;THE&nbsp;AI&nbsp;AGENT&nbsp;PLATFORM</div>
+                    <h1 class="hero-pro-h1">One agent platform.<br>Every way your company<br><span class="typewriter" id="typewriter">needs to use AI.</span></h1>
+                    <p class="hero-pro-sub">The one place to build, deploy and run AI agents — embedded in your product, working autonomously in the background, or sitting next to your team as named AI assistants. <em>Experiment in minutes, scale to thousands, with enterprise guardrails built in.</em></p>
+                    <div class="hero-pro-actions">
                         <button class="btn-primary btn-large" onclick="openDemoModal()">Book a Demo</button>
-                        <button class="btn-secondary btn-large"
-                            onclick="window.location.hash = '#/forms/get-started'">Get Started</button>
+                        <a href="https://console.catalex.co" class="btn-secondary btn-large" target="_blank" rel="noopener">Try CatalEx</a>
+                    </div>
+                </div>
+
+                <div class="hero-pro-stage">
+                    <!-- Mock card 1: chat input to agent -->
+                    <div class="mock-card mock-chat" data-tilt="-2">
+                        <div class="mock-head">
+                            <span class="mock-dot mock-dot-r"></span>
+                            <span class="mock-dot mock-dot-y"></span>
+                            <span class="mock-dot mock-dot-g"></span>
+                            <span class="mock-title">@claims-agent</span>
+                            <span class="mock-status">live</span>
+                        </div>
+                        <div class="mock-body">
+                            <div class="mock-msg mock-msg-user">
+                                <div class="mock-avatar">R</div>
+                                <div class="mock-bubble">Also start tracking total returns this quarter — and tell me when pass rate dips below 80%.</div>
+                            </div>
+                            <div class="mock-msg mock-msg-agent">
+                                <div class="mock-avatar mock-avatar-agent">C</div>
+                                <div class="mock-bubble">Got it. I've added <em>returns volume</em> to my metrics and set an alert at <em>pass rate &lt; 80%</em>. I'll surface both in your daily brief.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mock card 2: live business metric tile -->
+                    <div class="mock-card mock-metric" data-tilt="3">
+                        <div class="mock-metric-head">
+                            <span class="mock-metric-name">@claims-agent · live</span>
+                            <span class="mock-metric-pulse"></span>
+                        </div>
+                        <div class="mock-metric-row">
+                            <span class="mock-metric-label">claim pass rate</span>
+                            <span class="mock-metric-value">84<span class="mock-metric-unit">%</span></span>
+                            <span class="mock-metric-delta up">▲ 6 pts</span>
+                        </div>
+                        <div class="mock-metric-row">
+                            <span class="mock-metric-label">avg resolution</span>
+                            <span class="mock-metric-value">2.1<span class="mock-metric-unit">d</span></span>
+                            <span class="mock-metric-delta down">▼ 0.4</span>
+                        </div>
+                        <div class="mock-metric-row">
+                            <span class="mock-metric-label">escalations avoided</span>
+                            <span class="mock-metric-value">312</span>
+                            <span class="mock-metric-delta up">▲ 41</span>
+                        </div>
+                        <div class="mock-metric-foot">picked by the agent · evolves with chat</div>
+                    </div>
+
+                    <!-- Mock card 3: post-meeting toast -->
+                    <div class="mock-card mock-toast" data-tilt="-1">
+                        <div class="mock-toast-icon">✓</div>
+                        <div class="mock-toast-body">
+                            <div class="mock-toast-title">Rina just left "Q3 planning sync"</div>
+                            <div class="mock-toast-sub">4 action items filed · 1 doc drafted · 1 review booked</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="use-cases" class="use-cases fade-in">
+        <!-- §2 — THREE MODES -->
+        <section id="modes" class="modes-pro fade-in">
             <div class="content-container">
-                <h2>Not just intelligent. Autonomous.</h2>
-                <div class="use-cases-grid">
-                    <div class="use-case-card">
-                        <div class="use-case-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
+                <div class="section-eyebrow"><span class="eyebrow-rule"></span>§ 02 &nbsp;/&nbsp; THREE MODES</div>
+                <h2 class="section-h2">Pick the agent shape that fits the work.</h2>
+                <p class="section-lede">Three ways to put a CatalEx agent to work — embedded in your product, talked to in plain language, or hired as a virtual employee on your team.</p>
+
+                <div class="modes-grid">
+                    <article class="mode-card" data-mode="01 / EMBED">
+                        <div class="mode-card-head">
+                            <span class="mode-card-num">01</span>
+                            <span class="mode-card-name">EMBED</span>
                         </div>
-                        <h3>Your team brainstorms. CatalEx executes.</h3>
-                        <p>While your team focuses on strategy and creative decisions, CatalEx follows every task end to end — extracting action items, assigning owners, and driving them to completion autonomously.</p>
-                    </div>
-                    <div class="use-case-card">
-                        <div class="use-case-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 11l3 3L22 4"></path>
-                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                            </svg>
+                        <h3 class="mode-card-title">Embedded directly in your production application.</h3>
+                        <p class="mode-card-body">CatalEx agents run inside the product your customers already use, connected through simple APIs. Your engineers ship agents into the user experience without rebuilding it.</p>
+                        <div class="mode-mock mode-mock-embed">
+                            <div class="embed-window">
+                                <div class="embed-window-head">
+                                    <span class="mock-dot mock-dot-r"></span>
+                                    <span class="mock-dot mock-dot-y"></span>
+                                    <span class="mock-dot mock-dot-g"></span>
+                                    <span class="embed-window-title">lumifoods.app/onboarding</span>
+                                </div>
+                                <div class="embed-window-body">
+                                    <div class="embed-form">
+                                        <div class="embed-form-row"><span class="embed-label">Restaurant</span><span class="embed-value">Sunny's Kitchen</span></div>
+                                        <div class="embed-form-row"><span class="embed-label">License #</span><span class="embed-value">FL-2026-8841</span></div>
+                                        <div class="embed-form-row"><span class="embed-label">Bank</span><span class="embed-value">****4421</span></div>
+                                    </div>
+                                    <div class="embed-status">
+                                        <div class="embed-reviewing">
+                                            <span class="embed-spinner"></span>
+                                            <span>CatalEx agent reviewing…</span>
+                                        </div>
+                                        <div class="embed-checks">
+                                            <div class="embed-check embed-check-1"><span class="embed-check-icon">✓</span>License verified</div>
+                                            <div class="embed-check embed-check-2"><span class="embed-check-icon">✓</span>Tax ID matched</div>
+                                            <div class="embed-check embed-check-3"><span class="embed-check-icon">✓</span>Bank confirmed</div>
+                                        </div>
+                                        <div class="embed-approved">
+                                            <span class="embed-approved-icon">✓</span>
+                                            <span>Auto-approved <em>· 2.3s</em></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3>From meeting to done — without the handoff.</h3>
-                        <p>CatalEx doesn't just find tasks and wait. It picks them up, coordinates across tools, sends reminders, and closes the loop. People make decisions; CatalEx makes them happen.</p>
-                    </div>
-                    <div class="use-case-card">
-                        <div class="use-case-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="3" y1="9" x2="21" y2="9"></line>
-                                <line x1="9" y1="21" x2="9" y2="9"></line>
-                            </svg>
+                    </article>
+
+                    <article class="mode-card" data-mode="02 / AUTONOMOUS">
+                        <div class="mode-card-head">
+                            <span class="mode-card-num">02</span>
+                            <span class="mode-card-name">AUTONOMOUS</span>
                         </div>
-                        <h3>Extend with agents that get work done.</h3>
-                        <p>Deploy MCP agents that don't just integrate — they act. Create Jira tickets, update docs, draft follow-ups, and run recurring workflows without human intervention.</p>
-                    </div>
+                        <h3 class="mode-card-title">Agents that work in the background.</h3>
+                        <p class="mode-card-body">Set the goal, define the guardrails, walk away. CatalEx agents handle the long-running work — quietly, on schedule, until it's done.</p>
+                        <div class="mode-mock mode-mock-auto">
+                            <div class="auto-tasks">
+                                <div class="auto-task auto-task-1">
+                                    <span class="auto-check"></span>
+                                    <span class="auto-name">Reconcile yesterday's invoices</span>
+                                    <span class="auto-time">04:12</span>
+                                </div>
+                                <div class="auto-task auto-task-2">
+                                    <span class="auto-check"></span>
+                                    <span class="auto-name">Pull weekly cohort report</span>
+                                    <span class="auto-time">07:30</span>
+                                </div>
+                                <div class="auto-task auto-task-3">
+                                    <span class="auto-check"></span>
+                                    <span class="auto-name">Draft outreach for 14 leads</span>
+                                    <span class="auto-tag">running</span>
+                                </div>
+                                <div class="auto-substeps">
+                                    <div class="auto-substep auto-substep-1">↳ scanning LinkedIn profiles…</div>
+                                    <div class="auto-substep auto-substep-2">↳ reading email threads…</div>
+                                    <div class="auto-substep auto-substep-3">↳ drafting messages…</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="mode-card" data-mode="03 / ASSISTANTS">
+                        <div class="mode-card-head">
+                            <span class="mode-card-num">03</span>
+                            <span class="mode-card-name">ASSISTANTS</span>
+                        </div>
+                        <h3 class="mode-card-title">Named AI assistants that sit on your team.</h3>
+                        <p class="mode-card-body">Hire an AI assistant by name and role. They live in the tools your team already uses, learn how each person works, and turn every employee into the lead of their own AI.</p>
+                        <div class="mode-mock mode-mock-assistants">
+                            <div class="mock-assistants">
+                                <div class="mock-asst-row"><span class="mock-asst-avatar">R</span><span class="mock-asst-name">Rina</span><span class="mock-asst-role">Executive Assistant</span></div>
+                                <div class="mock-asst-row"><span class="mock-asst-avatar">J</span><span class="mock-asst-name">Joe</span><span class="mock-asst-role">Sales Analyst</span></div>
+                                <div class="mock-asst-row"><span class="mock-asst-avatar">C</span><span class="mock-asst-name">Cindy</span><span class="mock-asst-role">Support Lead</span></div>
+                            </div>
+                        </div>
+                        <div class="mode-tools">
+                            <a class="brand-icon" title="Slack" aria-label="Slack">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/><path fill="#36C5F0" d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"/><path fill="#2EB67D" d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"/><path fill="#ECB22E" d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg>
+                            </a>
+                            <a class="brand-icon" title="Microsoft Teams" aria-label="Microsoft Teams">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#5059C9" d="M19.6 7.31h-3.81V2.7h3.81v4.61zm-3.81 1.32h3.81c.66 0 1.2.54 1.2 1.2v6.34c0 2.47-2 4.47-4.47 4.47s-4.47-2-4.47-4.47v-7.06c0-.27.22-.49.49-.49h3.44z"/><circle fill="#5059C9" cx="17.69" cy="4.6" r="1.91"/><path fill="#7B83EB" d="M11.94 8.63v9.68c0 .53-.43.96-.96.96H3.65A4.65 4.65 0 0 1 0 14.61V9.5c0-.48.39-.87.87-.87h11.07z"/><circle fill="#7B83EB" cx="6.69" cy="5.65" r="3.2"/></svg>
+                            </a>
+                            <a class="brand-icon" title="Google Drive" aria-label="Google Drive">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="m9 3-9 15.5L4 22h16l-4-7H6l5-8.5z"/><path fill="#FBBC04" d="m9 3 6 11h-9z" transform="translate(0 -.5)"/><path fill="#34A853" d="M0 18.5 4 22 9 13.5 4.5 5z"/><path fill="#EA4335" d="M9 3h6l9 15.5L20 22 11 6.5z"/></svg>
+                            </a>
+                            <a class="brand-icon" title="Notion" aria-label="Notion">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#000" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.98-.7-2.055-.607L2.58 2.514c-.467.047-.56.28-.374.466l2.253 1.228zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.166V6.354c0-.606-.233-.933-.748-.886l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952l1.448.327s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.726l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.886.747-.933l3.222-.186zM1.6 1.054L15.98.154c1.682-.14 2.102.093 2.802.607l3.876 2.708c.513.373.653.467.653 1.167v15.924c0 1.12-.42 1.773-1.682 1.866l-15.45.888c-.935.047-1.402-.093-1.868-.7l-2.476-3.22c-.513-.653-.747-1.26-.747-1.866V2.361c0-.7.42-1.4 1.495-1.307z"/></svg>
+                            </a>
+                            <a class="brand-icon" title="Jira" aria-label="Jira">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#2684FF" d="M11.571 11.513H0a5.218 5.218 0 0 0 5.232 5.215h2.13v2.057A5.215 5.215 0 0 0 12.575 24V12.518a1.005 1.005 0 0 0-1.005-1.005zm5.723-5.756H5.736a5.215 5.215 0 0 0 5.215 5.214h2.129v2.058a5.218 5.218 0 0 0 5.215 5.214V6.762a1.005 1.005 0 0 0-1.001-1.005zM23.013 0H11.455a5.215 5.215 0 0 0 5.215 5.215h2.129v2.057A5.215 5.215 0 0 0 24 12.483V1.005A1.005 1.005 0 0 0 23.013 0z"/></svg>
+                            </a>
+                            <a class="brand-icon" title="GitHub" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#181717" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            </a>
+                            <a class="brand-icon" title="Confluence" aria-label="Confluence">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#0052CC" d="M.87 18.257c-.248.382.053.867.514.867h5.767a.667.667 0 0 0 .59-.357L12 10.472l-2.998-5.36a.667.667 0 0 0-1.18 0L.87 18.257zM14.196 5.111a.667.667 0 0 0-1.18 0L8.26 14.263l3.74 4.86 4.728-8.651-2.533-5.36zM17.764 10.472l-2.998 5.36 3.74 4.86h5.767c.461 0 .762-.486.514-.867L17.764 5.111l-2.533 5.36h2.533z"/></svg>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="integrations" class="integrations-section fade-in">
-            <div class="content-container">
-                <div class="section-header">
-                    <h2>Works with the tools you already use.</h2>
-                </div>
-                <div class="integrations-grid">
-                    <div class="integration-item">
-                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#4285F4" d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-                        <span>Google Drive</span>
-                    </div>
-                    <div class="integration-item">
-                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#E01E5A" d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/><path fill="#36C5F0" d="M8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312z"/><path fill="#2EB67D" d="M18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312z"/><path fill="#ECB22E" d="M15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg>
-                        <span>Slack</span>
-                    </div>
-                    <div class="integration-item">
-                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#181717" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        <span>GitHub</span>
-                    </div>
-                    <div class="integration-item">
-                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#0052CC" d="M4.913 13.571H1.74L7.826 2.16h3.722l-2.049 4.142h5.15L4.913 20.16V13.57zm10.8-3.399h3.173L12.8 21.783H9.079l2.049-4.142h-5.15L15.713 6.23v7.002-.06z"/></svg>
-                        <span>Jira</span>
-                    </div>
-                    <div class="integration-item">
-                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000000" d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.98-.7-2.055-.607L2.58 2.514c-.467.047-.56.28-.374.466l2.253 1.228zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.166V6.354c0-.606-.233-.933-.748-.886l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952l1.448.327s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.726l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.14c-.093-.514.28-.886.747-.933l3.222-.186zM1.6 1.054L15.98.154c1.682-.14 2.102.093 2.802.607l3.876 2.708c.513.373.653.467.653 1.167v15.924c0 1.12-.42 1.773-1.682 1.866l-15.45.888c-.935.047-1.402-.093-1.868-.7l-2.476-3.22c-.513-.653-.747-1.26-.747-1.866V2.361c0-.7.42-1.4 1.495-1.307z"/></svg>
-                        <span>Notion</span>
-                    </div>
-                    <div class="integration-item">
-                        <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#0052CC" d="M.87 18.257c-.248.382.053.867.514.867h5.767a.667.667 0 0 0 .59-.357L12 10.472l-2.998-5.36a.667.667 0 0 0-1.18 0L.87 18.257zM14.196 5.111a.667.667 0 0 0-1.18 0L8.26 14.263l3.74 4.86 4.728-8.651-2.533-5.36zM17.764 10.472l-2.998 5.36 3.74 4.86h5.767c.461 0 .762-.486.514-.867L17.764 5.111l-2.533 5.36h2.533z"/></svg>
-                        <span>Confluence</span>
-                    </div>
-                </div>
-                <p class="integrations-note">Plus custom MCP agents — build and deploy your own integrations.</p>
-            </div>
-        </section>
+        <!-- §3 — VIRTUAL EMPLOYEES (deep) -->
+        <section id="employees" class="employees-pro fade-in">
+            <div class="content-container employees-grid">
+                <div class="employees-text">
+                    <div class="section-eyebrow"><span class="eyebrow-rule"></span>§ 03 &nbsp;/&nbsp; VIRTUAL EMPLOYEES</div>
+                    <h2 class="section-h2">Hire your first AI teammate before lunch.</h2>
+                    <p class="section-lede">Every person on your team gets their own AI assistants — pick from a library of pre-built roles, or shape your own. They live in the tools you already use, learn the way <em>you</em> actually work, and pick up where you left off.</p>
 
-        <section id="how-it-works" class="how-it-works fade-in">
-            <div class="content-container">
-                <h2>Three steps to operational intelligence.</h2>
-                <div class="steps-grid">
-                    <div class="step">
-                        <div class="step-number">01</div>
-                        <h4>Connect</h4>
-                        <p>Link your Google Drive, Slack, and tools. CatalEx indexes everything into a knowledge graph.</p>
+                    <div class="employees-pillars">
+                        <div class="pillar">
+                            <div class="pillar-num">A</div>
+                            <h4>A library of roles, ready on day one.</h4>
+                            <p>Analyst, SDR, support, ops, researcher, recruiter, and more — each one shaped by best practices for the role. Or define a new one in plain language.</p>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-num">B</div>
+                            <h4>They learn from the person they work for.</h4>
+                            <p>Your assistants watch how you write, decide, escalate, and close the loop. They sound like you, and act like a teammate who's been at your side for years. They keep learning as your business and your work evolve — supercharging every person's personal productivity.</p>
+                        </div>
+                        <div class="pillar">
+                            <div class="pillar-num">C</div>
+                            <h4>Proactive, never unsupervised.</h4>
+                            <p>They watch for signals across your knowledge and tools and step in before being asked. Every action runs inside guardrails you set — what they can do, what they need approval for, what they can never touch.</p>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">02</div>
-                        <h4>Ask &amp; Act</h4>
-                        <p>Query your data in natural language. CatalEx finds answers, extracts tasks, and suggests actions.</p>
+                </div>
+
+                <div class="employees-stage">
+                    <!-- Centerpiece: Rina (AI Executive Assistant) acting after a meeting -->
+                    <div class="prod-card prod-card-meeting">
+                        <div class="prod-card-head">
+                            <span class="prod-card-icon">R</span>
+                            <div>
+                                <div class="prod-card-title">Rina <em>· Executive Assistant</em></div>
+                                <div class="prod-card-sub">acting on Q3 PLANNING SYNC · just ended</div>
+                            </div>
+                        </div>
+                        <ul class="prod-card-list">
+                            <li><span class="check">✓</span>Drafted follow-up notes <span class="muted">Notion</span></li>
+                            <li><span class="check">✓</span>Filed 4 action items <span class="muted">Linear</span></li>
+                            <li><span class="check">✓</span>Pinged Joe for the pricing input <span class="muted">Slack</span></li>
+                            <li><span class="dot">·</span>Booking the next review for Thursday <span class="muted">Calendar</span></li>
+                        </ul>
+                        <div class="prod-card-foot">
+                            <button class="prod-btn prod-btn-primary">Approve all</button>
+                            <button class="prod-btn">Review</button>
+                            <span class="prod-card-badge">within guardrails</span>
+                        </div>
                     </div>
-                    <div class="step">
-                        <div class="step-number">03</div>
-                        <h4>Extend &amp; Automate</h4>
-                        <p>Add agents from the marketplace or build your own. Schedule recurring workflows that run on autopilot.</p>
+
+                    <!-- Smaller card: Cindy (AI Support Lead) proactive nudge -->
+                    <div class="prod-card prod-card-nudge">
+                        <div class="prod-card-row">
+                            <span class="prod-mini-avatar">C</span>
+                            <span class="prod-mini-name">Cindy <em>· Support Lead</em></span>
+                            <span class="prod-mini-time">9:42</span>
+                        </div>
+                        <p class="prod-card-quote">"Ticket volume spiked 38% after yesterday's release. I've drafted a postmortem outline — share it with the team?"</p>
+                        <div class="prod-card-actions">
+                            <button class="prod-btn-mini prod-btn-mini-primary">Share</button>
+                            <button class="prod-btn-mini">Edit first</button>
+                            <button class="prod-btn-mini">Not now</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="features" class="features-section fade-in">
-            <div class="content-container">
-                <div class="section-header">
-                    <h2>Everything your team needs to move faster.</h2>
-                    <p>Eight capabilities. One platform. Zero context-switching.</p>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                        </div>
-                        <h3>Freeflow</h3>
-                        <p>Ask anything across your company's knowledge. Get precise, cited answers — not generic AI responses.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                            </svg>
-                        </div>
-                        <h3>Knowledge</h3>
-                        <p>Automatically sync and index Google Drive, Slack, and more into a searchable knowledge graph.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                            </svg>
-                        </div>
-                        <h3>Agent Market</h3>
-                        <p>Connect Jira, GitHub, Slack, Notion, Confluence — or build and deploy your own custom MCP agents.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 11l3 3L22 4"></path>
-                                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                            </svg>
-                        </div>
-                        <h3>Tasks</h3>
-                        <p>AI extracts action items from documents, assigns owners, and tracks them to completion — end to end.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                        </div>
-                        <h3>Automation</h3>
-                        <p>Schedule recurring workflows that run hourly, daily, or weekly. Define triggers in natural language.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                            </svg>
-                        </div>
-                        <h3>Execution Health</h3>
-                        <p>Monitor team velocity, spot blockers early, and track project risk with real-time dashboards.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                        </div>
-                        <h3>Admin</h3>
-                        <p>Manage users, roles, and permissions from a single dashboard. Invite team members and control access levels.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                            </svg>
-                        </div>
-                        <h3>Access Control</h3>
-                        <p>Every query respects your data permissions. Results are scoped to what each user is authorized to see — always.</p>
-                    </div>
+            <!-- Role chip marquee -->
+            <div class="role-marquee">
+                <div class="role-marquee-track">
+                    <span class="role-chip">Analyst</span>
+                    <span class="role-chip">SDR</span>
+                    <span class="role-chip">Support Lead</span>
+                    <span class="role-chip">Recruiter</span>
+                    <span class="role-chip">Researcher</span>
+                    <span class="role-chip">Ops</span>
+                    <span class="role-chip">Finance Analyst</span>
+                    <span class="role-chip">Customer Success</span>
+                    <span class="role-chip">QA</span>
+                    <span class="role-chip">Onboarding Buddy</span>
+                    <span class="role-chip">Pricing Analyst</span>
+                    <span class="role-chip">Data Steward</span>
+                    <span class="role-chip">Procurement</span>
+                    <span class="role-chip">Legal Reviewer</span>
+                    <span class="role-chip role-chip-build">+ build your own</span>
+                    <!-- duplicate for seamless loop -->
+                    <span class="role-chip">Analyst</span>
+                    <span class="role-chip">SDR</span>
+                    <span class="role-chip">Support Lead</span>
+                    <span class="role-chip">Recruiter</span>
+                    <span class="role-chip">Researcher</span>
+                    <span class="role-chip">Ops</span>
+                    <span class="role-chip">Finance Analyst</span>
+                    <span class="role-chip">Customer Success</span>
+                    <span class="role-chip">QA</span>
+                    <span class="role-chip">Onboarding Buddy</span>
+                    <span class="role-chip">Pricing Analyst</span>
+                    <span class="role-chip">Data Steward</span>
+                    <span class="role-chip">Procurement</span>
+                    <span class="role-chip">Legal Reviewer</span>
+                    <span class="role-chip role-chip-build">+ build your own</span>
                 </div>
             </div>
         </section>
 
-        <section class="cta-bottom fade-in">
+        <!-- §4 — WHY MOST AI FAILS + THE PLATFORM (merged) -->
+        <section id="platform" class="platform-pro fade-in">
             <div class="content-container">
-                <h2>Start building with CatalEx.</h2>
-                <p>Connect your tools, deploy agents, and give your team an intelligence layer.</p>
-                <div class="cta-actions">
+                <div class="section-eyebrow"><span class="eyebrow-rule"></span>§ 04 &nbsp;/&nbsp; WHY MOST AI FAILS &nbsp;<span class="ornament">✦</span></div>
+                <h2 class="section-h2"><span data-counter="95">95</span>% of AI projects never reach production. <em>We fix both reasons.</em></h2>
+                <p class="section-lede">Most teams either never run the experiments to find what's worth building, or they build something that was never engineered to survive real users. CatalEx packages the experimentation runtime <em>and</em> the production runtime — so the hard parts are handled and tech quietly disappears.</p>
+
+                <!-- TWO REASONS BLOCK -->
+                <div class="reasons" data-stagger>
+                    <div class="reason">
+                        <div class="reason-num">01</div>
+                        <h4 class="reason-title">They're never productionized.</h4>
+                        <p class="reason-body">Most agents are built like demos — in notebooks, with hand-wired plumbing — and they break the moment they meet real traffic. CatalEx agents are engineered to ship to production from day one.</p>
+                    </div>
+                    <div class="reason">
+                        <div class="reason-num">02</div>
+                        <h4 class="reason-title">The right experiments never happen.</h4>
+                        <p class="reason-body">Teams get stuck on one bet when they should be running ten. CatalEx makes experimentation cheap and fast, so you can throw out what doesn't work and double down on what does.</p>
+                    </div>
+                </div>
+
+                <!-- DEMARCATION: solution sub-heading -->
+                <div class="platform-intro platform-intro-gap">
+                    <div class="platform-intro-eyebrow">WHAT CHANGES WITH CATALEX</div>
+                    <h3 class="platform-intro-title">From quarters of plumbing <em>to minutes of agent.</em></h3>
+                </div>
+
+                <!-- 3-UP BENTO — thin one-line cards -->
+                <div class="bento bento-stats" data-stagger>
+                    <article class="stat-card">
+                        <div class="stat-card-foot">Time to first production agent</div>
+                        <div class="stat-line">
+                            <span class="stat-without">6–8 weeks</span>
+                            <span class="stat-arrow">→</span>
+                            <span class="stat-with">Minutes</span>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-card-foot">Token spend per workload</div>
+                        <div class="stat-line">
+                            <span class="stat-without">10× baseline</span>
+                            <span class="stat-arrow">→</span>
+                            <span class="stat-with">Up to 90% less</span>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-card-foot">Platform team to operate</div>
+                        <div class="stat-line">
+                            <span class="stat-without">10 engineers</span>
+                            <span class="stat-arrow">→</span>
+                            <span class="stat-with">Zero</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- THE PLATFORM — what we built to fix it -->
+                <div class="platform-intro">
+                    <div class="platform-intro-eyebrow">THE PLATFORM &nbsp;·&nbsp; WHAT WE BUILT</div>
+                    <h3 class="platform-intro-title">Six things we engineered so your agents <em>never break.</em></h3>
+                </div>
+
+                <div class="bento bento-platform">
+                    <article class="bento-cell">
+                        <div class="bento-cell-num">01</div>
+                        <h4>Persistent memory.</h4>
+                        <p>Every agent carries its own context. No amnesiac restarts.</p>
+                    </article>
+
+                    <article class="bento-cell">
+                        <div class="bento-cell-num">02</div>
+                        <h4>Self-correcting.</h4>
+                        <p>Agents catch their own mistakes mid-run and course-correct.</p>
+                    </article>
+
+                    <article class="bento-cell">
+                        <div class="bento-cell-num">03</div>
+                        <h4>Picks its own metrics.</h4>
+                        <p>Each agent reads its purpose and tracks what matters — claim pass rate, deflection, conversion. Change in chat.</p>
+                    </article>
+
+                    <article class="bento-cell">
+                        <div class="bento-cell-num">04</div>
+                        <h4>Isolated by default.</h4>
+                        <p>Every agent in its own protected environment. No shared state, no collateral damage.</p>
+                    </article>
+
+                    <article class="bento-cell">
+                        <div class="bento-cell-num">05</div>
+                        <h4>Scales without you.</h4>
+                        <p>One agent or ten thousand. Concurrent, isolated, no babysitting.</p>
+                    </article>
+
+                    <article class="bento-cell bento-cell-savings">
+                        <div class="bento-cell-num">06</div>
+                        <h4>Up to <span data-counter="10">10</span>× cheaper.</h4>
+                        <p>We cache the code your agents write, re-run it with new parameters, and route each action to the right model. <em>Up to 10× lower token cost</em> on typical workloads.</p>
+                    </article>
+                </div>
+
+                <p class="compare-source">Industry data points. Your numbers will vary — happy to walk through ours.</p>
+            </div>
+        </section>
+
+        <!-- §6 — TRUST -->
+        <section class="trust-pro fade-in">
+            <div class="content-container">
+                <div class="section-eyebrow"><span class="eyebrow-rule"></span>§ 06 &nbsp;/&nbsp; ENTERPRISE-READY</div>
+                <h2 class="section-h2">Safe for the industries that <em>can't afford mistakes.</em></h2>
+                <p class="section-lede">CatalEx is built for teams whose agents touch regulated data, customer money, or production systems. Every guardrail you'd build yourself, already in the platform.</p>
+
+                <div class="trust-grid" data-stagger>
+                    <article class="trust-card">
+                        <div class="trust-card-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M17 11l2 2 4-4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+                        </div>
+                        <h4 class="trust-card-title">Role-based access</h4>
+                        <p class="trust-card-body">Every agent, every action, scoped to who's allowed to see and do what. Permissions inherited from your existing identity provider.</p>
+                    </article>
+                    <article class="trust-card">
+                        <div class="trust-card-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+                        </div>
+                        <h4 class="trust-card-title">Full audit trail</h4>
+                        <p class="trust-card-body">Every decision, every tool call, every approval — recorded, timestamped, and queryable. Your auditors will thank you.</p>
+                    </article>
+                    <article class="trust-card">
+                        <div class="trust-card-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h4 class="trust-card-title">On-prem &amp; in-region</h4>
+                        <p class="trust-card-body">Deploy in your cloud, your region, your VPC. Your data never leaves your perimeter — and never trains anything.</p>
+                    </article>
+                    <article class="trust-card">
+                        <div class="trust-card-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h4 class="trust-card-title">Human-in-the-loop</h4>
+                        <p class="trust-card-body">Define the actions that need approval, the ones that can run free, and the ones that can never happen. Agents wait, humans confirm.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- §7 — CLOSING CTA -->
+        <section class="cta-pro fade-in">
+            <div class="content-container">
+                <h2 class="cta-pro-h2">Become <span class="ai-shimmer">AI-native.</span></h2>
+                <p class="cta-pro-sub">Book a walkthrough, or spin up your first agent in the console.</p>
+                <div class="cta-pro-actions">
                     <button class="btn-primary btn-large" onclick="openDemoModal()">Book a Demo</button>
                     <a href="https://console.catalex.co" class="btn-secondary btn-large" target="_blank" rel="noopener">Try CatalEx</a>
                 </div>
-                <p class="cta-muted">No commitment required. 15-minute intro call.</p>
             </div>
         </section>
+
 
         <footer class="site-footer">
             <div class="content-container">
@@ -265,7 +503,7 @@
                     <div class="footer-links-row">
                         <a href="https://docs.catalex.co" target="_blank" rel="noopener">Documentation</a>
                         <a href="https://console.catalex.co" target="_blank" rel="noopener">Console</a>
-                        <a href="#features">Features</a>
+                        <a href="#platform">Platform</a>
                         <a href="https://docs.catalex.co/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
                         <a href="https://docs.catalex.co/terms-of-service" target="_blank" rel="noopener">Terms of Service</a>
                     </div>
