@@ -92,6 +92,15 @@ document.documentElement.classList.add('js');
     });
 })();
 
+// Navbar scroll state
+(function() {
+  const nav = document.querySelector('.navbar');
+  if (!nav) return;
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
 // Typewriter Effect - cycles through phrases
 (function() {
     const phrases = ['needs to use AI.', 'works with AI.', 'ships with AI.', 'gets work done.'];

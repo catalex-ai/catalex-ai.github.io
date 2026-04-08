@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CatalEx — 50 Logo Concepts v2 (>C + AI Diamond)</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --warm: #F9F7F4;
+    --teal-tint: #F4F9F9;
+    --ink: #1A1A1A;
+    --muted: #6B6B6B;
+    --c1: #2D4A53;
+    --c2: #3A5E68;
+    --c3: #4A8F8F;
+    --c4: #5B8A8A;
+    --c5: #6BA4A4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, var(--teal-tint) 50%, var(--warm) 100%);
+    color: var(--ink);
+    padding: 60px 40px 80px;
+  }
+  header { max-width: 1200px; margin: 0 auto 50px; }
+  h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.02em; margin: 0 0 8px; }
+  header p { color: var(--muted); font-size: 15px; margin: 0; max-width: 720px; line-height: 1.6; }
+  .palette { display: flex; gap: 6px; margin-top: 14px; }
+  .sw { width: 24px; height: 24px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.05); }
+  .grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--bg);
+    border: 1px solid #E8E8E8;
+    border-radius: 14px;
+    padding: 24px 16px 16px;
+    display: flex; flex-direction: column; align-items: center;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -12px rgba(45,74,83,0.25);
+    border-color: var(--c3);
+  }
+  .mark { width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; }
+  .mark svg { width: 100%; height: 100%; display: block; }
+  .label { margin-top: 14px; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+  .num { font-size: 11px; color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CatalEx — 50 Logo Concepts v2</h1>
+  <p>Built around the <strong>&gt;C</strong> idea — a chevron + arc that reads as both X and C for CatalEx — paired with the four-point AI diamond (sparkle) motif. All marks use the current site teal/cream palette only.</p>
+  <div class="palette">
+    <div class="sw" style="background:#2D4A53"></div>
+    <div class="sw" style="background:#3A5E68"></div>
+    <div class="sw" style="background:#4A8F8F"></div>
+    <div class="sw" style="background:#5B8A8A"></div>
+    <div class="sw" style="background:#6BA4A4"></div>
+    <div class="sw" style="background:#F9F7F4;border-color:#E8E8E8"></div>
+  </div>
+</header>
+
+<div class="grid">
+
+<!-- Helper: AI diamond is a 4-point star: M cx cy-r L cx+r/3 cy L cx cy+r L cx-r/3 cy Z (diagonal compressed) -->
+
+<!-- 01 Classic >C with diamond inside -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 25 L48 50 L22 75" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 30 A24 24 0 1 0 78 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M65 42 L70 50 L65 58 L60 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">01 · &gt;C Diamond</div></div>
+
+<!-- 02 -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M20 28 L42 50 L20 72" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 35 A22 22 0 1 0 82 65" fill="none" stroke="#4A8F8F" stroke-width="9" stroke-linecap="round"/>
+  <path d="M55 38 L62 50 L55 62 L48 50 Z" fill="#2D4A53"/>
+</svg></div><div class="label">CatalEx</div><div class="num">02 · Two-tone</div></div>
+
+<!-- 03 Diamond replaces dot of > -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L46 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 28 A26 26 0 1 0 78 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M50 14 L56 22 L50 30 L44 22 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">03 · Spark Top</div></div>
+
+<!-- 04 Diamond as period -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M18 28 L40 50 L18 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M74 30 A24 24 0 1 0 74 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M86 42 L92 50 L86 58 L80 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">04 · Period</div></div>
+
+<!-- 05 Filled wedge > -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <polygon points="20,22 46,50 20,78 28,50" fill="#2D4A53"/>
+  <path d="M80 30 A24 24 0 1 0 80 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M68 42 L74 50 L68 58 L62 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">05 · Solid &gt;</div></div>
+
+<!-- 06 Double chevron -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M14 28 L34 50 L14 72 M30 28 L50 50 L30 72" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 32 A22 22 0 1 0 82 68" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round"/>
+  <path d="M68 42 L74 50 L68 58 L62 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">06 · Double &gt;</div></div>
+
+<!-- 07 Diamond inside C counter -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M20 28 L42 50 L20 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="50" r="26" fill="#2D4A53"/>
+  <circle cx="78" cy="50" r="18" fill="#fff"/>
+  <path d="M76 42 L82 50 L76 58 L70 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">07 · Inset C</div></div>
+
+<!-- 08 Stacked > over C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M30 18 L50 32 L70 18" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 50 A28 28 0 1 0 78 80" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M50 60 L57 68 L50 76 L43 68 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">08 · Stacked</div></div>
+
+<!-- 09 Diamond as bridge between > and C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M14 30 L34 50 L14 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M86 30 A22 22 0 1 0 86 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M50 38 L60 50 L50 62 L40 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">09 · Bridge</div></div>
+
+<!-- 10 Mono ligature -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 26 L46 50 L22 74" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 32 A22 22 0 1 0 76 68" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round"/>
+  <path d="M61 44 L66 50 L61 56 L56 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">10 · Mono</div></div>
+
+<!-- 11 Square tile bg -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <rect x="10" y="10" width="80" height="80" rx="18" fill="#2D4A53"/>
+  <path d="M28 32 L46 50 L28 68" fill="none" stroke="#F4F9F9" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 36 A18 18 0 1 0 76 64" fill="none" stroke="#F4F9F9" stroke-width="7" stroke-linecap="round"/>
+  <path d="M62 44 L67 50 L62 56 L57 50 Z" fill="#6BA4A4"/>
+</svg></div><div class="label">CatalEx</div><div class="num">11 · Tile</div></div>
+
+<!-- 12 Round tile -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="42" fill="#2D4A53"/>
+  <path d="M28 32 L44 50 L28 68" fill="none" stroke="#F4F9F9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M72 36 A16 16 0 1 0 72 64" fill="none" stroke="#F4F9F9" stroke-width="6" stroke-linecap="round"/>
+  <path d="M59 44 L64 50 L59 56 L54 50 Z" fill="#6BA4A4"/>
+</svg></div><div class="label">CatalEx</div><div class="num">12 · Coin</div></div>
+
+<!-- 13 Outline tile -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <rect x="10" y="10" width="80" height="80" rx="18" fill="none" stroke="#2D4A53" stroke-width="5"/>
+  <path d="M28 32 L44 50 L28 68" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M74 36 A16 16 0 1 0 74 64" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round"/>
+  <path d="M60 44 L65 50 L60 56 L55 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">13 · Outline</div></div>
+
+<!-- 14 Diamond replaces opening of C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="50" r="22" fill="none" stroke="#2D4A53" stroke-width="8"/>
+  <rect x="84" y="42" width="14" height="16" fill="#fff"/>
+  <path d="M88 42 L94 50 L88 58 L82 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">14 · Notch</div></div>
+
+<!-- 15 Diamond is the C dot -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M20 28 L42 50 L20 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 30 A24 24 0 1 0 82 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M58 42 L66 50 L58 58 L50 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">15 · Center Gem</div></div>
+
+<!-- 16 Larger diamond -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M18 26 L38 50 L18 74" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M84 30 A22 22 0 1 0 84 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M55 30 L72 50 L55 70 L38 50 Z" fill="none" stroke="#4A8F8F" stroke-width="5"/>
+</svg></div><div class="label">CatalEx</div><div class="num">16 · Open Gem</div></div>
+
+<!-- 17 4-point sparkle (Gemini-style) -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 30 A24 24 0 1 0 82 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M62 50 C62 42 58 38 50 38 C58 38 62 34 62 26 C62 34 66 38 74 38 C66 38 62 42 62 50 Z M62 50 C62 58 66 62 74 62 C66 62 62 66 62 74 C62 66 58 62 50 62 C58 62 62 58 62 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">17 · Sparkle</div></div>
+
+<!-- 18 Sparkle small in C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M84 32 A22 22 0 1 0 84 68" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#4A8F8F">
+    <path d="M64 50 C64 45 61 42 56 42 C61 42 64 39 64 34 C64 39 67 42 72 42 C67 42 64 45 64 50 Z"/>
+    <path d="M64 50 C64 55 67 58 72 58 C67 58 64 61 64 66 C64 61 61 58 56 58 C61 58 64 55 64 50 Z"/>
+  </g>
+</svg></div><div class="label">CatalEx</div><div class="num">18 · Mini Sparkle</div></div>
+
+<!-- 19 > with diamond eye, C below -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M28 22 L52 38 L28 54" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 28 L54 36 L48 44 L42 36 Z" fill="#4A8F8F"/>
+  <path d="M76 60 A18 18 0 1 0 76 88" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round"/>
+</svg></div><div class="label">CatalEx</div><div class="num">19 · Eye</div></div>
+
+<!-- 20 ligature lockup -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M16 30 L36 50 L16 70 M32 30 L52 50 L32 70" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M84 30 A22 22 0 1 0 84 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M64 42 L70 50 L64 58 L58 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">20 · Ligature</div></div>
+
+<!-- 21 thin elegant -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 26 L46 50 L22 74" fill="none" stroke="#2D4A53" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 26 A24 24 0 1 0 78 74" fill="none" stroke="#2D4A53" stroke-width="4" stroke-linecap="round"/>
+  <path d="M61 42 L69 50 L61 58 L53 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">21 · Thin</div></div>
+
+<!-- 22 heavy bold -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 24 L44 50 L22 76" fill="none" stroke="#2D4A53" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 30 A22 22 0 1 0 76 70" fill="none" stroke="#2D4A53" stroke-width="12" stroke-linecap="round"/>
+  <path d="M58 42 L66 50 L58 58 L50 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">22 · Bold</div></div>
+
+<!-- 23 gradient teal -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <defs><linearGradient id="g23" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2D4A53"/><stop offset="1" stop-color="#6BA4A4"/></linearGradient></defs>
+  <path d="M22 28 L44 50 L22 72" fill="none" stroke="url(#g23)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 30 A24 24 0 1 0 78 70" fill="none" stroke="url(#g23)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M62 42 L70 50 L62 58 L54 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">23 · Gradient</div></div>
+
+<!-- 24 C as full ring -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="74" cy="50" r="22" fill="none" stroke="#2D4A53" stroke-width="8"/>
+  <path d="M74 38 L82 50 L74 62 L66 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">24 · Ring</div></div>
+
+<!-- 25 wedge + ring + sparkle -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <polygon points="18,24 44,50 18,76" fill="#2D4A53"/>
+  <circle cx="72" cy="50" r="22" fill="none" stroke="#2D4A53" stroke-width="8"/>
+  <path d="M72 40 L78 50 L72 60 L66 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">25 · Wedge Ring</div></div>
+
+<!-- 26 chevron of dots -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <g fill="#2D4A53">
+    <circle cx="22" cy="30" r="4"/><circle cx="32" cy="40" r="4"/><circle cx="42" cy="50" r="4"/><circle cx="32" cy="60" r="4"/><circle cx="22" cy="70" r="4"/>
+  </g>
+  <path d="M82 32 A22 22 0 1 0 82 68" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round"/>
+  <path d="M64 42 L70 50 L64 58 L58 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">26 · Dot &gt;</div></div>
+
+<!-- 27 Diamond + chevron only -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M28 26 L52 50 L28 74" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M64 32 L80 50 L64 68 L48 50 Z" fill="none" stroke="#4A8F8F" stroke-width="6" stroke-linejoin="round"/>
+</svg></div><div class="label">CatalEx</div><div class="num">27 · &gt;◆</div></div>
+
+<!-- 28 split color -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 30 A24 24 0 1 0 78 70" fill="none" stroke="#4A8F8F" stroke-width="8" stroke-linecap="round"/>
+  <path d="M62 42 L70 50 L62 58 L54 50 Z" fill="#2D4A53"/>
+</svg></div><div class="label">CatalEx</div><div class="num">28 · Split</div></div>
+
+<!-- 29 inside the C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M70 28 A26 26 0 1 0 70 72" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round"/>
+  <path d="M40 38 L52 50 L40 62" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M60 42 L66 50 L60 58 L54 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">29 · Nested</div></div>
+
+<!-- 30 sparkle ABOVE -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M50 8 L56 18 L50 28 L44 18 Z" fill="#4A8F8F"/>
+  <path d="M22 38 L42 56 L22 74" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 40 A20 20 0 1 0 78 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+</svg></div><div class="label">CatalEx</div><div class="num">30 · Halo</div></div>
+
+<!-- 31 cmd-prompt style -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <rect x="10" y="20" width="80" height="60" rx="10" fill="none" stroke="#2D4A53" stroke-width="5"/>
+  <path d="M22 38 L36 50 L22 62" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44 60 A12 12 0 1 0 44 40" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round"/>
+  <path d="M72 44 L78 50 L72 56 L66 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">31 · Prompt</div></div>
+
+<!-- 32 stencil C with > cut -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M50 18 A32 32 0 1 0 50 82 L50 64 A14 14 0 1 1 50 36 Z" fill="#2D4A53"/>
+  <path d="M62 36 L74 50 L62 64" fill="none" stroke="#F4F9F9" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M82 44 L88 50 L82 56 L76 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">32 · Stencil</div></div>
+
+<!-- 33 chevron inside ring -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="36" fill="none" stroke="#2D4A53" stroke-width="6"/>
+  <path d="M36 34 L58 50 L36 66" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 42 L74 50 L68 58 L62 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">33 · Enclosed</div></div>
+
+<!-- 34 Square C with > -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 26 L42 50 L22 74" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M86 30 L60 30 L60 70 L86 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 42 L82 50 L76 58 L70 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">34 · Square C</div></div>
+
+<!-- 35 hex C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 26 L42 50 L22 74" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 38 L78 22 L60 22 L50 38 L60 54 L78 54 L88 38 M88 62 L78 78 L60 78 L50 62" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M68 44 L74 50 L68 56 L62 50 Z" fill="#4A8F8F" transform="translate(-2 0)"/>
+</svg></div><div class="label">CatalEx</div><div class="num">35 · Hex C</div></div>
+
+<!-- 36 triangle > diamond C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <polygon points="18,28 42,50 18,72" fill="#2D4A53"/>
+  <path d="M74 22 L96 50 L74 78 L52 50 Z" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M74 42 L80 50 L74 58 L68 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">36 · Twin Gem</div></div>
+
+<!-- 37 underline -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 32 A22 22 0 1 0 80 68" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M62 42 L68 50 L62 58 L56 50 Z" fill="#4A8F8F"/>
+  <line x1="20" y1="86" x2="80" y2="86" stroke="#4A8F8F" stroke-width="4" stroke-linecap="round"/>
+</svg></div><div class="label">CatalEx</div><div class="num">37 · Underline</div></div>
+
+<!-- 38 cursor blink -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M18 30 L40 50 L18 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 30 A22 22 0 1 0 76 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <rect x="84" y="38" width="6" height="24" rx="2" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">38 · Cursor</div></div>
+
+<!-- 39 dotted ring -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="50" r="24" fill="none" stroke="#2D4A53" stroke-width="6" stroke-dasharray="3 6" stroke-linecap="round"/>
+  <path d="M72 40 L80 50 L72 60 L64 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">39 · Dotted</div></div>
+
+<!-- 40 reversed -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M30 30 A22 22 0 1 1 30 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M82 28 L62 50 L82 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 42 L56 50 L50 58 L44 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">40 · Mirrored</div></div>
+
+<!-- 41 Diamond outline only -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 30 A22 22 0 1 0 80 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M61 40 L71 50 L61 60 L51 50 Z" fill="none" stroke="#4A8F8F" stroke-width="4"/>
+</svg></div><div class="label">CatalEx</div><div class="num">41 · Outline Gem</div></div>
+
+<!-- 42 4-color palette diamond -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L42 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 30 A22 22 0 1 0 80 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M61 40 L71 50 L61 60 Z" fill="#4A8F8F"/>
+  <path d="M61 40 L71 50 L61 60 L51 50 Z" fill="none" stroke="#2D4A53" stroke-width="2"/>
+  <path d="M61 40 L51 50 L61 60 Z" fill="#6BA4A4"/>
+</svg></div><div class="label">CatalEx</div><div class="num">42 · Faceted</div></div>
+
+<!-- 43 stamp -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <rect x="14" y="14" width="72" height="72" rx="20" fill="#F9F7F4" stroke="#2D4A53" stroke-width="4"/>
+  <path d="M30 34 L46 50 L30 66" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M74 38 A14 14 0 1 0 74 62" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round"/>
+  <path d="M61 44 L66 50 L61 56 L56 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">43 · Stamp</div></div>
+
+<!-- 44 chevron arc fused -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L46 50 L22 72 M46 50 A26 26 0 1 1 90 50" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 42 L74 50 L68 58 L62 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">44 · Fused</div></div>
+
+<!-- 45 stylized monogram -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M30 22 L52 50 L30 78" fill="none" stroke="#2D4A53" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M84 34 A20 20 0 1 0 84 66" fill="none" stroke="#2D4A53" stroke-width="10" stroke-linecap="round"/>
+  <path d="M67 44 L73 50 L67 56 L61 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">45 · Mark</div></div>
+
+<!-- 46 vertical bar accent -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <rect x="14" y="22" width="4" height="56" rx="2" fill="#4A8F8F"/>
+  <path d="M28 28 L48 50 L28 72" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M84 32 A22 22 0 1 0 84 68" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M66 42 L72 50 L66 58 L60 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">46 · Anchor</div></div>
+
+<!-- 47 small + big sparkle -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M20 30 L40 50 L20 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 30 A22 22 0 1 0 80 70" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/>
+  <path d="M62 38 L70 50 L62 62 L54 50 Z" fill="#4A8F8F"/>
+  <path d="M84 18 L88 24 L84 30 L80 24 Z" fill="#6BA4A4"/>
+</svg></div><div class="label">CatalEx</div><div class="num">47 · Twin Spark</div></div>
+
+<!-- 48 reverse on dark -->
+<div class="card" style="background:#2D4A53;border-color:#2D4A53"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L44 50 L22 72" fill="none" stroke="#F4F9F9" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 30 A22 22 0 1 0 80 70" fill="none" stroke="#F4F9F9" stroke-width="9" stroke-linecap="round"/>
+  <path d="M62 40 L70 50 L62 60 L54 50 Z" fill="#6BA4A4"/>
+</svg></div><div class="label" style="color:#fff">CatalEx</div><div class="num" style="color:#B8CFCF">48 · Dark Mode</div></div>
+
+<!-- 49 reverse cream bg -->
+<div class="card" style="background:#F9F7F4"><div class="mark"><svg viewBox="0 0 100 100">
+  <path d="M22 28 L44 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 30 A22 22 0 1 0 80 70" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round"/>
+  <path d="M62 40 L70 50 L62 60 L54 50 Z" fill="#4A8F8F"/>
+</svg></div><div class="label">CatalEx</div><div class="num">49 · Cream</div></div>
+
+<!-- 50 wordmark lockup -->
+<div class="card" style="grid-column: span 2"><div class="mark" style="width:auto;height:80px"><svg viewBox="0 0 320 100">
+  <path d="M22 28 L44 50 L22 72" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 30 A22 22 0 1 0 80 70" fill="none" stroke="#2D4A53" stroke-width="9" stroke-linecap="round"/>
+  <path d="M62 40 L70 50 L62 60 L54 50 Z" fill="#4A8F8F"/>
+  <text x="118" y="64" font-family="-apple-system, Inter, sans-serif" font-size="38" font-weight="600" fill="#2D4A53" letter-spacing="-1">CatalEx</text>
+</svg></div><div class="label">CatalEx</div><div class="num">50 · Lockup</div></div>
+
+</div>
+</body>
+</html>

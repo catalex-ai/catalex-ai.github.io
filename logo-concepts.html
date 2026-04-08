@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CatalEx — 50 Logo Concepts</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --warm: #F9F7F4;
+    --teal-tint: #F4F9F9;
+    --ink: #1A1A1A;
+    --muted: #6B6B6B;
+    --c1: #2D4A53;
+    --c2: #3A5E68;
+    --c3: #4A8F8F;
+    --c4: #5B8A8A;
+    --c5: #6BA4A4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", system-ui, sans-serif;
+    background: linear-gradient(135deg, #ffffff 0%, var(--teal-tint) 50%, var(--warm) 100%);
+    color: var(--ink);
+    padding: 60px 40px 80px;
+  }
+  header {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+  }
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  header p {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0;
+    max-width: 640px;
+    line-height: 1.6;
+  }
+  .grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--bg);
+    border: 1px solid #E8E8E8;
+    border-radius: 14px;
+    padding: 24px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -12px rgba(45,74,83,0.25);
+    border-color: var(--c3);
+  }
+  .mark {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mark svg { width: 100%; height: 100%; display: block; }
+  .label {
+    margin-top: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .num {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .desc {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 6px;
+    text-align: center;
+    line-height: 1.4;
+    min-height: 28px;
+  }
+  /* Dark variant row */
+  .card.dark {
+    background: var(--c1);
+    border-color: var(--c1);
+  }
+  .card.dark .label { color: #fff; }
+  .card.dark .num, .card.dark .desc { color: #B8CFCF; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CatalEx — 50 Logo Concepts</h1>
+  <p>SVG mark explorations using the CatalEx teal palette (#2D4A53 → #6BA4A4). Each mark is geometrically constructed, scales to favicon size, and conveys AI/agent semantics through abstraction rather than literal imagery.</p>
+</header>
+
+<div class="grid">
+
+<!-- 01 Orbit C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="#2D4A53" stroke-width="6"/><path d="M70 30 A38 38 0 0 0 30 70" fill="none" stroke="#F9F7F4" stroke-width="10"/><circle cx="70" cy="30" r="5" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">01 · Orbit C</div></div>
+
+<!-- 02 Node C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M75 30 A30 30 0 1 0 75 70" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round"/><circle cx="75" cy="30" r="6" fill="#4A8F8F"/><circle cx="75" cy="70" r="6" fill="#6BA4A4"/><circle cx="20" cy="50" r="4" fill="#2D4A53"/></svg></div><div class="label">CatalEx</div><div class="num">02 · Node C</div></div>
+
+<!-- 03 Spark X -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M25 25 L75 75 M75 25 L25 75" stroke="#2D4A53" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="50" r="8" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">03 · Spark X</div></div>
+
+<!-- 04 Atom -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><ellipse cx="50" cy="50" rx="35" ry="14" fill="none" stroke="#2D4A53" stroke-width="4"/><ellipse cx="50" cy="50" rx="35" ry="14" fill="none" stroke="#4A8F8F" stroke-width="4" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="35" ry="14" fill="none" stroke="#6BA4A4" stroke-width="4" transform="rotate(120 50 50)"/><circle cx="50" cy="50" r="5" fill="#2D4A53"/></svg></div><div class="label">CatalEx</div><div class="num">04 · Atom</div></div>
+
+<!-- 05 Hex Mol -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><polygon points="50,15 82,33 82,67 50,85 18,67 18,33" fill="none" stroke="#2D4A53" stroke-width="6"/><circle cx="50" cy="50" r="7" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">05 · Hex Core</div></div>
+
+<!-- 06 Pulse -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M10 50 L30 50 L40 25 L55 75 L65 40 L75 50 L90 50" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="label">CatalEx</div><div class="num">06 · Pulse</div></div>
+
+<!-- 07 Concentric arcs -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M20 50 A30 30 0 0 1 80 50" fill="none" stroke="#2D4A53" stroke-width="5"/><path d="M28 50 A22 22 0 0 1 72 50" fill="none" stroke="#4A8F8F" stroke-width="5"/><path d="M36 50 A14 14 0 0 1 64 50" fill="none" stroke="#6BA4A4" stroke-width="5"/></svg></div><div class="label">CatalEx</div><div class="num">07 · Signal</div></div>
+
+<!-- 08 Triangle stack -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><polygon points="50,18 85,80 15,80" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linejoin="round"/><polygon points="50,40 70,76 30,76" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">08 · Catalyst</div></div>
+
+<!-- 09 Network graph -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><line x1="20" y1="25" x2="50" y2="50" stroke="#2D4A53" stroke-width="3"/><line x1="80" y1="25" x2="50" y2="50" stroke="#2D4A53" stroke-width="3"/><line x1="20" y1="75" x2="50" y2="50" stroke="#2D4A53" stroke-width="3"/><line x1="80" y1="75" x2="50" y2="50" stroke="#2D4A53" stroke-width="3"/><circle cx="20" cy="25" r="6" fill="#4A8F8F"/><circle cx="80" cy="25" r="6" fill="#4A8F8F"/><circle cx="20" cy="75" r="6" fill="#6BA4A4"/><circle cx="80" cy="75" r="6" fill="#6BA4A4"/><circle cx="50" cy="50" r="8" fill="#2D4A53"/></svg></div><div class="label">CatalEx</div><div class="num">09 · Mesh</div></div>
+
+<!-- 10 Wave bars -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="20" y="40" width="8" height="20" rx="2" fill="#2D4A53"/><rect x="34" y="28" width="8" height="44" rx="2" fill="#3A5E68"/><rect x="48" y="18" width="8" height="64" rx="2" fill="#4A8F8F"/><rect x="62" y="28" width="8" height="44" rx="2" fill="#5B8A8A"/><rect x="76" y="40" width="8" height="20" rx="2" fill="#6BA4A4"/></svg></div><div class="label">CatalEx</div><div class="num">10 · Wave</div></div>
+
+<!-- 11 Prism -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><polygon points="50,15 85,75 15,75" fill="none" stroke="#2D4A53" stroke-width="5"/><line x1="30" y1="55" x2="80" y2="40" stroke="#4A8F8F" stroke-width="3"/><line x1="30" y1="55" x2="78" y2="55" stroke="#6BA4A4" stroke-width="3"/><line x1="30" y1="55" x2="76" y2="68" stroke="#5B8A8A" stroke-width="3"/></svg></div><div class="label">CatalEx</div><div class="num">11 · Prism</div></div>
+
+<!-- 12 Infinity -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M30 50 A15 15 0 1 1 50 50 A15 15 0 1 0 70 50 A15 15 0 1 1 50 50 A15 15 0 1 0 30 50 Z" fill="none" stroke="#2D4A53" stroke-width="6" stroke-linecap="round"/></svg></div><div class="label">CatalEx</div><div class="num">12 · Loop</div></div>
+
+<!-- 13 Pixel C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><g fill="#2D4A53"><rect x="25" y="20" width="14" height="14" rx="2"/><rect x="43" y="20" width="14" height="14" rx="2"/><rect x="61" y="20" width="14" height="14" rx="2"/><rect x="25" y="38" width="14" height="14" rx="2"/><rect x="25" y="56" width="14" height="14" rx="2"/><rect x="25" y="74" width="14" height="14" rx="2"/><rect x="43" y="74" width="14" height="14" rx="2"/><rect x="61" y="74" width="14" height="14" rx="2"/></g><rect x="61" y="56" width="14" height="14" rx="2" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">13 · Pixel C</div></div>
+
+<!-- 14 Eye lens -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M15 50 Q50 15 85 50 Q50 85 15 50 Z" fill="none" stroke="#2D4A53" stroke-width="6"/><circle cx="50" cy="50" r="12" fill="#4A8F8F"/><circle cx="50" cy="50" r="4" fill="#fff"/></svg></div><div class="label">CatalEx</div><div class="num">14 · Lens</div></div>
+
+<!-- 15 Diamond grid -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><g stroke="#2D4A53" stroke-width="5" fill="none"><polygon points="50,20 80,50 50,80 20,50"/></g><line x1="35" y1="50" x2="65" y2="50" stroke="#4A8F8F" stroke-width="5"/><line x1="50" y1="35" x2="50" y2="65" stroke="#4A8F8F" stroke-width="5"/></svg></div><div class="label">CatalEx</div><div class="num">15 · Compass</div></div>
+
+<!-- 16 Bracket C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M70 22 L30 22 L30 78 L70 78" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="70" cy="50" r="6" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">16 · Bracket</div></div>
+
+<!-- 17 Half ring + dot -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M50 18 A32 32 0 1 0 50 82" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/><circle cx="65" cy="50" r="7" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">17 · Crescent</div></div>
+
+<!-- 18 Stacked C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M75 30 A28 28 0 1 0 75 70" fill="none" stroke="#2D4A53" stroke-width="6"/><path d="M70 38 A20 20 0 1 0 70 62" fill="none" stroke="#4A8F8F" stroke-width="5"/><path d="M65 45 A12 12 0 1 0 65 55" fill="none" stroke="#6BA4A4" stroke-width="4"/></svg></div><div class="label">CatalEx</div><div class="num">18 · Echo C</div></div>
+
+<!-- 19 Quantum dots -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><g fill="#2D4A53"><circle cx="25" cy="25" r="5"/><circle cx="50" cy="25" r="5"/><circle cx="75" cy="25" r="5"/><circle cx="25" cy="50" r="5"/><circle cx="75" cy="50" r="5"/><circle cx="25" cy="75" r="5"/><circle cx="50" cy="75" r="5"/><circle cx="75" cy="75" r="5"/></g><circle cx="50" cy="50" r="9" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">19 · Quantum</div></div>
+
+<!-- 20 Arrow flow -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M20 65 L50 35 L80 65" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="35" r="6" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">20 · Apex</div></div>
+
+<!-- 21 Bloom -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><g stroke="#2D4A53" stroke-width="4" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="80"/><line x1="20" y1="50" x2="80" y2="50"/><line x1="29" y1="29" x2="71" y2="71"/><line x1="71" y1="29" x2="29" y2="71"/></g><circle cx="50" cy="50" r="9" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">21 · Bloom</div></div>
+
+<!-- 22 Cube iso -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><g fill="none" stroke="#2D4A53" stroke-width="5" stroke-linejoin="round"><polygon points="50,20 80,37 80,72 50,89 20,72 20,37"/><line x1="50" y1="20" x2="50" y2="55"/><line x1="50" y1="55" x2="20" y2="37"/><line x1="50" y1="55" x2="80" y2="37"/></g></svg></div><div class="label">CatalEx</div><div class="num">22 · Cube</div></div>
+
+<!-- 23 Slash C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M75 25 A30 30 0 1 0 75 75" fill="none" stroke="#2D4A53" stroke-width="8" stroke-linecap="round"/><line x1="35" y1="80" x2="75" y2="20" stroke="#4A8F8F" stroke-width="6" stroke-linecap="round"/></svg></div><div class="label">CatalEx</div><div class="num">23 · Slash C</div></div>
+
+<!-- 24 Orbit dots -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="32" fill="none" stroke="#2D4A53" stroke-width="3"/><circle cx="50" cy="18" r="6" fill="#2D4A53"/><circle cx="82" cy="50" r="6" fill="#4A8F8F"/><circle cx="50" cy="82" r="6" fill="#5B8A8A"/><circle cx="18" cy="50" r="6" fill="#6BA4A4"/></svg></div><div class="label">CatalEx</div><div class="num">24 · Orbit Dots</div></div>
+
+<!-- 25 Square ring -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" rx="12" fill="none" stroke="#2D4A53" stroke-width="6"/><rect x="38" y="38" width="24" height="24" rx="4" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">25 · Frame</div></div>
+
+<!-- 26 X overlap -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="20" y="44" width="60" height="12" rx="3" fill="#2D4A53" transform="rotate(45 50 50)"/><rect x="20" y="44" width="60" height="12" rx="3" fill="#4A8F8F" transform="rotate(-45 50 50)" opacity="0.85"/></svg></div><div class="label">CatalEx</div><div class="num">26 · Cross X</div></div>
+
+<!-- 27 Bar C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="22" y="22" width="56" height="10" rx="3" fill="#2D4A53"/><rect x="22" y="22" width="10" height="56" rx="3" fill="#2D4A53"/><rect x="22" y="68" width="56" height="10" rx="3" fill="#2D4A53"/><rect x="55" y="45" width="23" height="10" rx="3" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">27 · Block C</div></div>
+
+<!-- 28 Sun rays -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="14" fill="#2D4A53"/><g stroke="#4A8F8F" stroke-width="4" stroke-linecap="round"><line x1="50" y1="14" x2="50" y2="24"/><line x1="50" y1="76" x2="50" y2="86"/><line x1="14" y1="50" x2="24" y2="50"/><line x1="76" y1="50" x2="86" y2="50"/><line x1="24" y1="24" x2="31" y2="31"/><line x1="69" y1="69" x2="76" y2="76"/><line x1="76" y1="24" x2="69" y2="31"/><line x1="24" y1="76" x2="31" y2="69"/></g></svg></div><div class="label">CatalEx</div><div class="num">28 · Beacon</div></div>
+
+<!-- 29 Dual arc -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M22 50 A28 28 0 0 1 78 50" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round"/><path d="M22 50 A28 28 0 0 0 78 50" fill="none" stroke="#4A8F8F" stroke-width="7" stroke-linecap="round"/></svg></div><div class="label">CatalEx</div><div class="num">29 · Lens Pair</div></div>
+
+<!-- 30 Hex grid mini -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><g fill="none" stroke="#2D4A53" stroke-width="4"><polygon points="50,18 70,30 70,52 50,64 30,52 30,30"/><polygon points="30,52 50,64 50,86 30,98" stroke="none"/></g><polygon points="50,28 64,36 64,52 50,60 36,52 36,36" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">30 · Cell</div></div>
+
+<!-- 31 Chat dot -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M20 30 Q20 18 32 18 L68 18 Q80 18 80 30 L80 56 Q80 68 68 68 L42 68 L28 82 L30 68 Q20 68 20 56 Z" fill="#2D4A53"/><circle cx="38" cy="42" r="4" fill="#4A8F8F"/><circle cx="50" cy="42" r="4" fill="#6BA4A4"/><circle cx="62" cy="42" r="4" fill="#fff"/></svg></div><div class="label">CatalEx</div><div class="num">31 · Agent</div></div>
+
+<!-- 32 Spiral -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M50 50 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0 a16 16 0 1 1 -32 0 a20 20 0 1 1 40 0 a24 24 0 1 1 -48 0" fill="none" stroke="#2D4A53" stroke-width="4" stroke-linecap="round"/></svg></div><div class="label">CatalEx</div><div class="num">32 · Spiral</div></div>
+
+<!-- 33 Flag arrow -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M25 20 L75 20 L60 50 L75 80 L25 80 Z" fill="#2D4A53"/><circle cx="40" cy="50" r="6" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">33 · Pennant</div></div>
+
+<!-- 34 Layered C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M78 30 A30 30 0 1 0 78 70" fill="none" stroke="#6BA4A4" stroke-width="6" opacity="0.45"/><path d="M75 32 A28 28 0 1 0 75 68" fill="none" stroke="#4A8F8F" stroke-width="6" opacity="0.7"/><path d="M72 34 A26 26 0 1 0 72 66" fill="none" stroke="#2D4A53" stroke-width="6"/></svg></div><div class="label">CatalEx</div><div class="num">34 · Triple C</div></div>
+
+<!-- 35 Square dots -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="22" y="22" width="56" height="56" rx="10" fill="none" stroke="#2D4A53" stroke-width="5"/><circle cx="35" cy="35" r="4" fill="#4A8F8F"/><circle cx="50" cy="35" r="4" fill="#4A8F8F"/><circle cx="65" cy="35" r="4" fill="#4A8F8F"/><circle cx="35" cy="50" r="4" fill="#5B8A8A"/><circle cx="50" cy="50" r="4" fill="#2D4A53"/><circle cx="65" cy="50" r="4" fill="#5B8A8A"/><circle cx="35" cy="65" r="4" fill="#6BA4A4"/><circle cx="50" cy="65" r="4" fill="#6BA4A4"/><circle cx="65" cy="65" r="4" fill="#6BA4A4"/></svg></div><div class="label">CatalEx</div><div class="num">35 · Matrix</div></div>
+
+<!-- 36 Wedge -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M20 80 L50 20 L80 80 Z" fill="#2D4A53"/><path d="M35 80 L50 50 L65 80 Z" fill="#F4F9F9"/></svg></div><div class="label">CatalEx</div><div class="num">36 · Spire</div></div>
+
+<!-- 37 C with gap -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="32" fill="none" stroke="#2D4A53" stroke-width="9" stroke-dasharray="160 200" transform="rotate(-30 50 50)"/></svg></div><div class="label">CatalEx</div><div class="num">37 · Arc</div></div>
+
+<!-- 38 Double helix -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M30 20 Q70 35 30 50 Q70 65 30 80" fill="none" stroke="#2D4A53" stroke-width="5"/><path d="M70 20 Q30 35 70 50 Q30 65 70 80" fill="none" stroke="#4A8F8F" stroke-width="5"/></svg></div><div class="label">CatalEx</div><div class="num">38 · Helix</div></div>
+
+<!-- 39 Plus grid -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="42" y="20" width="16" height="60" rx="3" fill="#2D4A53"/><rect x="20" y="42" width="60" height="16" rx="3" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">39 · Plus</div></div>
+
+<!-- 40 Lens C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M75 30 A28 28 0 1 0 75 70" fill="none" stroke="#2D4A53" stroke-width="10" stroke-linecap="round"/></svg></div><div class="label">CatalEx</div><div class="num">40 · Pure C</div></div>
+
+<!-- 41 Dot field C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><g fill="#2D4A53"><circle cx="65" cy="22" r="3"/><circle cx="50" cy="20" r="3"/><circle cx="35" cy="24" r="3"/><circle cx="24" cy="35" r="3"/><circle cx="20" cy="50" r="3"/><circle cx="24" cy="65" r="3"/><circle cx="35" cy="76" r="3"/><circle cx="50" cy="80" r="3"/><circle cx="65" cy="78" r="3"/></g><circle cx="78" cy="50" r="6" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">41 · Particle C</div></div>
+
+<!-- 42 Stair -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M20 75 L20 60 L40 60 L40 45 L60 45 L60 30 L80 30" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="80" cy="30" r="6" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">42 · Step</div></div>
+
+<!-- 43 Twin orbit -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><circle cx="38" cy="50" r="22" fill="none" stroke="#2D4A53" stroke-width="5"/><circle cx="62" cy="50" r="22" fill="none" stroke="#4A8F8F" stroke-width="5"/></svg></div><div class="label">CatalEx</div><div class="num">43 · Twin</div></div>
+
+<!-- 44 Tag X -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" rx="14" fill="#2D4A53"/><path d="M35 35 L65 65 M65 35 L35 65" stroke="#F4F9F9" stroke-width="7" stroke-linecap="round"/></svg></div><div class="label">CatalEx</div><div class="num">44 · Tile X</div></div>
+
+<!-- 45 Tag C -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" rx="14" fill="#2D4A53"/><path d="M65 35 A18 18 0 1 0 65 65" fill="none" stroke="#F4F9F9" stroke-width="7" stroke-linecap="round"/></svg></div><div class="label">CatalEx</div><div class="num">45 · Tile C</div></div>
+
+<!-- 46 Constellation -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><line x1="25" y1="30" x2="55" y2="22" stroke="#2D4A53" stroke-width="2"/><line x1="55" y1="22" x2="78" y2="48" stroke="#2D4A53" stroke-width="2"/><line x1="78" y1="48" x2="60" y2="75" stroke="#2D4A53" stroke-width="2"/><line x1="60" y1="75" x2="28" y2="68" stroke="#2D4A53" stroke-width="2"/><line x1="28" y1="68" x2="25" y2="30" stroke="#2D4A53" stroke-width="2"/><circle cx="25" cy="30" r="4" fill="#4A8F8F"/><circle cx="55" cy="22" r="4" fill="#4A8F8F"/><circle cx="78" cy="48" r="4" fill="#2D4A53"/><circle cx="60" cy="75" r="4" fill="#6BA4A4"/><circle cx="28" cy="68" r="4" fill="#6BA4A4"/></svg></div><div class="label">CatalEx</div><div class="num">46 · Constellation</div></div>
+
+<!-- 47 Soft square -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><rect x="22" y="22" width="56" height="56" rx="18" fill="#2D4A53"/><path d="M62 38 A14 14 0 1 0 62 62" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><circle cx="62" cy="50" r="3" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">47 · Pebble</div></div>
+
+<!-- 48 Crystal -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><polygon points="50,18 78,38 68,80 32,80 22,38" fill="none" stroke="#2D4A53" stroke-width="5" stroke-linejoin="round"/><line x1="50" y1="18" x2="50" y2="80" stroke="#4A8F8F" stroke-width="3"/><line x1="22" y1="38" x2="78" y2="38" stroke="#4A8F8F" stroke-width="3"/></svg></div><div class="label">CatalEx</div><div class="num">48 · Crystal</div></div>
+
+<!-- 49 Loop arrow -->
+<div class="card"><div class="mark"><svg viewBox="0 0 100 100"><path d="M75 35 A28 28 0 1 0 75 65" fill="none" stroke="#2D4A53" stroke-width="7" stroke-linecap="round"/><polygon points="75,28 85,38 65,38" fill="#4A8F8F"/></svg></div><div class="label">CatalEx</div><div class="num">49 · Cycle</div></div>
+
+<!-- 50 Wordmark mini -->
+<div class="card"><div class="mark"><svg viewBox="0 0 200 100"><circle cx="30" cy="50" r="22" fill="none" stroke="#2D4A53" stroke-width="6"/><path d="M44 38 A18 18 0 1 0 44 62" fill="#F9F7F4" stroke="none"/><circle cx="44" cy="50" r="5" fill="#4A8F8F"/><text x="68" y="62" font-family="-apple-system, Inter, sans-serif" font-size="32" font-weight="600" fill="#2D4A53" letter-spacing="-1">CatalEx</text></svg></div><div class="label">CatalEx</div><div class="num">50 · Wordmark</div></div>
+
+</div>
+</body>
+</html>

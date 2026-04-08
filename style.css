@@ -2117,10 +2117,17 @@ h3, h4 {
 
 /* Navbar — hairline editorial bar */
 .navbar {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease;
+}
+.navbar.scrolled {
   background: rgba(251, 250, 247, 0.78);
   backdrop-filter: saturate(140%) blur(14px);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
-  border-bottom: 1px solid var(--rule);
+  border-bottom-color: var(--rule);
 }
 .logo-text {
   font-family: var(--font-display);
@@ -6067,6 +6074,83 @@ body::before {
   font-family: var(--font-italic-display);
   font-weight: 400;
 }
+.hero-pro-tagline {
+  display: block;
+  margin: 0 0 2.25rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--ink-2, var(--ink));
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.005em;
+  max-width: none;
+  white-space: nowrap;
+}
+.hero-pro-tagline strong { color: var(--ink); font-weight: 700; }
+
+/* Logo alignment — match the hero grid container, not the default 1120 nav */
+#homepage .navbar.nav-pro > .nav-container {
+  max-width: 1280px !important;
+  padding: 0 2.5rem !important;
+}
+#homepage .nav-pro .logo { align-items: center; gap: 0.55rem; }
+#homepage .nav-pro .logo-img {
+  height: 24px;
+  width: auto;
+  display: block;
+  transform: translateY(1px);
+}
+
+/* Counter: lock width so trailing text doesn't shift while animating */
+[data-counter] {
+  display: inline-block;
+  min-width: 2.2ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Trust section eyebrow rule: use accent like other sections */
+#homepage .trust-pro .section-eyebrow .eyebrow-rule { background: var(--accent) !important; }
+
+/* Force all section content containers to identical horizontal metrics */
+#homepage .modes-pro > .content-container,
+#homepage .employees-pro > .content-container,
+#homepage .platform-pro > .content-container,
+#homepage .trust-pro > .content-container,
+#homepage .cta-pro > .content-container {
+  max-width: 1120px !important;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* === Final navbar override: transparent at top, opaque on scroll === */
+#homepage .navbar.nav-pro,
+.navbar.nav-pro {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease !important;
+}
+#homepage .navbar.nav-pro.scrolled,
+.navbar.nav-pro.scrolled {
+  background: rgba(251, 250, 247, 0.82) !important;
+  backdrop-filter: saturate(160%) blur(14px) !important;
+  -webkit-backdrop-filter: saturate(160%) blur(14px) !important;
+  border-bottom-color: rgba(14,26,29,0.08) !important;
+}
+/* Pull hero up under the transparent nav so its peachy bg shows through */
+#homepage .hero-section.hero-pro {
+  margin-top: -88px;
+  padding-top: 9rem !important;
+}
+
 .hero-pro-tools-label {
   color: var(--ink);
   font-family: var(--font-mono);
