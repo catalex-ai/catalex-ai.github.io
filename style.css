@@ -8271,11 +8271,28 @@ body::before { opacity: 0.14; }
   .hero-pro-sub { font-size: 1rem !important; }
   .hero-pro-tagline { font-size: 0.92rem !important; }
   .hero-pro-actions {
+    display: flex !important;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 0.75rem;
+    width: 100%;
   }
   .hero-pro-actions .btn-primary,
-  .hero-pro-actions .btn-secondary { width: 100%; text-align: center; }
+  .hero-pro-actions .btn-secondary {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Center the hero text block itself on mobile */
+  .hero-pro-text { text-align: center; }
+  .hero-pro-text .hero-pro-h1,
+  .hero-pro-text .hero-pro-sub,
+  .hero-pro-text .hero-pro-tagline { margin-left: auto; margin-right: auto; }
 
   /* Hero background blobs scaled down */
   .hero-section::before,
