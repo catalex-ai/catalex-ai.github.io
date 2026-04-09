@@ -67,9 +67,31 @@ document.documentElement.classList.add('js');
     });
 })();
 
+// Mobile nav hamburger toggle
+(function() {
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', () => {
+        const isOpen = links.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    // Close on link click
+    links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            links.classList.remove('open');
+            toggle.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+
 // Subtle parallax for [data-parallax] — translates Y based on scroll position
 (function() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Disable parallax on small viewports — too jarring on mobile
+    if (window.matchMedia('(max-width: 900px)').matches) return;
     const els = [];
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-parallax]').forEach(el => {
