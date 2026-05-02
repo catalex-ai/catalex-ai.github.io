@@ -7,7 +7,136 @@
     <title>CatalEx | The AI Operating Layer for AI-Native Companies</title>
     <meta name="description"
         content="CatalEx is the operating layer for AI-native companies — one platform to build, measure, and govern every agent in your organization. Move from pilots to production P&L.">
+    <link rel="canonical" href="https://catalex.co/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://catalex.co/">
+    <meta property="og:title" content="CatalEx — The AI Operating Layer for AI-Native Companies">
+    <meta property="og:description" content="One platform to build, deploy, and run AI agents — embedded in your product, working autonomously, or sitting on your team as named AI assistants. Experiment in minutes, scale to millions, enterprise guardrails baked in.">
+    <meta property="og:image" content="https://catalex.co/logo.png">
+    <meta property="og:site_name" content="CatalEx">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CatalEx — The AI Operating Layer for AI-Native Companies">
+    <meta name="twitter:description" content="One platform to build, deploy, and run AI agents — embedded in your product, working autonomously, or sitting on your team as named AI assistants.">
+    <meta name="twitter:image" content="https://catalex.co/logo.png">
+
     <link rel="icon" href="logo.svg" type="image/svg+xml">
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CatalEx",
+      "url": "https://catalex.co",
+      "logo": "https://catalex.co/logo.png",
+      "description": "CatalEx is the AI operating layer for AI-native companies. One platform to build, deploy, and run AI agents — embedded in your product, working autonomously, or as named AI assistants on your team.",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Structured Data: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CatalEx",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://catalex.co",
+      "description": "AI operating layer that lets companies build, deploy, and govern AI agents in three modes: embedded in products via API, autonomous background workers, and named AI assistants on your team. Reduces time to first production agent from 6-8 weeks to minutes, cuts token spend by up to 90%, and includes enterprise guardrails — role-based access, full audit trails, on-prem deployment, and human-in-the-loop approvals.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "url": "https://console.catalex.co"
+      },
+      "featureList": [
+        "Three deployment modes: Embed, Autonomous, Assistants",
+        "Persistent agent memory across sessions — agents remember past decisions and context",
+        "Self-evolving agents that learn from outcomes and improve over time",
+        "Self-correcting agents that fix mistakes mid-run",
+        "Agents pick and track their own business metrics",
+        "Auto-scaling from one to ten thousand concurrent agents",
+        "Up to 10x lower token cost via caching and model routing",
+        "Role-based access control",
+        "Full audit trail for every decision and tool call",
+        "On-premises and in-region deployment",
+        "Human-in-the-loop approval workflows",
+        "Pre-built role library: Analyst, SDR, Support Lead, Recruiter, Researcher, and more"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CatalEx?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CatalEx is an AI operating layer for AI-native companies. It is a single platform where organizations build, deploy, measure, and govern every AI agent — whether embedded in a product, running autonomously in the background, or working alongside employees as named AI assistants."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I can build agents with coding tools like Claude Code. Why do I need CatalEx?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Coding agents help you build an agent. CatalEx helps you run, measure, and govern agents at organizational scale. Without a platform layer, every session starts from scratch with no persistent memory, agents never learn from outcomes (same performance on day 100 as day one), there is no cost control or visibility into what AI spend produces, no business KPIs tied to agent output, and no guardrails on data access. CatalEx agents are self-evolving with persistent memory, model-agnostic (Claude, GPT, Gemini, Llama), cut token spend by up to 90%, and ship governance on day one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the three deployment modes in CatalEx?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CatalEx supports three agent deployment modes: (1) Embed — agents run inside your product via API, handling tasks like onboarding verification and compliance checks in real time; (2) Autonomous — agents work in the background on scheduled or long-running tasks like invoice reconciliation, cohort reports, and lead outreach; (3) Assistants — named AI teammates that live in Slack, Notion, Jira, and GitHub and learn how each person works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do 95% of AI projects fail to reach production?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Two reasons: most agents are built like demos in notebooks with hand-wired plumbing that breaks under real traffic, and teams get stuck on one bet when they should be running many experiments. CatalEx solves both by packaging an experimentation runtime and a production runtime together — reducing time to first production agent from 6-8 weeks to minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does CatalEx reduce AI costs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CatalEx reduces token spend by up to 90% compared to baseline through three mechanisms: caching the code agents write and re-running it with new parameters, routing each action to the most cost-effective model, and running agents in isolated environments that prevent redundant processing. This can result in up to 10x lower token cost on typical workloads."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CatalEx enterprise-ready?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. CatalEx is built for teams whose agents touch regulated data, customer money, or production systems. Enterprise features include role-based access control inherited from your identity provider, full audit trails for every decision and tool call, on-premises and in-region deployment so data never leaves your perimeter, and human-in-the-loop approval workflows where agents wait for confirmation on sensitive actions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are virtual employees in CatalEx?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Virtual employees are named AI assistants that join your team with specific roles — like Analyst, SDR, Support Lead, Recruiter, or Researcher. They live in tools your team already uses (Slack, Notion, Jira, GitHub), learn how each person works, and act proactively within guardrails you define. You can choose from a library of pre-built roles or define custom ones in plain language."
+          }
+        }
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -405,25 +534,25 @@
                     <article class="bento-cell">
                         <div class="bento-cell-num">01</div>
                         <h4>Persistent memory.</h4>
-                        <p>Every agent carries its own context. No amnesiac restarts.</p>
+                        <p>Every agent carries its own context across sessions. No amnesiac restarts — they remember past decisions, user preferences, and what worked before.</p>
                     </article>
 
                     <article class="bento-cell">
                         <div class="bento-cell-num">02</div>
-                        <h4>Self-correcting.</h4>
-                        <p>Agents catch their own mistakes mid-run and course-correct.</p>
+                        <h4>Self-evolving.</h4>
+                        <p>Agents learn from every outcome. They refine how they work, adapt to your business as it changes, and get better on day 100 than they were on day one.</p>
                     </article>
 
                     <article class="bento-cell">
                         <div class="bento-cell-num">03</div>
-                        <h4>Picks its own metrics.</h4>
-                        <p>Each agent reads its purpose and tracks what matters — claim pass rate, deflection, conversion. Change in chat.</p>
+                        <h4>Self-correcting.</h4>
+                        <p>Agents catch their own mistakes mid-run and course-correct — without waiting for a human to notice.</p>
                     </article>
 
                     <article class="bento-cell">
                         <div class="bento-cell-num">04</div>
-                        <h4>Isolated by default.</h4>
-                        <p>Every agent in its own protected environment. No shared state, no collateral damage.</p>
+                        <h4>Picks its own metrics.</h4>
+                        <p>Each agent reads its purpose and tracks what matters — claim pass rate, deflection, conversion. Change in chat.</p>
                     </article>
 
                     <article class="bento-cell">
@@ -479,6 +608,99 @@
                         <h4 class="trust-card-title">Human-in-the-loop</h4>
                         <p class="trust-card-body">Define the actions that need approval, the ones that can run free, and the ones that can never happen. Agents wait, humans confirm.</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- §6 — FAQ -->
+        <section id="faq" class="faq-pro fade-in">
+            <div class="content-container">
+                <div class="section-eyebrow"><span class="eyebrow-rule"></span>§ 06 &nbsp;/&nbsp; FAQ</div>
+                <h2 class="section-h2">Questions we hear most.</h2>
+
+                <div class="faq-grid">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">What is CatalEx?</summary>
+                        <div class="faq-answer">
+                            <p>CatalEx is an AI operating layer for AI-native companies. It is a single platform where organizations build, deploy, measure, and govern every AI agent — whether embedded in a product, running autonomously in the background, or working alongside employees as named AI assistants. It reduces time to first production agent from 6–8 weeks to minutes.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">I can build agents with coding tools like Claude Code. Why do I need CatalEx?</summary>
+                        <div class="faq-answer">
+                            <p>Coding agents help you <em>build</em> an agent. CatalEx helps you <em>run, measure, and govern</em> agents at organizational scale. Without a platform layer:</p>
+                            <ul class="faq-list">
+                                <li><strong>No memory or context</strong> — every session starts from scratch. CatalEx agents carry persistent memory and evolve with your business.</li>
+                                <li><strong>No self-evolution</strong> — agents perform the same on day 100 as day one. CatalEx agents learn from outcomes and get better over time.</li>
+                                <li><strong>No cost control</strong> — teams adopt AI tools and burn through budgets with no visibility into what the spend produced. CatalEx routes actions to the right model and cuts token spend by up to 90%.</li>
+                                <li><strong>No business KPIs</strong> — agents are deployed and forgotten. CatalEx ties every agent to measurable outcomes.</li>
+                                <li><strong>No guardrails</strong> — data leaks to cloud AI with no audit trail. CatalEx ships governance on day one.</li>
+                            </ul>
+                            <p>CatalEx is model-agnostic — works across Claude, GPT, Gemini, and Llama with no vendor lock-in.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What are the three deployment modes?</summary>
+                        <div class="faq-answer">
+                            <ul class="faq-list">
+                                <li><strong>Embed</strong> — agents run inside your product via API, handling tasks like onboarding verification and compliance checks in real time.</li>
+                                <li><strong>Autonomous</strong> — agents work in the background on scheduled or long-running tasks like invoice reconciliation, cohort reports, and lead outreach.</li>
+                                <li><strong>Assistants</strong> — named AI teammates (Analyst, SDR, Support Lead, Recruiter, Researcher, and more) that live in Slack, Notion, Jira, and GitHub and learn how each person works.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">How does CatalEx reduce AI costs?</summary>
+                        <div class="faq-answer">
+                            <p>CatalEx cuts token spend by up to <strong>90%</strong> through three mechanisms:</p>
+                            <ul class="faq-list">
+                                <li><strong>Code caching</strong> — caches the code agents write and re-runs it with new parameters instead of regenerating.</li>
+                                <li><strong>Smart model routing</strong> — routes each action to the most cost-effective model for the task.</li>
+                                <li><strong>Isolated execution</strong> — agents run in their own environments, preventing redundant processing.</li>
+                            </ul>
+                            <p>This can result in up to <strong>10× lower token cost</strong> on typical workloads.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Is CatalEx enterprise-ready?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. CatalEx is built for teams whose agents touch regulated data, customer money, or production systems.</p>
+                            <ul class="faq-list">
+                                <li><strong>Role-based access</strong> — permissions inherited from your existing identity provider.</li>
+                                <li><strong>Full audit trail</strong> — every decision, tool call, and approval logged and queryable.</li>
+                                <li><strong>On-prem &amp; in-region</strong> — deploy in your cloud, your VPC. Data never leaves your perimeter.</li>
+                                <li><strong>Human-in-the-loop</strong> — define which actions need approval, which run free, and which can never happen.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">What are virtual employees?</summary>
+                        <div class="faq-answer">
+                            <p>Named AI assistants that join your team with a specific role. They carry persistent memory, evolve with how you work, and act proactively within guardrails you set.</p>
+                            <ul class="faq-list">
+                                <li><strong>Pre-built roles</strong> — Analyst, SDR, Support Lead, Recruiter, Researcher, and more.</li>
+                                <li><strong>Your tools</strong> — live in Slack, Notion, Jira, GitHub, and Google Drive.</li>
+                                <li><strong>They learn</strong> — adapt to how each person writes, decides, and escalates. They get better the longer they work with you.</li>
+                                <li><strong>Custom roles</strong> — define new ones in plain language.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">Can I deploy CatalEx on-premises?</summary>
+                        <div class="faq-answer">
+                            <p>Yes. CatalEx supports on-premises and in-region deployment — in your cloud, your region, your VPC.</p>
+                            <ul class="faq-list">
+                                <li>Your data <strong>never leaves your perimeter</strong> and never trains any model.</li>
+                                <li>Suitable for <strong>regulated industries</strong> including financial services, healthcare, and government.</li>
+                            </ul>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>

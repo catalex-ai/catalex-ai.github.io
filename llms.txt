@@ -1,0 +1,41 @@
+# CatalEx
+
+> CatalEx is the AI operating layer for AI-native companies. One platform to build, deploy, and run AI agents — embedded in your product, working autonomously in the background, or sitting next to your team as named AI assistants.
+
+## What CatalEx Does
+
+CatalEx solves the AI-to-production gap: 95% of AI projects never reach production because they're built like demos or because teams never run the right experiments. CatalEx packages both an experimentation runtime and a production runtime so companies can go from idea to production agent in minutes instead of 6-8 weeks.
+
+## Three Agent Deployment Modes
+
+- **Embed**: Agents run inside your product via API — handling tasks like onboarding verification, claims processing, or compliance checks in real time.
+- **Autonomous**: Agents work in the background on scheduled or long-running tasks — invoice reconciliation, cohort reports, lead outreach — without human supervision.
+- **Assistants (Virtual Employees)**: Named AI teammates with specific roles (Analyst, SDR, Support Lead, Recruiter, Researcher, etc.) that live in Slack, Notion, Jira, GitHub, and learn how each person works.
+
+## Key Platform Capabilities
+
+- Persistent memory: agents carry context across sessions, remembering past decisions and user preferences
+- Self-evolving: agents learn from every outcome and get better over time — not the same performance on day 100 as day one
+- Self-correcting: agents catch and fix their own mistakes mid-run
+- Self-metriced: agents pick and track their own business metrics
+- Auto-scaling: one agent or ten thousand, concurrent and isolated
+- Up to 10x cheaper: caching, code re-use, and intelligent model routing
+
+## Enterprise Features
+
+- Role-based access control (inherited from your identity provider)
+- Full audit trail (every decision, tool call, and approval logged)
+- On-premises and in-region deployment (data never leaves your perimeter)
+- Human-in-the-loop approval workflows
+
+## Who It's For
+
+Product leaders and founders at mid-market companies (200-2,000 employees) building AI-native products or adding AI capabilities to existing operations. Industries that handle regulated data, customer money, or production systems.
+
+## Links
+
+- Website: https://catalex.co
+- Console: https://console.catalex.co
+- Documentation: https://docs.catalex.co
+- Privacy Policy: https://docs.catalex.co/privacy-policy
+- Terms of Service: https://docs.catalex.co/terms-of-service

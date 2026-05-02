@@ -1,0 +1,29 @@
+# CatalEx — AI bot access policy
+# We welcome AI search crawlers so our content can be cited in AI-generated answers.
+
+User-agent: *
+Allow: /
+
+# Explicitly allow AI search and assistant bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://catalex.co/sitemap.xml
